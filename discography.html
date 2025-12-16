@@ -4,60 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discography - Bob Dylan</title>
-    <meta name="description" content="Complete discography of Bob Dylan">
+    <meta name="description" content="Complete discography of Bob Dylan - 39 studio albums spanning 60+ years">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .hero-gradient { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
-        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
-        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .nav-link { transition: color 0.2s; }
         .nav-link:hover { color: #f59e0b; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .lyrics-text { white-space: pre-wrap; font-family: Georgia, serif; line-height: 1.8; }
-        .chord { color: #f59e0b; font-weight: bold; }
+        .album-card { transition: transform 0.3s; }
+        .album-card:hover { transform: translateY(-5px); }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
-    
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-yellow-500">BOB</a>
+                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
                 <div class="hidden md:flex space-x-6 text-sm">
                     <a href="/" class="nav-link text-gray-300">Home</a>
-<a href="about.html" class="nav-link text-gray-300">Biography</a>
-<a href="timeline.html" class="nav-link text-gray-300">Timeline</a>
-<a href="videos.html" class="nav-link text-gray-300">Videos</a>
-<a href="gallery.html" class="nav-link text-gray-300">Gallery</a>
-<a href="discography.html" class="nav-link text-white">Discography</a>
-<a href="songs.html" class="nav-link text-gray-300">Songs & Lyrics</a>
-<a href="performances.html" class="nav-link text-gray-300">Performances</a>
-<a href="legacy.html" class="nav-link text-gray-300">Legacy</a>
-<a href="sources.html" class="nav-link text-gray-300">Sources</a>
-
+                    <a href="about.html" class="nav-link text-gray-300">Biography</a>
+                    <a href="timeline.html" class="nav-link text-gray-300">Timeline</a>
+                    <a href="videos.html" class="nav-link text-gray-300">Videos</a>
+                    <a href="gallery.html" class="nav-link text-gray-300">Gallery</a>
+                    <a href="discography.html" class="nav-link text-white font-semibold">Discography</a>
+                    <a href="songs.html" class="nav-link text-gray-300">Songs</a>
+                    <a href="performances.html" class="nav-link text-gray-300">Performances</a>
+                    <a href="legacy.html" class="nav-link text-gray-300">Legacy</a>
+                    <a href="sources.html" class="nav-link text-gray-300">Sources</a>
                 </div>
-                <button class="md:hidden text-white" onclick="toggleMobileMenu()">☰</button>
+                <button class="md:hidden text-white text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('open')">&#9776;</button>
+            </div>
+            <div id="mobile-menu" class="md:hidden mt-4 space-y-2">
+                <a href="/" class="block text-gray-300 py-2">Home</a>
+                <a href="about.html" class="block text-gray-300 py-2">Biography</a>
+                <a href="timeline.html" class="block text-gray-300 py-2">Timeline</a>
+                <a href="videos.html" class="block text-gray-300 py-2">Videos</a>
+                <a href="gallery.html" class="block text-gray-300 py-2">Gallery</a>
+                <a href="discography.html" class="block text-white py-2 font-semibold">Discography</a>
+                <a href="songs.html" class="block text-gray-300 py-2">Songs</a>
+                <a href="performances.html" class="block text-gray-300 py-2">Performances</a>
+                <a href="legacy.html" class="block text-gray-300 py-2">Legacy</a>
+                <a href="sources.html" class="block text-gray-300 py-2">Sources</a>
             </div>
         </div>
     </nav>
+    <style>#mobile-menu { display: none; } #mobile-menu.open { display: block; }</style>
 
+    <!-- Hero -->
     <section class="hero-gradient pt-32 pb-20">
         <div class="max-w-7xl mx-auto px-4">
-            <h1 class="text-5xl font-bold mb-4">Discography</h1>
-            <p class="text-xl text-gray-300">Complete catalog of Bob Dylan's music</p>
+            <h1 class="text-5xl font-bold mb-4">Complete Discography</h1>
+            <p class="text-xl text-gray-300">39 studio albums spanning over 60 years of musical evolution</p>
         </div>
     </section>
 
+    <!-- Stats -->
     <section class="py-8 bg-gray-800">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
                 <div>
                     <p class="text-4xl font-bold text-yellow-500">39</p>
                     <p class="text-gray-400">Studio Albums</p>
                 </div>
                 <div>
-                    <p class="text-4xl font-bold text-yellow-500">36</p>
+                    <p class="text-4xl font-bold text-yellow-500">600+</p>
                     <p class="text-gray-400">Songs</p>
                 </div>
                 <div>
@@ -65,429 +74,704 @@
                     <p class="text-gray-400">Live Albums</p>
                 </div>
                 <div>
-                    <p class="text-4xl font-bold text-yellow-500">1962-present</p>
+                    <p class="text-4xl font-bold text-yellow-500">10</p>
+                    <p class="text-gray-400">Grammy Awards</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-yellow-500">1962-2024</p>
                     <p class="text-gray-400">Active Years</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- 1960s - Folk Period -->
     <section class="py-16">
-        <div class="max-w-5xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-yellow-500 mb-8">Studio Albums</h2>
-            
-            <div class="bg-gray-800 rounded-xl overflow-hidden mb-8">
-                <div class="md:flex">
-                    <div class="md:w-64 bg-gray-700 p-8 flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="text-6xl mb-4">💿</div>
-                            <p class="text-2xl font-bold text-yellow-500">1962</p>
-                        </div>
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-yellow-500 mb-2">The 1960s</h2>
+            <p class="text-gray-400 mb-8">From folk prophet to rock revolutionary</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Bob Dylan (1962) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-gray-600 to-gray-800 p-8 text-center">
+                        <div class="text-6xl mb-2">🎸</div>
+                        <p class="text-yellow-500 font-bold">1962</p>
                     </div>
-                    <div class="flex-1 p-6">
-                        <h2 class="text-2xl font-bold text-yellow-500 mb-2">Bob Dylan</h2>
-                        <p class="text-gray-400 mb-4">
-                            Columbia Records • John Hammond • Gold
-                        </p>
-                        <table class="w-full text-sm">
-                            <thead>
-                                <tr class="border-b border-gray-600 text-gray-400">
-                                    <th class="py-2 px-2 text-left w-12">#</th>
-                                    <th class="py-2 px-2 text-left">Title</th>
-                                    <th class="py-2 px-2 text-left w-16">Time</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">1</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#you're-no-good"
-                               class="text-yellow-500 hover:underline">You're No Good</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">1:40</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">2</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#talkin'-new-york"
-                               class="text-yellow-500 hover:underline">Talkin' New York</a>
-                            ⭐ 
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">3:20</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">3</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#in-my-time-of-dyin'"
-                               class="text-yellow-500 hover:underline">In My Time of Dyin'</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">2:40</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">4</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#man-of-constant-sorrow"
-                               class="text-yellow-500 hover:underline">Man of Constant Sorrow</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">3:10</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">5</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#fixin'-to-die"
-                               class="text-yellow-500 hover:underline">Fixin' to Die</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">2:22</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">6</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#pretty-peggy-o"
-                               class="text-yellow-500 hover:underline">Pretty Peggy-O</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">3:23</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">7</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#highway-51-blues"
-                               class="text-yellow-500 hover:underline">Highway 51 Blues</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">2:52</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">8</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#gospel-plow"
-                               class="text-yellow-500 hover:underline">Gospel Plow</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">1:47</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">9</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#baby,-let-me-follow-you-down"
-                               class="text-yellow-500 hover:underline">Baby, Let Me Follow You Down</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">2:37</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">10</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#house-of-the-risin'-sun"
-                               class="text-yellow-500 hover:underline">House of the Risin' Sun</a>
-                            ⭐ 
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">5:20</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">11</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#freight-train-blues"
-                               class="text-yellow-500 hover:underline">Freight Train Blues</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">2:18</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">12</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#song-to-woody"
-                               class="text-yellow-500 hover:underline">Song to Woody</a>
-                            ⭐ 
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">2:42</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">13</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#see-that-my-grave-is-kept-clean"
-                               class="text-yellow-500 hover:underline">See That My Grave Is Kept Clean</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">2:43</td>
-                    </tr>
-                            </tbody>
-                        </table>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Bob Dylan</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Debut album featuring traditional folk and blues covers. Recorded in just two sessions.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Folk</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Gold</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="bg-gray-800 rounded-xl overflow-hidden mb-8">
-                <div class="md:flex">
-                    <div class="md:w-64 bg-gray-700 p-8 flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="text-6xl mb-4">💿</div>
-                            <p class="text-2xl font-bold text-yellow-500">1963</p>
-                        </div>
+
+                <!-- The Freewheelin' Bob Dylan (1963) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-900 p-8 text-center">
+                        <div class="text-6xl mb-2">🌬️</div>
+                        <p class="text-yellow-500 font-bold">1963</p>
                     </div>
-                    <div class="flex-1 p-6">
-                        <h2 class="text-2xl font-bold text-yellow-500 mb-2">The Freewheelin' Bob Dylan</h2>
-                        <p class="text-gray-400 mb-4">
-                            Columbia Records • John Hammond, Tom Wilson • Platinum
-                        </p>
-                        <table class="w-full text-sm">
-                            <thead>
-                                <tr class="border-b border-gray-600 text-gray-400">
-                                    <th class="py-2 px-2 text-left w-12">#</th>
-                                    <th class="py-2 px-2 text-left">Title</th>
-                                    <th class="py-2 px-2 text-left w-16">Time</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">1</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#blowin'-in-the-wind"
-                               class="text-yellow-500 hover:underline">Blowin' in the Wind</a>
-                            ⭐ 🎬
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">2:48</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">2</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#girl-from-the-north-country"
-                               class="text-yellow-500 hover:underline">Girl from the North Country</a>
-                            ⭐ 
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">3:22</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">3</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#masters-of-war"
-                               class="text-yellow-500 hover:underline">Masters of War</a>
-                            ⭐ 
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">4:34</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">4</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#down-the-highway"
-                               class="text-yellow-500 hover:underline">Down the Highway</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">3:27</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">5</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#bob-dylan's-blues"
-                               class="text-yellow-500 hover:underline">Bob Dylan's Blues</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">2:23</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">6</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#a-hard-rain's-a-gonna-fall"
-                               class="text-yellow-500 hover:underline">A Hard Rain's a-Gonna Fall</a>
-                            ⭐ 
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">6:55</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">7</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#don't-think-twice,-it's-all-right"
-                               class="text-yellow-500 hover:underline">Don't Think Twice, It's All Right</a>
-                            ⭐ 
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">3:40</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">8</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#bob-dylan's-dream"
-                               class="text-yellow-500 hover:underline">Bob Dylan's Dream</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">5:03</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">9</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#oxford-town"
-                               class="text-yellow-500 hover:underline">Oxford Town</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">1:50</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">10</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#talkin'-world-war-iii-blues"
-                               class="text-yellow-500 hover:underline">Talkin' World War III Blues</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">6:28</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">11</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#corrina,-corrina"
-                               class="text-yellow-500 hover:underline">Corrina, Corrina</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">2:44</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">12</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#honey,-just-allow-me-one-more-chance"
-                               class="text-yellow-500 hover:underline">Honey, Just Allow Me One More Chance</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">2:01</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">13</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#i-shall-be-free"
-                               class="text-yellow-500 hover:underline">I Shall Be Free</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">4:49</td>
-                    </tr>
-                            </tbody>
-                        </table>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">The Freewheelin' Bob Dylan</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Breakthrough album. "Blowin' in the Wind" becomes a civil rights anthem.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Folk</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Platinum</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="bg-gray-800 rounded-xl overflow-hidden mb-8">
-                <div class="md:flex">
-                    <div class="md:w-64 bg-gray-700 p-8 flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="text-6xl mb-4">💿</div>
-                            <p class="text-2xl font-bold text-yellow-500">1964</p>
+
+                <!-- The Times They Are a-Changin' (1964) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-amber-600 to-amber-900 p-8 text-center">
+                        <div class="text-6xl mb-2">⏳</div>
+                        <p class="text-yellow-500 font-bold">1964</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">The Times They Are a-Changin'</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Protest songs at their peak. Title track becomes generational anthem.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Folk</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Gold</span>
                         </div>
                     </div>
-                    <div class="flex-1 p-6">
-                        <h2 class="text-2xl font-bold text-yellow-500 mb-2">The Times They Are a-Changin'</h2>
-                        <p class="text-gray-400 mb-4">
-                            Columbia Records • Tom Wilson • Gold
-                        </p>
-                        <table class="w-full text-sm">
-                            <thead>
-                                <tr class="border-b border-gray-600 text-gray-400">
-                                    <th class="py-2 px-2 text-left w-12">#</th>
-                                    <th class="py-2 px-2 text-left">Title</th>
-                                    <th class="py-2 px-2 text-left w-16">Time</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">1</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#the-times-they-are-a-changin'"
-                               class="text-yellow-500 hover:underline">The Times They Are a-Changin'</a>
-                            ⭐ 🎬
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">3:14</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">2</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#ballad-of-hollis-brown"
-                               class="text-yellow-500 hover:underline">Ballad of Hollis Brown</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">5:06</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">3</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#with-god-on-our-side"
-                               class="text-yellow-500 hover:underline">With God on Our Side</a>
-                            ⭐ 
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">7:08</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">4</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#one-too-many-mornings"
-                               class="text-yellow-500 hover:underline">One Too Many Mornings</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">2:40</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">5</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#north-country-blues"
-                               class="text-yellow-500 hover:underline">North Country Blues</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">4:35</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">6</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#only-a-pawn-in-their-game"
-                               class="text-yellow-500 hover:underline">Only a Pawn in Their Game</a>
-                            ⭐ 
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">3:33</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">7</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#boots-of-spanish-leather"
-                               class="text-yellow-500 hover:underline">Boots of Spanish Leather</a>
-                            ⭐ 
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">4:40</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">8</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#when-the-ship-comes-in"
-                               class="text-yellow-500 hover:underline">When the Ship Comes In</a>
-                            ⭐ 
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">3:18</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">9</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#the-lonesome-death-of-hattie-carroll"
-                               class="text-yellow-500 hover:underline">The Lonesome Death of Hattie Carroll</a>
-                            ⭐ 
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">5:48</td>
-                    </tr>
-                    <tr class="border-b border-gray-700 hover:bg-gray-700">
-                        <td class="py-2 px-2 text-gray-400">10</td>
-                        <td class="py-2 px-2">
-                            <a href="songs.html#restless-farewell"
-                               class="text-yellow-500 hover:underline">Restless Farewell</a>
-                             
-                        </td>
-                        <td class="py-2 px-2 text-gray-400">5:32</td>
-                    </tr>
-                            </tbody>
-                        </table>
+                </div>
+
+                <!-- Another Side of Bob Dylan (1964) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-900 p-8 text-center">
+                        <div class="text-6xl mb-2">🪞</div>
+                        <p class="text-yellow-500 font-bold">1964</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Another Side of Bob Dylan</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Introspective turn away from protest. Features "My Back Pages" and "It Ain't Me Babe."</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Folk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bringing It All Back Home (1965) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-red-600 to-red-900 p-8 text-center">
+                        <div class="text-6xl mb-2">⚡</div>
+                        <p class="text-yellow-500 font-bold">1965</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Bringing It All Back Home</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Goes electric! "Subterranean Homesick Blues" and "Mr. Tambourine Man."</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Folk Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Platinum</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Highway 61 Revisited (1965) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden border-2 border-yellow-500">
+                    <div class="bg-gradient-to-br from-yellow-600 to-orange-800 p-8 text-center">
+                        <div class="text-6xl mb-2">🛣️</div>
+                        <p class="text-yellow-500 font-bold">1965</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Highway 61 Revisited</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Masterpiece. "Like a Rolling Stone" redefines rock music forever.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Platinum</span>
+                            <span class="text-xs bg-red-500 px-2 py-1 rounded">Essential</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blonde on Blonde (1966) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden border-2 border-yellow-500">
+                    <div class="bg-gradient-to-br from-pink-600 to-pink-900 p-8 text-center">
+                        <div class="text-6xl mb-2">👱‍♀️</div>
+                        <p class="text-yellow-500 font-bold">1966</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Blonde on Blonde</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">First rock double album. "Visions of Johanna," "Sad Eyed Lady of the Lowlands."</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">2x Platinum</span>
+                            <span class="text-xs bg-red-500 px-2 py-1 rounded">Essential</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- John Wesley Harding (1967) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-green-700 to-green-900 p-8 text-center">
+                        <div class="text-6xl mb-2">🤠</div>
+                        <p class="text-yellow-500 font-bold">1967</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">John Wesley Harding</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Stripped-back return after motorcycle accident. "All Along the Watchtower."</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Country Folk</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Platinum</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nashville Skyline (1969) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-yellow-500 to-orange-600 p-8 text-center">
+                        <div class="text-6xl mb-2">🎵</div>
+                        <p class="text-yellow-500 font-bold">1969</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Nashville Skyline</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Full country embrace. New smooth vocal style. Duet with Johnny Cash.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Country</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Platinum</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
+    <!-- 1970s -->
+    <section class="py-16 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-yellow-500 mb-2">The 1970s</h2>
+            <p class="text-gray-400 mb-8">Searching, experimenting, and triumphant returns</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Self Portrait (1970) -->
+                <div class="album-card bg-gray-700 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-gray-500 to-gray-700 p-8 text-center">
+                        <div class="text-6xl mb-2">🎨</div>
+                        <p class="text-yellow-500 font-bold">1970</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Self Portrait</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Controversial double album of covers. Later reappraised by some critics.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-600 px-2 py-1 rounded">Pop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Morning (1970) -->
+                <div class="album-card bg-gray-700 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-orange-500 to-orange-700 p-8 text-center">
+                        <div class="text-6xl mb-2">🌅</div>
+                        <p class="text-yellow-500 font-bold">1970</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">New Morning</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Warm, optimistic record. Critics welcomed return to form.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-600 px-2 py-1 rounded">Folk Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Gold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pat Garrett & Billy the Kid (1973) -->
+                <div class="album-card bg-gray-700 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-amber-700 to-amber-900 p-8 text-center">
+                        <div class="text-6xl mb-2">🎬</div>
+                        <p class="text-yellow-500 font-bold">1973</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Pat Garrett & Billy the Kid</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Soundtrack album. "Knockin' on Heaven's Door" becomes a classic.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-600 px-2 py-1 rounded">Soundtrack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Planet Waves (1974) -->
+                <div class="album-card bg-gray-700 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-blue-700 to-indigo-900 p-8 text-center">
+                        <div class="text-6xl mb-2">🌍</div>
+                        <p class="text-yellow-500 font-bold">1974</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Planet Waves</h3>
+                        <p class="text-gray-400 text-sm mb-3">Asylum Records</p>
+                        <p class="text-gray-300 text-sm mb-3">First #1 album. Recorded with The Band. "Forever Young."</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-600 px-2 py-1 rounded">Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Platinum</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blood on the Tracks (1975) -->
+                <div class="album-card bg-gray-700 rounded-xl overflow-hidden border-2 border-yellow-500">
+                    <div class="bg-gradient-to-br from-red-700 to-red-900 p-8 text-center">
+                        <div class="text-6xl mb-2">💔</div>
+                        <p class="text-yellow-500 font-bold">1975</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Blood on the Tracks</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Masterpiece of heartbreak. "Tangled Up in Blue," "Simple Twist of Fate."</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-600 px-2 py-1 rounded">Folk Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">2x Platinum</span>
+                            <span class="text-xs bg-red-500 px-2 py-1 rounded">Essential</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desire (1976) -->
+                <div class="album-card bg-gray-700 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-purple-700 to-purple-900 p-8 text-center">
+                        <div class="text-6xl mb-2">🎻</div>
+                        <p class="text-yellow-500 font-bold">1976</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Desire</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">#1 album. "Hurricane" and "Sara." Scarlet Rivera's violin throughout.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-600 px-2 py-1 rounded">Folk Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">2x Platinum</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Street Legal (1978) -->
+                <div class="album-card bg-gray-700 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-gray-600 to-gray-800 p-8 text-center">
+                        <div class="text-6xl mb-2">🎷</div>
+                        <p class="text-yellow-500 font-bold">1978</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Street Legal</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Big band sound. Precursor to his spiritual period. "Changing of the Guards."</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-600 px-2 py-1 rounded">Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Gold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slow Train Coming (1979) -->
+                <div class="album-card bg-gray-700 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-yellow-600 to-yellow-800 p-8 text-center">
+                        <div class="text-6xl mb-2">✝️</div>
+                        <p class="text-yellow-500 font-bold">1979</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Slow Train Coming</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">First Christian album. Won Grammy. "Gotta Serve Somebody."</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-600 px-2 py-1 rounded">Gospel Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Platinum</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1980s -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-yellow-500 mb-2">The 1980s</h2>
+            <p class="text-gray-400 mb-8">Christian trilogy and creative struggles</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Saved (1980) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-700 p-8 text-center">
+                        <div class="text-6xl mb-2">🙏</div>
+                        <p class="text-yellow-500 font-bold">1980</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Saved</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Fully gospel album. Most overtly religious record.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Gospel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shot of Love (1981) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-pink-500 to-pink-700 p-8 text-center">
+                        <div class="text-6xl mb-2">💘</div>
+                        <p class="text-yellow-500 font-bold">1981</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Shot of Love</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">End of Christian trilogy. "Every Grain of Sand" widely praised.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Rock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Infidels (1983) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-amber-600 to-amber-800 p-8 text-center">
+                        <div class="text-6xl mb-2">🔥</div>
+                        <p class="text-yellow-500 font-bold">1983</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Infidels</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Mark Knopfler produces. Return to secular themes. "Jokerman."</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Gold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empire Burlesque (1985) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-700 p-8 text-center">
+                        <div class="text-6xl mb-2">🎭</div>
+                        <p class="text-yellow-500 font-bold">1985</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Empire Burlesque</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">80s production aesthetic. "Dark Eyes" is acoustic highlight.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Rock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Knocked Out Loaded (1986) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-gray-500 to-gray-700 p-8 text-center">
+                        <div class="text-6xl mb-2">💫</div>
+                        <p class="text-yellow-500 font-bold">1986</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Knocked Out Loaded</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">"Brownsville Girl" with Sam Shepard is epic 11-minute highlight.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Rock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Down in the Groove (1988) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-green-500 to-green-700 p-8 text-center">
+                        <div class="text-6xl mb-2">🎺</div>
+                        <p class="text-yellow-500 font-bold">1988</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Down in the Groove</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Mix of covers and originals. Lowest charting album.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Rock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oh Mercy (1989) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-teal-600 to-teal-800 p-8 text-center">
+                        <div class="text-6xl mb-2">🌙</div>
+                        <p class="text-yellow-500 font-bold">1989</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Oh Mercy</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Daniel Lanois produces. Critical comeback. "Most of the Time."</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Gold</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1990s -->
+    <section class="py-16 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-yellow-500 mb-2">The 1990s</h2>
+            <p class="text-gray-400 mb-8">Folk roots revival and late-career renaissance</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Under the Red Sky (1990) -->
+                <div class="album-card bg-gray-700 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-red-500 to-red-700 p-8 text-center">
+                        <div class="text-6xl mb-2">🌆</div>
+                        <p class="text-yellow-500 font-bold">1990</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Under the Red Sky</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Star-studded sessions. George Harrison, Slash, Elton John appear.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-600 px-2 py-1 rounded">Rock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Good As I Been to You (1992) -->
+                <div class="album-card bg-gray-700 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-amber-600 to-amber-800 p-8 text-center">
+                        <div class="text-6xl mb-2">🪕</div>
+                        <p class="text-yellow-500 font-bold">1992</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Good As I Been to You</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Solo acoustic folk/blues covers. Return to roots.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-600 px-2 py-1 rounded">Folk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- World Gone Wrong (1993) -->
+                <div class="album-card bg-gray-700 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-gray-600 to-gray-800 p-8 text-center">
+                        <div class="text-6xl mb-2">🌍</div>
+                        <p class="text-yellow-500 font-bold">1993</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">World Gone Wrong</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Second acoustic covers album. Won Grammy for Best Traditional Folk.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-600 px-2 py-1 rounded">Folk Blues</span>
+                            <span class="text-xs bg-purple-500 px-2 py-1 rounded">Grammy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Time Out of Mind (1997) -->
+                <div class="album-card bg-gray-700 rounded-xl overflow-hidden border-2 border-yellow-500">
+                    <div class="bg-gradient-to-br from-blue-800 to-indigo-900 p-8 text-center">
+                        <div class="text-6xl mb-2">⏰</div>
+                        <p class="text-yellow-500 font-bold">1997</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Time Out of Mind</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Masterpiece. Album of the Year Grammy. "Not Dark Yet," "Highlands."</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-600 px-2 py-1 rounded">Blues Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Platinum</span>
+                            <span class="text-xs bg-red-500 px-2 py-1 rounded">Essential</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2000s-2020s -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-yellow-500 mb-2">2000s - Present</h2>
+            <p class="text-gray-400 mb-8">Elder statesman of rock continues to create</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Love and Theft (2001) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-red-600 to-red-800 p-8 text-center">
+                        <div class="text-6xl mb-2">❤️</div>
+                        <p class="text-yellow-500 font-bold">2001</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">"Love and Theft"</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Released on 9/11. Won Grammy. Playful, swinging record.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Gold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modern Times (2006) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-amber-600 to-amber-800 p-8 text-center">
+                        <div class="text-6xl mb-2">📺</div>
+                        <p class="text-yellow-500 font-bold">2006</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Modern Times</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">#1 debut. First chart-topper since 1976. "Thunder on the Mountain."</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Blues Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">2x Platinum</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Together Through Life (2009) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-800 p-8 text-center">
+                        <div class="text-6xl mb-2">👫</div>
+                        <p class="text-yellow-500 font-bold">2009</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Together Through Life</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">#1 in US and UK. Accordion-driven border music feel.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Gold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tempest (2012) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-teal-600 to-teal-800 p-8 text-center">
+                        <div class="text-6xl mb-2">⛈️</div>
+                        <p class="text-yellow-500 font-bold">2012</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Tempest</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">14-minute Titanic epic. "Roll On John" tribute to Lennon.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Gold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shadows in the Night (2015) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-800 p-8 text-center">
+                        <div class="text-6xl mb-2">🌃</div>
+                        <p class="text-yellow-500 font-bold">2015</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Shadows in the Night</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Frank Sinatra covers. First of three Great American Songbook albums.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Standards</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Gold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fallen Angels (2016) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-gray-500 to-gray-700 p-8 text-center">
+                        <div class="text-6xl mb-2">😇</div>
+                        <p class="text-yellow-500 font-bold">2016</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Fallen Angels</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Second Sinatra tribute. Released same year as Nobel Prize.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Standards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Triplicate (2017) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-br from-indigo-600 to-indigo-800 p-8 text-center">
+                        <div class="text-6xl mb-2">3️⃣</div>
+                        <p class="text-yellow-500 font-bold">2017</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Triplicate</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">Triple album of American standards. 30 songs total.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Standards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rough and Rowdy Ways (2020) -->
+                <div class="album-card bg-gray-800 rounded-xl overflow-hidden border-2 border-yellow-500">
+                    <div class="bg-gradient-to-br from-gray-700 to-gray-900 p-8 text-center">
+                        <div class="text-6xl mb-2">🎤</div>
+                        <p class="text-yellow-500 font-bold">2020</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Rough and Rowdy Ways</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300 text-sm mb-3">First originals in 8 years. 17-minute "Murder Most Foul." Critical triumph at 79.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">Rock</span>
+                            <span class="text-xs bg-yellow-500 text-gray-900 px-2 py-1 rounded">Gold</span>
+                            <span class="text-xs bg-red-500 px-2 py-1 rounded">Essential</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Albums Section -->
+    <section class="py-16 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-yellow-500 mb-2">Essential Live Albums</h2>
+            <p class="text-gray-400 mb-8">Capturing Dylan's legendary performances</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-700 rounded-xl p-6">
+                    <p class="text-yellow-500 font-bold">1966</p>
+                    <h3 class="font-bold mb-2">The Bootleg Series Vol. 4: Live 1966</h3>
+                    <p class="text-gray-400 text-sm">"The Royal Albert Hall Concert" - electric and acoustic sets</p>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-6">
+                    <p class="text-yellow-500 font-bold">1974</p>
+                    <h3 class="font-bold mb-2">Before the Flood</h3>
+                    <p class="text-gray-400 text-sm">With The Band - legendary tour recordings</p>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-6">
+                    <p class="text-yellow-500 font-bold">1976</p>
+                    <h3 class="font-bold mb-2">Hard Rain</h3>
+                    <p class="text-gray-400 text-sm">Rolling Thunder Revue captures</p>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-6">
+                    <p class="text-yellow-500 font-bold">1984</p>
+                    <h3 class="font-bold mb-2">Real Live</h3>
+                    <p class="text-gray-400 text-sm">European tour with Mick Taylor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-800 py-12">
         <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
             <p>&copy; 2025 bobdylan.bio - A Biography Domains Site</p>
