@@ -1,0 +1,91 @@
+{
+  "stats": {
+    "total_pages": 51,
+    "pages_with_videos": 42,
+    "pages_with_schema": 51,
+    "pages_with_og_tags": 51,
+    "song_pages": 17,
+    "album_pages": 15,
+    "vs_pages": 8
+  },
+  "issues": {
+    "images": [
+      {
+        "page": "album-highway-61-revisited.html",
+        "issues": [
+          "Image missing lazy loading: <img src=\"https://upload.wikimedia.org/wikipedia/en/9/95/Bob...",
+          "Image missing lazy loading: <img src=\"https://upload.wikimedia.org/wikipedia/en/a/a6/Bob...",
+          "Image missing lazy loading: <img src=\"https://upload.wikimedia.org/wikipedia/en/3/38/Bob...",
+          "Image missing lazy loading: <img src=\"https://upload.wikimedia.org/wikipedia/en/f/fa/Bob...",
+          "Image missing lazy loading: <img src=\"https://upload.wikimedia.org/wikipedia/en/f/f6/Tim..."
+        ]
+      },
+      {
+        "page": "discography.html",
+        "issues": [
+          "Image missing lazy loading: <img src=\"images/albums/highway-61-revisited.jpg\" alt=\"Highw...",
+          "Image missing lazy loading: <img src=\"images/albums/blonde-on-blonde.jpg\" alt=\"Blonde on...",
+          "Image missing lazy loading: <img src=\"images/albums/blood-on-the-tracks.jpg\" alt=\"Blood ...",
+          "Image missing lazy loading: <img src=\"images/albums/time-out-of-mind.jpg\" alt=\"Time Out ...",
+          "Image missing lazy loading: <img src=\"images/albums/rough-and-rowdy-ways.png\" alt=\"Rough..."
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "page": "vs-knockin-on-heavens-door.html",
+        "issues": [
+          "Has H3 but no H2 - check heading hierarchy"
+        ]
+      },
+      {
+        "page": "vs-it-aint-me-babe.html",
+        "issues": [
+          "Has H3 but no H2 - check heading hierarchy"
+        ]
+      },
+      {
+        "page": "vs-make-you-feel-my-love.html",
+        "issues": [
+          "Has H3 but no H2 - check heading hierarchy"
+        ]
+      },
+      {
+        "page": "vs-mr-tambourine-man.html",
+        "issues": [
+          "Has H3 but no H2 - check heading hierarchy"
+        ]
+      },
+      {
+        "page": "vs-blowin-in-the-wind.html",
+        "issues": [
+          "Has H3 but no H2 - check heading hierarchy"
+        ]
+      },
+      {
+        "page": "vs-maggies-farm.html",
+        "issues": [
+          "Has H3 but no H2 - check heading hierarchy"
+        ]
+      },
+      {
+        "page": "vs-like-a-rolling-stone.html",
+        "issues": [
+          "Has H3 but no H2 - check heading hierarchy"
+        ]
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "issue": "Images missing alt text or lazy loading",
+      "action": "Add descriptive alt text for accessibility and SEO"
+    },
+    {
+      "priority": "SUGGESTION",
+      "issue": "Traffic opportunities",
+      "action": "Consider adding: guitar tutorial videos, printable chord sheets, comparison polls with social sharing"
+    }
+  ]
+}
