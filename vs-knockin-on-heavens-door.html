@@ -157,7 +157,24 @@
             <!-- Comments Section -->
             <div class="bg-gray-800 rounded-xl p-8">
                 <h3 class="text-2xl font-bold text-yellow-500 mb-6">Comments</h3>
-                <div id="disqus_thread"></div>
+
+                <!-- Comment Form -->
+                <form id="comment-form" class="mb-8">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <input type="text" id="comment-author" placeholder="Your name" required
+                               class="bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-yellow-500 focus:outline-none">
+                    </div>
+                    <textarea id="comment-content" placeholder="Share your thoughts..." required rows="4"
+                              class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-yellow-500 focus:outline-none mb-4"></textarea>
+                    <button type="submit" class="bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition">
+                        Post Comment
+                    </button>
+                </form>
+
+                <!-- Comments List -->
+                <div id="comments-list" class="space-y-4">
+                    <p class="text-gray-400">Loading comments...</p>
+                </div>
             </div>
         </div>
     </section>
@@ -169,23 +186,23 @@
     </footer>
 
     <script>
-        const STORAGE_KEY = 'knockin_votes';
-        function getVotes() {
-            const stored = localStorage.getItem(STORAGE_KEY);
-            return stored ? JSON.parse(stored) : { dylan: 892, gnr: 2156 };
-        }
-        function saveVotes(votes) { localStorage.setItem(STORAGE_KEY, JSON.stringify(votes)); }
-        function hasVoted() { return localStorage.getItem(STORAGE_KEY + '_voted') === 'true'; }
-        function setVoted() { localStorage.setItem(STORAGE_KEY + '_voted', 'true'); }
+        const API_URL = 'https://bio-api.james-7ee.workers.dev';
+        const SITE = 'bobdylan.bio';
+        const COMPARISON_ID = 'knockin-vs-gnr';
+        const PAGE_ID = 'vs-knockin-on-heavens-door';
 
-        function updateDisplay() {
-            const votes = getVotes();
-            const total = votes.dylan + votes.gnr;
-            const dylanPct = total > 0 ? Math.round((votes.dylan / total) * 100) : 0;
-            const gnrPct = total > 0 ? Math.round((votes.gnr / total) * 100) : 0;
+        function hasVoted() { return localStorage.getItem(COMPARISON_ID + '_voted') === 'true'; }
+        function setVoted() { localStorage.setItem(COMPARISON_ID + '_voted', 'true'); }
 
-            document.getElementById('dylan-votes').textContent = votes.dylan.toLocaleString();
-            document.getElementById('gnr-votes').textContent = votes.gnr.toLocaleString();
+        function updateDisplay(votes) {
+            const dylanVotes = votes.dylan || 0;
+            const gnrVotes = votes.gnr || 0;
+            const total = dylanVotes + gnrVotes;
+            const dylanPct = total > 0 ? Math.round((dylanVotes / total) * 100) : 0;
+            const gnrPct = total > 0 ? Math.round((gnrVotes / total) * 100) : 0;
+
+            document.getElementById('dylan-votes').textContent = dylanVotes.toLocaleString();
+            document.getElementById('gnr-votes').textContent = gnrVotes.toLocaleString();
             document.getElementById('dylan-percent').textContent = dylanPct + '%';
             document.getElementById('gnr-percent').textContent = gnrPct + '%';
             document.getElementById('dylan-bar').style.width = dylanPct + '%';
@@ -200,29 +217,102 @@
             }
         }
 
-        function vote(artist) {
-            if (hasVoted()) return;
-            const votes = getVotes();
-            votes[artist]++;
-            saveVotes(votes);
-            setVoted();
-            updateDisplay();
+        async function loadVotes() {
+            try {
+                const res = await fetch(`${API_URL}/votes?site=${SITE}&comparison=${COMPARISON_ID}`);
+                const data = await res.json();
+                updateDisplay(data.votes || {});
+            } catch (e) {
+                console.error('Failed to load votes:', e);
+            }
         }
 
-        document.addEventListener('DOMContentLoaded', updateDisplay);
+        async function vote(artist) {
+            if (hasVoted()) return;
+            try {
+                const res = await fetch(`${API_URL}/votes`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ site: SITE, comparison: COMPARISON_ID, artist })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    setVoted();
+                    updateDisplay(data.votes);
+                }
+            } catch (e) {
+                console.error('Failed to vote:', e);
+            }
+        }
 
-        // Disqus
-        var disqus_config = function () {
-            this.page.url = 'https://bobdylan.bio/vs-knockin-on-heavens-door.html';
-            this.page.identifier = 'knockin-dylan-vs-gnr';
-        };
-        (function() {
-            var d = document, s = d.createElement('script');
-            s.src = 'https://bobdylan-bio.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
+        // Comments
+        function renderComments(comments) {
+            const container = document.getElementById('comments-list');
+            if (!comments || comments.length === 0) {
+                container.innerHTML = '<p class="text-gray-400">No comments yet. Be the first!</p>';
+                return;
+            }
+            container.innerHTML = comments.map(c => `
+                <div class="bg-gray-700 rounded-lg p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="font-bold text-yellow-500">${escapeHtml(c.author)}</span>
+                        <span class="text-gray-500 text-sm">${formatDate(c.createdAt)}</span>
+                    </div>
+                    <p class="text-gray-300">${escapeHtml(c.content)}</p>
+                </div>
+            `).join('');
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function formatDate(dateStr) {
+            const d = new Date(dateStr);
+            return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+
+        async function loadComments() {
+            try {
+                const res = await fetch(`${API_URL}/comments?site=${SITE}&page=${PAGE_ID}`);
+                const data = await res.json();
+                renderComments(data.comments || []);
+            } catch (e) {
+                console.error('Failed to load comments:', e);
+                document.getElementById('comments-list').innerHTML = '<p class="text-red-400">Failed to load comments.</p>';
+            }
+        }
+
+        async function submitComment(e) {
+            e.preventDefault();
+            const author = document.getElementById('comment-author').value.trim();
+            const content = document.getElementById('comment-content').value.trim();
+            if (!author || !content) return;
+
+            try {
+                const res = await fetch(`${API_URL}/comments`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ site: SITE, page: PAGE_ID, author, content })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    document.getElementById('comment-content').value = '';
+                    loadComments();
+                }
+            } catch (e) {
+                console.error('Failed to post comment:', e);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadVotes();
+            loadComments();
+            document.getElementById('comment-form').addEventListener('submit', submitComment);
+        });
     </script>
-    <noscript>Please enable JavaScript to view comments.</noscript>
+    <noscript>Please enable JavaScript to view voting and comments.</noscript>
 </body>
 </html>
