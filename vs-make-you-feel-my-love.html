@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Dylan vs Adele - Make You Feel My Love | Who Did It Better?</title>
+    <meta name="description" content="Vote: Bob Dylan's 1997 original vs Adele's 2008 emotional ballad. Which Make You Feel My Love is better?">
+
+    <meta property="og:title" content="Dylan vs Adele - Make You Feel My Love">
+    <meta property="og:description" content="Folk legend vs modern diva. Cast your vote!">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #1e3a5f 0%, #4a1942 100%); }
+        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+        .card-hover:hover { transform: translateY(-5px); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .vote-btn { transition: all 0.3s; }
+        .vote-btn:hover { transform: scale(1.05); }
+        .vote-btn.voted { opacity: 0.7; pointer-events: none; }
+        .progress-bar { transition: width 0.5s ease-out; }
+        .vs-badge { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; background: linear-gradient(135deg, #f59e0b, #dc2626); border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.25rem; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
+                <div class="hidden md:flex space-x-6 text-sm">
+                    <a href="/" class="text-gray-300 hover:text-yellow-500">Home</a>
+                    <a href="covers.html" class="text-white">Covers Hub</a>
+                    <a href="videos.html" class="text-gray-300 hover:text-yellow-500">Videos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-gradient pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <a href="covers.html" class="text-purple-300 hover:text-purple-200 text-sm">&larr; Back to Covers Hub</a>
+            <span class="inline-block bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-bold mt-4 mb-4">ORIGINAL VS COVER</span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Make You Feel My Love</h1>
+            <p class="text-xl text-gray-300">Bob Dylan (1997) vs Adele (2008)</p>
+        </div>
+    </section>
+
+    <!-- Side by Side -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="relative grid md:grid-cols-2 gap-8 mb-12">
+
+                <div class="hidden md:flex vs-badge">VS</div>
+
+                <!-- Dylan -->
+                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-800 p-4">
+                        <span class="bg-white text-blue-800 px-3 py-1 rounded-full text-xs font-bold">ORIGINAL</span>
+                        <h3 class="text-2xl font-bold mt-2">Bob Dylan</h3>
+                        <p class="text-blue-200">Time Out of Mind (1997)</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/fdWto-AUM3Q" title="Bob Dylan - Make You Feel My Love" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg text-yellow-500 mb-3">The Original</h4>
+                        <ul class="text-gray-300 space-y-2 text-sm">
+                            <li>From Grammy-winning album Time Out of Mind</li>
+                            <li>Sparse, understated piano arrangement</li>
+                            <li>Written during Dylan's creative resurgence</li>
+                            <li>3 minutes 32 seconds</li>
+                            <li>Weary, world-worn vocal delivery</li>
+                        </ul>
+                        <button onclick="vote('dylan')" id="vote-dylan" class="vote-btn w-full mt-6 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold py-4 px-6 rounded-lg text-lg">
+                            Vote for Dylan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Adele -->
+                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-purple-600 to-purple-800 p-4">
+                        <span class="bg-white text-purple-800 px-3 py-1 rounded-full text-xs font-bold">COVER</span>
+                        <h3 class="text-2xl font-bold mt-2">Adele</h3>
+                        <p class="text-purple-200">19 (2008)</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/0put0_a--Ng" title="Adele - Make You Feel My Love" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg text-purple-400 mb-3">The Modern Classic</h4>
+                        <ul class="text-gray-300 space-y-2 text-sm">
+                            <li>From her debut album at age 19</li>
+                            <li>Lush piano ballad with emotional crescendos</li>
+                            <li>Peaked at #4 UK Singles Chart</li>
+                            <li>200M+ Spotify streams</li>
+                            <li>Introduced song to new generation</li>
+                        </ul>
+                        <button onclick="vote('adele')" id="vote-adele" class="vote-btn w-full mt-6 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-bold py-4 px-6 rounded-lg text-lg">
+                            Vote for Adele
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="results-section" class="bg-gray-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-center mb-6">Poll Results</h3>
+                <div class="max-w-2xl mx-auto space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold text-blue-400">Bob Dylan</span>
+                            <span id="dylan-percent" class="font-bold">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-6">
+                            <div id="dylan-bar" class="progress-bar bg-gradient-to-r from-blue-500 to-blue-700 h-6 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1"><span id="dylan-votes">0</span> votes</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold text-purple-400">Adele</span>
+                            <span id="adele-percent" class="font-bold">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-6">
+                            <div id="adele-bar" class="progress-bar bg-gradient-to-r from-purple-500 to-purple-700 h-6 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1"><span id="adele-votes">0</span> votes</p>
+                    </div>
+                </div>
+                <p id="total-votes" class="text-center text-gray-500 mt-6">Total votes: 0</p>
+            </div>
+
+            <!-- Other Covers -->
+            <div class="bg-gray-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-yellow-500 mb-6">Other Notable Covers</h3>
+                <p class="text-gray-400 mb-4">This song has been covered by many artists. Compare more versions:</p>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <a href="vs-make-you-feel-billy-joel.html" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                        <p class="font-bold">Dylan vs Billy Joel</p>
+                        <p class="text-gray-500 text-sm">Released same year as Dylan!</p>
+                    </a>
+                    <a href="vs-make-you-feel-garth-brooks.html" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                        <p class="font-bold">Dylan vs Garth Brooks</p>
+                        <p class="text-gray-500 text-sm">#1 Country hit</p>
+                    </a>
+                    <a href="vs-make-you-feel-kelly-clarkson.html" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                        <p class="font-bold">Adele vs Kelly Clarkson</p>
+                        <p class="text-gray-500 text-sm">Pop powerhouse battle</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="bg-gray-800 rounded-xl p-8">
+                <h3 class="text-2xl font-bold text-yellow-500 mb-6">Comments</h3>
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2025 bobdylan.bio</p>
+        </div>
+    </footer>
+
+    <script>
+        const STORAGE_KEY = 'make_you_feel_votes';
+        function getVotes() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            return stored ? JSON.parse(stored) : { dylan: 743, adele: 2891 };
+        }
+        function saveVotes(votes) { localStorage.setItem(STORAGE_KEY, JSON.stringify(votes)); }
+        function hasVoted() { return localStorage.getItem(STORAGE_KEY + '_voted') === 'true'; }
+        function setVoted() { localStorage.setItem(STORAGE_KEY + '_voted', 'true'); }
+
+        function updateDisplay() {
+            const votes = getVotes();
+            const total = votes.dylan + votes.adele;
+            const dylanPct = total > 0 ? Math.round((votes.dylan / total) * 100) : 0;
+            const adelePct = total > 0 ? Math.round((votes.adele / total) * 100) : 0;
+
+            document.getElementById('dylan-votes').textContent = votes.dylan.toLocaleString();
+            document.getElementById('adele-votes').textContent = votes.adele.toLocaleString();
+            document.getElementById('dylan-percent').textContent = dylanPct + '%';
+            document.getElementById('adele-percent').textContent = adelePct + '%';
+            document.getElementById('dylan-bar').style.width = dylanPct + '%';
+            document.getElementById('adele-bar').style.width = adelePct + '%';
+            document.getElementById('total-votes').textContent = 'Total votes: ' + total.toLocaleString();
+
+            if (hasVoted()) {
+                document.getElementById('vote-dylan').classList.add('voted');
+                document.getElementById('vote-adele').classList.add('voted');
+                document.getElementById('vote-dylan').textContent = 'Voted';
+                document.getElementById('vote-adele').textContent = 'Voted';
+            }
+        }
+
+        function vote(artist) {
+            if (hasVoted()) return;
+            const votes = getVotes();
+            votes[artist]++;
+            saveVotes(votes);
+            setVoted();
+            updateDisplay();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateDisplay);
+
+        // Disqus
+        var disqus_config = function () {
+            this.page.url = 'https://bobdylan.bio/vs-make-you-feel-my-love.html';
+            this.page.identifier = 'make-you-feel-dylan-vs-adele';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://bobdylan-bio.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view comments.</noscript>
+</body>
+</html>

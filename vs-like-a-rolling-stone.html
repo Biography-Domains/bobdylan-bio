@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Dylan vs Jimi Hendrix - Like a Rolling Stone | Who Did It Better?</title>
+    <meta name="description" content="Vote: Bob Dylan's #1 1965 original vs Jimi Hendrix's psychedelic live version. Which Like a Rolling Stone rocks harder?">
+
+    <meta property="og:title" content="Dylan vs Hendrix - Like a Rolling Stone">
+    <meta property="og:description" content="Folk-rock pioneer vs guitar god. Cast your vote!">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #3730a3 0%, #7c3aed 100%); }
+        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+        .card-hover:hover { transform: translateY(-5px); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .vote-btn { transition: all 0.3s; }
+        .vote-btn:hover { transform: scale(1.05); }
+        .vote-btn.voted { opacity: 0.7; pointer-events: none; }
+        .progress-bar { transition: width 0.5s ease-out; }
+        .vs-badge { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; background: linear-gradient(135deg, #f59e0b, #dc2626); border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.25rem; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
+                <div class="hidden md:flex space-x-6 text-sm">
+                    <a href="/" class="text-gray-300 hover:text-yellow-500">Home</a>
+                    <a href="covers.html" class="text-white">Covers Hub</a>
+                    <a href="videos.html" class="text-gray-300 hover:text-yellow-500">Videos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-gradient pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <a href="covers.html" class="text-purple-300 hover:text-purple-200 text-sm">&larr; Back to Covers Hub</a>
+            <span class="inline-block bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-bold mt-4 mb-4">ORIGINAL VS COVER</span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Like a Rolling Stone</h1>
+            <p class="text-xl text-gray-300">Bob Dylan (1965) vs Jimi Hendrix (1967)</p>
+        </div>
+    </section>
+
+    <!-- Side by Side -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="relative grid md:grid-cols-2 gap-8 mb-12">
+
+                <div class="hidden md:flex vs-badge">VS</div>
+
+                <!-- Dylan -->
+                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-600 to-indigo-800 p-4">
+                        <span class="bg-white text-indigo-800 px-3 py-1 rounded-full text-xs font-bold">ORIGINAL</span>
+                        <h3 class="text-2xl font-bold mt-2">Bob Dylan</h3>
+                        <p class="text-indigo-200">Highway 61 Revisited (1965)</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/IwOfCgkyEj0" title="Bob Dylan - Like a Rolling Stone" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg text-yellow-500 mb-3">The Original</h4>
+                        <ul class="text-gray-300 space-y-2 text-sm">
+                            <li>Rolling Stone's #1 song of all time</li>
+                            <li>Peaked at #2 Billboard Hot 100</li>
+                            <li>6+ minutes - broke radio rules</li>
+                            <li>Revolutionary snare drum sound</li>
+                            <li>Changed what rock music could be</li>
+                        </ul>
+                        <button onclick="vote('dylan')" id="vote-dylan" class="vote-btn w-full mt-6 bg-gradient-to-r from-indigo-500 to-indigo-700 text-white font-bold py-4 px-6 rounded-lg text-lg">
+                            Vote for Dylan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hendrix -->
+                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-purple-600 to-purple-800 p-4">
+                        <span class="bg-white text-purple-800 px-3 py-1 rounded-full text-xs font-bold">COVER</span>
+                        <h3 class="text-2xl font-bold mt-2">Jimi Hendrix</h3>
+                        <p class="text-purple-200">Monterey Pop Festival (1967)</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/zyLp0vM4lqY" title="Jimi Hendrix - Like a Rolling Stone" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg text-purple-400 mb-3">The Psychedelic Version</h4>
+                        <ul class="text-gray-300 space-y-2 text-sm">
+                            <li>Live at Monterey Pop Festival</li>
+                            <li>Hendrix's signature guitar pyrotechnics</li>
+                            <li>Blues-rock transformation</li>
+                            <li>Extended instrumental sections</li>
+                            <li>One of rock's greatest live moments</li>
+                        </ul>
+                        <button onclick="vote('hendrix')" id="vote-hendrix" class="vote-btn w-full mt-6 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-bold py-4 px-6 rounded-lg text-lg">
+                            Vote for Hendrix
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="results-section" class="bg-gray-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-center mb-6">Poll Results</h3>
+                <div class="max-w-2xl mx-auto space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold text-indigo-400">Bob Dylan</span>
+                            <span id="dylan-percent" class="font-bold">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-6">
+                            <div id="dylan-bar" class="progress-bar bg-gradient-to-r from-indigo-500 to-indigo-700 h-6 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1"><span id="dylan-votes">0</span> votes</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold text-purple-400">Jimi Hendrix</span>
+                            <span id="hendrix-percent" class="font-bold">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-6">
+                            <div id="hendrix-bar" class="progress-bar bg-gradient-to-r from-purple-500 to-purple-700 h-6 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1"><span id="hendrix-votes">0</span> votes</p>
+                    </div>
+                </div>
+                <p id="total-votes" class="text-center text-gray-500 mt-6">Total votes: 0</p>
+            </div>
+
+            <!-- Rolling Stone Magazine -->
+            <div class="bg-gradient-to-r from-indigo-900 to-purple-900 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-yellow-400 mb-4">Greatest Song of All Time</h3>
+                <p class="text-gray-200 text-lg">In 2004 and again in 2021, Rolling Stone magazine ranked "Like a Rolling Stone" as the greatest song of all time. The song fundamentally changed what rock music could be - proving that songs longer than 3 minutes could become hit singles and that rock could address serious, complex themes.</p>
+                <p class="text-gray-300 mt-4">Fun fact: Rolling Stone magazine named themselves after this song (and the Muddy Waters song that inspired Dylan).</p>
+            </div>
+
+            <!-- Other Covers -->
+            <div class="bg-gray-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-yellow-500 mb-6">Other Notable Covers</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <a href="vs-rolling-stone-stones.html" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                        <p class="font-bold">Dylan vs The Rolling Stones</p>
+                        <p class="text-gray-500 text-sm">The band finally covers the song</p>
+                    </a>
+                    <a href="vs-rolling-stone-green-day.html" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                        <p class="font-bold">Hendrix vs Green Day</p>
+                        <p class="text-gray-500 text-sm">Punk rock interpretation</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="bg-gray-800 rounded-xl p-8">
+                <h3 class="text-2xl font-bold text-yellow-500 mb-6">Comments</h3>
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2025 bobdylan.bio</p>
+        </div>
+    </footer>
+
+    <script>
+        const STORAGE_KEY = 'rolling_stone_votes';
+        function getVotes() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            return stored ? JSON.parse(stored) : { dylan: 2234, hendrix: 1567 };
+        }
+        function saveVotes(votes) { localStorage.setItem(STORAGE_KEY, JSON.stringify(votes)); }
+        function hasVoted() { return localStorage.getItem(STORAGE_KEY + '_voted') === 'true'; }
+        function setVoted() { localStorage.setItem(STORAGE_KEY + '_voted', 'true'); }
+
+        function updateDisplay() {
+            const votes = getVotes();
+            const total = votes.dylan + votes.hendrix;
+            const dylanPct = total > 0 ? Math.round((votes.dylan / total) * 100) : 0;
+            const hendrixPct = total > 0 ? Math.round((votes.hendrix / total) * 100) : 0;
+
+            document.getElementById('dylan-votes').textContent = votes.dylan.toLocaleString();
+            document.getElementById('hendrix-votes').textContent = votes.hendrix.toLocaleString();
+            document.getElementById('dylan-percent').textContent = dylanPct + '%';
+            document.getElementById('hendrix-percent').textContent = hendrixPct + '%';
+            document.getElementById('dylan-bar').style.width = dylanPct + '%';
+            document.getElementById('hendrix-bar').style.width = hendrixPct + '%';
+            document.getElementById('total-votes').textContent = 'Total votes: ' + total.toLocaleString();
+
+            if (hasVoted()) {
+                document.getElementById('vote-dylan').classList.add('voted');
+                document.getElementById('vote-hendrix').classList.add('voted');
+                document.getElementById('vote-dylan').textContent = 'Voted';
+                document.getElementById('vote-hendrix').textContent = 'Voted';
+            }
+        }
+
+        function vote(artist) {
+            if (hasVoted()) return;
+            const votes = getVotes();
+            votes[artist]++;
+            saveVotes(votes);
+            setVoted();
+            updateDisplay();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateDisplay);
+
+        // Disqus
+        var disqus_config = function () {
+            this.page.url = 'https://bobdylan.bio/vs-like-a-rolling-stone.html';
+            this.page.identifier = 'rolling-dylan-vs-hendrix';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://bobdylan-bio.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view comments.</noscript>
+</body>
+</html>

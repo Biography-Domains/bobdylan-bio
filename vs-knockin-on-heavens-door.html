@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Dylan vs Guns N' Roses - Knockin' on Heaven's Door | Who Did It Better?</title>
+    <meta name="description" content="Vote: Bob Dylan's acoustic 1973 original vs Guns N' Roses' 1987 rock anthem. Which Knockin' on Heaven's Door is better?">
+
+    <meta property="og:title" content="Dylan vs GNR - Knockin' on Heaven's Door">
+    <meta property="og:description" content="Acoustic folk vs power rock. Cast your vote!">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #78350f 0%, #7f1d1d 100%); }
+        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+        .card-hover:hover { transform: translateY(-5px); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .vote-btn { transition: all 0.3s; }
+        .vote-btn:hover { transform: scale(1.05); }
+        .vote-btn.voted { opacity: 0.7; pointer-events: none; }
+        .progress-bar { transition: width 0.5s ease-out; }
+        .vs-badge { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; background: linear-gradient(135deg, #f59e0b, #dc2626); border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.25rem; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
+                <div class="hidden md:flex space-x-6 text-sm">
+                    <a href="/" class="text-gray-300 hover:text-yellow-500">Home</a>
+                    <a href="covers.html" class="text-white">Covers Hub</a>
+                    <a href="videos.html" class="text-gray-300 hover:text-yellow-500">Videos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-gradient pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <a href="covers.html" class="text-amber-300 hover:text-amber-200 text-sm">&larr; Back to Covers Hub</a>
+            <span class="inline-block bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-bold mt-4 mb-4">ORIGINAL VS COVER</span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Knockin' on Heaven's Door</h1>
+            <p class="text-xl text-gray-300">Bob Dylan (1973) vs Guns N' Roses (1987)</p>
+        </div>
+    </section>
+
+    <!-- Side by Side -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="relative grid md:grid-cols-2 gap-8 mb-12">
+
+                <div class="hidden md:flex vs-badge">VS</div>
+
+                <!-- Dylan -->
+                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-amber-600 to-amber-800 p-4">
+                        <span class="bg-white text-amber-800 px-3 py-1 rounded-full text-xs font-bold">ORIGINAL</span>
+                        <h3 class="text-2xl font-bold mt-2">Bob Dylan</h3>
+                        <p class="text-amber-200">Pat Garrett & Billy the Kid (1973)</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/rm9coqlk8fY" title="Bob Dylan - Knockin' on Heaven's Door" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg text-yellow-500 mb-3">The Original</h4>
+                        <ul class="text-gray-300 space-y-2 text-sm">
+                            <li>Written for the film Pat Garrett & Billy the Kid</li>
+                            <li>Sparse, haunting acoustic arrangement</li>
+                            <li>Peaked at #12 on Billboard Hot 100</li>
+                            <li>2 minutes 32 seconds</li>
+                            <li>Sung from perspective of dying sheriff</li>
+                        </ul>
+                        <button onclick="vote('dylan')" id="vote-dylan" class="vote-btn w-full mt-6 bg-gradient-to-r from-amber-500 to-amber-700 text-white font-bold py-4 px-6 rounded-lg text-lg">
+                            Vote for Dylan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- GNR -->
+                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-red-600 to-red-800 p-4">
+                        <span class="bg-white text-red-800 px-3 py-1 rounded-full text-xs font-bold">COVER</span>
+                        <h3 class="text-2xl font-bold mt-2">Guns N' Roses</h3>
+                        <p class="text-red-200">Use Your Illusion II (1991)</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/k04tX2fvh0o" title="Guns N' Roses - Knockin' on Heaven's Door" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg text-red-400 mb-3">The Rock Anthem</h4>
+                        <ul class="text-gray-300 space-y-2 text-sm">
+                            <li>First recorded 1987 on Appetite sessions</li>
+                            <li>Power rock arrangement with iconic solo</li>
+                            <li>Peaked at #18 US, #2 UK</li>
+                            <li>5 minutes 36 seconds</li>
+                            <li>Axl Rose's emotional vocal delivery</li>
+                        </ul>
+                        <button onclick="vote('gnr')" id="vote-gnr" class="vote-btn w-full mt-6 bg-gradient-to-r from-red-500 to-red-700 text-white font-bold py-4 px-6 rounded-lg text-lg">
+                            Vote for GNR
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="results-section" class="bg-gray-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-center mb-6">Poll Results</h3>
+                <div class="max-w-2xl mx-auto space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold text-amber-500">Bob Dylan</span>
+                            <span id="dylan-percent" class="font-bold">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-6">
+                            <div id="dylan-bar" class="progress-bar bg-gradient-to-r from-amber-500 to-amber-700 h-6 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1"><span id="dylan-votes">0</span> votes</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold text-red-400">Guns N' Roses</span>
+                            <span id="gnr-percent" class="font-bold">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-6">
+                            <div id="gnr-bar" class="progress-bar bg-gradient-to-r from-red-500 to-red-700 h-6 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1"><span id="gnr-votes">0</span> votes</p>
+                    </div>
+                </div>
+                <p id="total-votes" class="text-center text-gray-500 mt-6">Total votes: 0</p>
+            </div>
+
+            <!-- Other Covers -->
+            <div class="bg-gray-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-yellow-500 mb-6">Other Notable Covers</h3>
+                <p class="text-gray-400 mb-4">150+ artists have covered this song. Compare more versions:</p>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <a href="vs-knockin-dylan-vs-clapton.html" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                        <p class="font-bold">Dylan vs Eric Clapton</p>
+                        <p class="text-gray-500 text-sm">Blues legend's take</p>
+                    </a>
+                    <a href="vs-knockin-gnr-vs-clapton.html" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                        <p class="font-bold">GNR vs Eric Clapton</p>
+                        <p class="text-gray-500 text-sm">Rock vs blues</p>
+                    </a>
+                    <a href="vs-knockin-avril.html" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                        <p class="font-bold">Dylan vs Avril Lavigne</p>
+                        <p class="text-gray-500 text-sm">Pop-punk version</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="bg-gray-800 rounded-xl p-8">
+                <h3 class="text-2xl font-bold text-yellow-500 mb-6">Comments</h3>
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2025 bobdylan.bio</p>
+        </div>
+    </footer>
+
+    <script>
+        const STORAGE_KEY = 'knockin_votes';
+        function getVotes() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            return stored ? JSON.parse(stored) : { dylan: 892, gnr: 2156 };
+        }
+        function saveVotes(votes) { localStorage.setItem(STORAGE_KEY, JSON.stringify(votes)); }
+        function hasVoted() { return localStorage.getItem(STORAGE_KEY + '_voted') === 'true'; }
+        function setVoted() { localStorage.setItem(STORAGE_KEY + '_voted', 'true'); }
+
+        function updateDisplay() {
+            const votes = getVotes();
+            const total = votes.dylan + votes.gnr;
+            const dylanPct = total > 0 ? Math.round((votes.dylan / total) * 100) : 0;
+            const gnrPct = total > 0 ? Math.round((votes.gnr / total) * 100) : 0;
+
+            document.getElementById('dylan-votes').textContent = votes.dylan.toLocaleString();
+            document.getElementById('gnr-votes').textContent = votes.gnr.toLocaleString();
+            document.getElementById('dylan-percent').textContent = dylanPct + '%';
+            document.getElementById('gnr-percent').textContent = gnrPct + '%';
+            document.getElementById('dylan-bar').style.width = dylanPct + '%';
+            document.getElementById('gnr-bar').style.width = gnrPct + '%';
+            document.getElementById('total-votes').textContent = 'Total votes: ' + total.toLocaleString();
+
+            if (hasVoted()) {
+                document.getElementById('vote-dylan').classList.add('voted');
+                document.getElementById('vote-gnr').classList.add('voted');
+                document.getElementById('vote-dylan').textContent = 'Voted';
+                document.getElementById('vote-gnr').textContent = 'Voted';
+            }
+        }
+
+        function vote(artist) {
+            if (hasVoted()) return;
+            const votes = getVotes();
+            votes[artist]++;
+            saveVotes(votes);
+            setVoted();
+            updateDisplay();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateDisplay);
+
+        // Disqus
+        var disqus_config = function () {
+            this.page.url = 'https://bobdylan.bio/vs-knockin-on-heavens-door.html';
+            this.page.identifier = 'knockin-dylan-vs-gnr';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://bobdylan-bio.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view comments.</noscript>
+</body>
+</html>

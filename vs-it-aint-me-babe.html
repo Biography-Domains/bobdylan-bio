@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Dylan vs Johnny Cash - It Ain't Me Babe | Who Did It Better?</title>
+    <meta name="description" content="Vote: Bob Dylan's 1964 solo original vs Johnny Cash & June Carter's legendary duet. Which It Ain't Me Babe wins?">
+
+    <meta property="og:title" content="Dylan vs Cash - It Ain't Me Babe">
+    <meta property="og:description" content="Folk poet vs country legends. Cast your vote!">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #292524 0%, #1c1917 100%); }
+        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+        .card-hover:hover { transform: translateY(-5px); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .vote-btn { transition: all 0.3s; }
+        .vote-btn:hover { transform: scale(1.05); }
+        .vote-btn.voted { opacity: 0.7; pointer-events: none; }
+        .progress-bar { transition: width 0.5s ease-out; }
+        .vs-badge { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; background: linear-gradient(135deg, #f59e0b, #dc2626); border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.25rem; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
+                <div class="hidden md:flex space-x-6 text-sm">
+                    <a href="/" class="text-gray-300 hover:text-yellow-500">Home</a>
+                    <a href="covers.html" class="text-white">Covers Hub</a>
+                    <a href="videos.html" class="text-gray-300 hover:text-yellow-500">Videos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-gradient pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <a href="covers.html" class="text-stone-400 hover:text-stone-300 text-sm">&larr; Back to Covers Hub</a>
+            <span class="inline-block bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-bold mt-4 mb-4">ORIGINAL VS COVER</span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">It Ain't Me Babe</h1>
+            <p class="text-xl text-gray-300">Bob Dylan (1964) vs Johnny Cash & June Carter (1964)</p>
+        </div>
+    </section>
+
+    <!-- Side by Side -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="relative grid md:grid-cols-2 gap-8 mb-12">
+
+                <div class="hidden md:flex vs-badge">VS</div>
+
+                <!-- Dylan -->
+                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-stone-600 to-stone-800 p-4">
+                        <span class="bg-white text-stone-800 px-3 py-1 rounded-full text-xs font-bold">ORIGINAL</span>
+                        <h3 class="text-2xl font-bold mt-2">Bob Dylan</h3>
+                        <p class="text-stone-300">Another Side of Bob Dylan (1964)</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/YoagldK69U0" title="Bob Dylan - It Ain't Me Babe" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg text-yellow-500 mb-3">The Original</h4>
+                        <ul class="text-gray-300 space-y-2 text-sm">
+                            <li>Solo acoustic performance</li>
+                            <li>Anti-love song rejecting idealization</li>
+                            <li>Written about relationship struggles</li>
+                            <li>3 minutes 34 seconds</li>
+                            <li>Vulnerable, honest delivery</li>
+                        </ul>
+                        <button onclick="vote('dylan')" id="vote-dylan" class="vote-btn w-full mt-6 bg-gradient-to-r from-stone-500 to-stone-700 text-white font-bold py-4 px-6 rounded-lg text-lg">
+                            Vote for Dylan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Johnny Cash -->
+                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-black to-gray-800 p-4 border-b border-gray-700">
+                        <span class="bg-white text-black px-3 py-1 rounded-full text-xs font-bold">COVER</span>
+                        <h3 class="text-2xl font-bold mt-2">Johnny Cash & June Carter</h3>
+                        <p class="text-gray-400">Orange Blossom Special (1965)</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/2R2NrV4ve1o" title="Johnny Cash & June Carter - It Ain't Me Babe" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg text-gray-300 mb-3">The Duet</h4>
+                        <ul class="text-gray-300 space-y-2 text-sm">
+                            <li>Transformed into a playful duet</li>
+                            <li>Peaked at #4 Country charts</li>
+                            <li>Johnny & June's chemistry shines</li>
+                            <li>Country arrangement with humor</li>
+                            <li>Changed meaning to mutual rejection</li>
+                        </ul>
+                        <button onclick="vote('cash')" id="vote-cash" class="vote-btn w-full mt-6 bg-gradient-to-r from-gray-700 to-black text-white font-bold py-4 px-6 rounded-lg text-lg border border-gray-600">
+                            Vote for Cash
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="results-section" class="bg-gray-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-center mb-6">Poll Results</h3>
+                <div class="max-w-2xl mx-auto space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold text-stone-400">Bob Dylan</span>
+                            <span id="dylan-percent" class="font-bold">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-6">
+                            <div id="dylan-bar" class="progress-bar bg-gradient-to-r from-stone-500 to-stone-700 h-6 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1"><span id="dylan-votes">0</span> votes</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold text-gray-300">Johnny Cash & June Carter</span>
+                            <span id="cash-percent" class="font-bold">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-6">
+                            <div id="cash-bar" class="progress-bar bg-gradient-to-r from-gray-600 to-gray-800 h-6 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1"><span id="cash-votes">0</span> votes</p>
+                    </div>
+                </div>
+                <p id="total-votes" class="text-center text-gray-500 mt-6">Total votes: 0</p>
+            </div>
+
+            <!-- Context -->
+            <div class="bg-gradient-to-r from-stone-900 to-stone-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-yellow-400 mb-4">Dylan & Cash: A Legendary Friendship</h3>
+                <p class="text-gray-200 text-lg">Johnny Cash was one of Dylan's earliest and most vocal supporters. The two became close friends, with Cash writing Dylan a letter of support in 1963. Their musical friendship would culminate in Dylan appearing on The Johnny Cash Show and the two collaborating multiple times.</p>
+                <p class="text-gray-300 mt-4">Cash and June Carter's duet version transforms Dylan's rejection song into a comedic back-and-forth between two lovers telling each other to get lost.</p>
+            </div>
+
+            <!-- Other Covers -->
+            <div class="bg-gray-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-yellow-500 mb-6">Other Notable Covers</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <a href="vs-aint-me-turtles.html" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                        <p class="font-bold">Dylan vs The Turtles</p>
+                        <p class="text-gray-500 text-sm">#8 Billboard Hot 100 (1965)</p>
+                    </a>
+                    <a href="vs-aint-me-cage-elephant.html" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                        <p class="font-bold">Cash vs Cage the Elephant</p>
+                        <p class="text-gray-500 text-sm">Modern rock interpretation</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="bg-gray-800 rounded-xl p-8">
+                <h3 class="text-2xl font-bold text-yellow-500 mb-6">Comments</h3>
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2025 bobdylan.bio</p>
+        </div>
+    </footer>
+
+    <script>
+        const STORAGE_KEY = 'aint_me_babe_votes';
+        function getVotes() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            return stored ? JSON.parse(stored) : { dylan: 987, cash: 1456 };
+        }
+        function saveVotes(votes) { localStorage.setItem(STORAGE_KEY, JSON.stringify(votes)); }
+        function hasVoted() { return localStorage.getItem(STORAGE_KEY + '_voted') === 'true'; }
+        function setVoted() { localStorage.setItem(STORAGE_KEY + '_voted', 'true'); }
+
+        function updateDisplay() {
+            const votes = getVotes();
+            const total = votes.dylan + votes.cash;
+            const dylanPct = total > 0 ? Math.round((votes.dylan / total) * 100) : 0;
+            const cashPct = total > 0 ? Math.round((votes.cash / total) * 100) : 0;
+
+            document.getElementById('dylan-votes').textContent = votes.dylan.toLocaleString();
+            document.getElementById('cash-votes').textContent = votes.cash.toLocaleString();
+            document.getElementById('dylan-percent').textContent = dylanPct + '%';
+            document.getElementById('cash-percent').textContent = cashPct + '%';
+            document.getElementById('dylan-bar').style.width = dylanPct + '%';
+            document.getElementById('cash-bar').style.width = cashPct + '%';
+            document.getElementById('total-votes').textContent = 'Total votes: ' + total.toLocaleString();
+
+            if (hasVoted()) {
+                document.getElementById('vote-dylan').classList.add('voted');
+                document.getElementById('vote-cash').classList.add('voted');
+                document.getElementById('vote-dylan').textContent = 'Voted';
+                document.getElementById('vote-cash').textContent = 'Voted';
+            }
+        }
+
+        function vote(artist) {
+            if (hasVoted()) return;
+            const votes = getVotes();
+            votes[artist]++;
+            saveVotes(votes);
+            setVoted();
+            updateDisplay();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateDisplay);
+
+        // Disqus
+        var disqus_config = function () {
+            this.page.url = 'https://bobdylan.bio/vs-it-aint-me-babe.html';
+            this.page.identifier = 'aint-me-dylan-vs-cash';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://bobdylan-bio.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view comments.</noscript>
+</body>
+</html>

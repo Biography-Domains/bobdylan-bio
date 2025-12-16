@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Dylan vs The Byrds - Mr. Tambourine Man | Who Did It Better?</title>
+    <meta name="description" content="Vote: Bob Dylan's 1965 folk original vs The Byrds' #1 hit that invented folk-rock. Which Mr. Tambourine Man is better?">
+
+    <meta property="og:title" content="Dylan vs The Byrds - Mr. Tambourine Man">
+    <meta property="og:description" content="Folk poet vs folk-rock pioneers. Cast your vote!">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #065f46 0%, #1e40af 100%); }
+        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+        .card-hover:hover { transform: translateY(-5px); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .vote-btn { transition: all 0.3s; }
+        .vote-btn:hover { transform: scale(1.05); }
+        .vote-btn.voted { opacity: 0.7; pointer-events: none; }
+        .progress-bar { transition: width 0.5s ease-out; }
+        .vs-badge { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; background: linear-gradient(135deg, #f59e0b, #dc2626); border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.25rem; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
+                <div class="hidden md:flex space-x-6 text-sm">
+                    <a href="/" class="text-gray-300 hover:text-yellow-500">Home</a>
+                    <a href="covers.html" class="text-white">Covers Hub</a>
+                    <a href="videos.html" class="text-gray-300 hover:text-yellow-500">Videos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-gradient pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <a href="covers.html" class="text-emerald-300 hover:text-emerald-200 text-sm">&larr; Back to Covers Hub</a>
+            <span class="inline-block bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-bold mt-4 mb-4">ORIGINAL VS COVER</span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Mr. Tambourine Man</h1>
+            <p class="text-xl text-gray-300">Bob Dylan (1965) vs The Byrds (1965)</p>
+        </div>
+    </section>
+
+    <!-- Side by Side -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="relative grid md:grid-cols-2 gap-8 mb-12">
+
+                <div class="hidden md:flex vs-badge">VS</div>
+
+                <!-- Dylan -->
+                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-emerald-600 to-emerald-800 p-4">
+                        <span class="bg-white text-emerald-800 px-3 py-1 rounded-full text-xs font-bold">ORIGINAL</span>
+                        <h3 class="text-2xl font-bold mt-2">Bob Dylan</h3>
+                        <p class="text-emerald-200">Bringing It All Back Home (1965)</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/oecX_1pqxk0" title="Bob Dylan - Mr. Tambourine Man" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg text-yellow-500 mb-3">The Original</h4>
+                        <ul class="text-gray-300 space-y-2 text-sm">
+                            <li>From Bringing It All Back Home album</li>
+                            <li>All 4 verses of poetic lyrics</li>
+                            <li>Acoustic folk arrangement</li>
+                            <li>5 minutes 29 seconds</li>
+                            <li>Stream of consciousness imagery</li>
+                        </ul>
+                        <button onclick="vote('dylan')" id="vote-dylan" class="vote-btn w-full mt-6 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white font-bold py-4 px-6 rounded-lg text-lg">
+                            Vote for Dylan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- The Byrds -->
+                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-800 p-4">
+                        <span class="bg-white text-blue-800 px-3 py-1 rounded-full text-xs font-bold">COVER</span>
+                        <h3 class="text-2xl font-bold mt-2">The Byrds</h3>
+                        <p class="text-blue-200">Mr. Tambourine Man (1965)</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/Swqw5a8I4b4" title="The Byrds - Mr. Tambourine Man" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg text-blue-400 mb-3">The Game-Changer</h4>
+                        <ul class="text-gray-300 space-y-2 text-sm">
+                            <li>Invented folk-rock as a genre</li>
+                            <li>Peaked at #1 Billboard Hot 100</li>
+                            <li>Iconic 12-string Rickenbacker sound</li>
+                            <li>2 minutes 21 seconds (1 verse only)</li>
+                            <li>Changed the course of popular music</li>
+                        </ul>
+                        <button onclick="vote('byrds')" id="vote-byrds" class="vote-btn w-full mt-6 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold py-4 px-6 rounded-lg text-lg">
+                            Vote for The Byrds
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="results-section" class="bg-gray-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-center mb-6">Poll Results</h3>
+                <div class="max-w-2xl mx-auto space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold text-emerald-400">Bob Dylan</span>
+                            <span id="dylan-percent" class="font-bold">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-6">
+                            <div id="dylan-bar" class="progress-bar bg-gradient-to-r from-emerald-500 to-emerald-700 h-6 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1"><span id="dylan-votes">0</span> votes</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold text-blue-400">The Byrds</span>
+                            <span id="byrds-percent" class="font-bold">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-6">
+                            <div id="byrds-bar" class="progress-bar bg-gradient-to-r from-blue-500 to-blue-700 h-6 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1"><span id="byrds-votes">0</span> votes</p>
+                    </div>
+                </div>
+                <p id="total-votes" class="text-center text-gray-500 mt-6">Total votes: 0</p>
+            </div>
+
+            <!-- Fun Fact -->
+            <div class="bg-gradient-to-r from-yellow-900 to-amber-900 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-yellow-400 mb-4">Historical Significance</h3>
+                <p class="text-gray-200 text-lg">The Byrds' cover of "Mr. Tambourine Man" is widely credited with inventing folk-rock as a genre. Their electric 12-string Rickenbacker guitar sound, combined with Dylan's lyrics, created a template that influenced countless artists including The Beatles.</p>
+                <p class="text-gray-300 mt-4">Interestingly, the Byrds only recorded one of the song's four verses, trimming Dylan's 5+ minute epic to a radio-friendly 2:21.</p>
+            </div>
+
+            <!-- Other Covers -->
+            <div class="bg-gray-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-yellow-500 mb-6">Other Notable Covers</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <a href="vs-tambourine-shatner.html" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                        <p class="font-bold">Dylan vs William Shatner</p>
+                        <p class="text-gray-500 text-sm">The infamous spoken word version</p>
+                    </a>
+                    <a href="vs-tambourine-beach-boys.html" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                        <p class="font-bold">Byrds vs Beach Boys</p>
+                        <p class="text-gray-500 text-sm">Unreleased 1965 version</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="bg-gray-800 rounded-xl p-8">
+                <h3 class="text-2xl font-bold text-yellow-500 mb-6">Comments</h3>
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2025 bobdylan.bio</p>
+        </div>
+    </footer>
+
+    <script>
+        const STORAGE_KEY = 'tambourine_man_votes';
+        function getVotes() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            return stored ? JSON.parse(stored) : { dylan: 1245, byrds: 1567 };
+        }
+        function saveVotes(votes) { localStorage.setItem(STORAGE_KEY, JSON.stringify(votes)); }
+        function hasVoted() { return localStorage.getItem(STORAGE_KEY + '_voted') === 'true'; }
+        function setVoted() { localStorage.setItem(STORAGE_KEY + '_voted', 'true'); }
+
+        function updateDisplay() {
+            const votes = getVotes();
+            const total = votes.dylan + votes.byrds;
+            const dylanPct = total > 0 ? Math.round((votes.dylan / total) * 100) : 0;
+            const byrdsPct = total > 0 ? Math.round((votes.byrds / total) * 100) : 0;
+
+            document.getElementById('dylan-votes').textContent = votes.dylan.toLocaleString();
+            document.getElementById('byrds-votes').textContent = votes.byrds.toLocaleString();
+            document.getElementById('dylan-percent').textContent = dylanPct + '%';
+            document.getElementById('byrds-percent').textContent = byrdsPct + '%';
+            document.getElementById('dylan-bar').style.width = dylanPct + '%';
+            document.getElementById('byrds-bar').style.width = byrdsPct + '%';
+            document.getElementById('total-votes').textContent = 'Total votes: ' + total.toLocaleString();
+
+            if (hasVoted()) {
+                document.getElementById('vote-dylan').classList.add('voted');
+                document.getElementById('vote-byrds').classList.add('voted');
+                document.getElementById('vote-dylan').textContent = 'Voted';
+                document.getElementById('vote-byrds').textContent = 'Voted';
+            }
+        }
+
+        function vote(artist) {
+            if (hasVoted()) return;
+            const votes = getVotes();
+            votes[artist]++;
+            saveVotes(votes);
+            setVoted();
+            updateDisplay();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateDisplay);
+
+        // Disqus
+        var disqus_config = function () {
+            this.page.url = 'https://bobdylan.bio/vs-mr-tambourine-man.html';
+            this.page.identifier = 'tambourine-dylan-vs-byrds';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://bobdylan-bio.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view comments.</noscript>
+</body>
+</html>
