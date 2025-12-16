@@ -7,7 +7,12 @@
     <meta name="description" content="Bob Dylan represents the quintessential American artist whose continuous reinvention both reflected and shaped the cultural transformations of the late 20th cen">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        .hero-gradient { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(26,26,46,0.9) 0%, rgba(22,33,62,0.85) 50%, rgba(15,52,96,0.9) 100%),
+                        url('images/gallery/dylan_1965_Bob_Dylan_1965_publicity_photo.jpg.jpg');
+            background-size: cover;
+            background-position: center top;
+        }
         .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
         .nav-link { transition: color 0.2s; }
