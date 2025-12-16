@@ -14,484 +14,292 @@
         .nav-link:hover { color: #f59e0b; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .lyrics-text { white-space: pre-wrap; font-family: Georgia, serif; line-height: 1.8; }
-        .chord { color: #f59e0b; font-weight: bold; }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
-    
+
     <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-yellow-500">BOB</a>
+                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
                 <div class="hidden md:flex space-x-6 text-sm">
                     <a href="/" class="nav-link text-gray-300">Home</a>
-<a href="about.html" class="nav-link text-gray-300">Biography</a>
-<a href="timeline.html" class="nav-link text-gray-300">Timeline</a>
-<a href="videos.html" class="nav-link text-gray-300">Videos</a>
-<a href="gallery.html" class="nav-link text-gray-300">Gallery</a>
-<a href="discography.html" class="nav-link text-gray-300">Discography</a>
-<a href="songs.html" class="nav-link text-gray-300">Songs & Lyrics</a>
-<a href="performances.html" class="nav-link text-white">Performances</a>
-<a href="legacy.html" class="nav-link text-gray-300">Legacy</a>
-<a href="sources.html" class="nav-link text-gray-300">Sources</a>
-
+                    <a href="about.html" class="nav-link text-gray-300">Biography</a>
+                    <a href="timeline.html" class="nav-link text-gray-300">Timeline</a>
+                    <a href="videos.html" class="nav-link text-gray-300">Videos</a>
+                    <a href="gallery.html" class="nav-link text-gray-300">Gallery</a>
+                    <a href="discography.html" class="nav-link text-gray-300">Discography</a>
+                    <a href="songs.html" class="nav-link text-gray-300">Songs</a>
+                    <a href="performances.html" class="nav-link text-white">Performances</a>
+                    <a href="legacy.html" class="nav-link text-gray-300">Legacy</a>
                 </div>
-                <button class="md:hidden text-white" onclick="toggleMobileMenu()">☰</button>
+                <button class="md:hidden text-white text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">&#9776;</button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="/" class="block py-2 text-gray-300">Home</a>
+                <a href="about.html" class="block py-2 text-gray-300">Biography</a>
+                <a href="timeline.html" class="block py-2 text-gray-300">Timeline</a>
+                <a href="videos.html" class="block py-2 text-gray-300">Videos</a>
+                <a href="gallery.html" class="block py-2 text-gray-300">Gallery</a>
+                <a href="discography.html" class="block py-2 text-gray-300">Discography</a>
+                <a href="songs.html" class="block py-2 text-gray-300">Songs</a>
+                <a href="performances.html" class="block py-2 text-white">Performances</a>
+                <a href="legacy.html" class="block py-2 text-gray-300">Legacy</a>
             </div>
         </div>
     </nav>
 
     <section class="hero-gradient pt-32 pb-20">
         <div class="max-w-7xl mx-auto px-4">
-            <h1 class="text-5xl font-bold mb-4">Performances</h1>
-            <p class="text-xl text-gray-300">30 legendary performances documented</p>
+            <h1 class="text-5xl font-bold mb-4">Legendary Performances</h1>
+            <p class="text-xl text-gray-300">Historic concerts and TV appearances that defined an era</p>
         </div>
     </section>
 
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4">
-            
+
+            <!-- Newport Folk Festival -->
             <section class="mb-16">
-                <h2 class="text-3xl font-bold text-yellow-500 mb-6">Legendary Concerts</h2>
+                <h2 class="text-3xl font-bold text-yellow-500 mb-6">Newport Folk Festival (1964-1965)</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/lzI0hvSVpzY"
-                                title="Newport Folk Festival Electric Performance" frameborder="0" allowfullscreen></iframe>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/OeP4FFr88SQ" title="Mr. Tambourine Man - Newport 1964" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Mr. Tambourine Man (Newport 1964)</h3>
+                            <p class="text-gray-400 text-sm">Newport Folk Festival</p>
+                            <p class="text-gray-300 mt-2">Dylan debuts the song that would become a classic, one year before The Byrds' cover topped the charts</p>
+                        </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Newport Folk Festival Electric Performance</h3>
-                        <p class="text-gray-400 text-sm">Newport Folk Festival • Newport, Rhode Island, USA</p>
-                        <p class="text-gray-500 text-sm">1965-07-25</p>
-                        <p class="text-gray-300 mt-2">Dylan's controversial electric performance that divided folk purists and rock fans, marking his transition from acoustic folk to electric rock</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Maggie's Farm</li><li>Like a Rolling Stone</li><li>Phantom Engineer</li></ul></p>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/a6Kv0vF41Bc" title="Like A Rolling Stone - Newport 1965" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Like A Rolling Stone (Newport 1965)</h3>
+                            <p class="text-gray-400 text-sm">The Electric Controversy</p>
+                            <p class="text-gray-300 mt-2">Dylan "goes electric" with the Paul Butterfield Blues Band, dividing the folk community and changing rock history forever</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/I5lFeyUPKq4"
-                                title="Royal Albert Hall 'Judas' Concert" frameborder="0" allowfullscreen></iframe>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/QPfsUlFxhrI" title="Maggie's Farm - Newport 1965" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Maggie's Farm (Newport 1965) - 4K</h3>
+                            <p class="text-gray-400 text-sm">4K Restoration</p>
+                            <p class="text-gray-300 mt-2">Stunning restoration of the opening electric song that sparked controversy and cheers in equal measure</p>
+                        </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Royal Albert Hall 'Judas' Concert</h3>
-                        <p class="text-gray-400 text-sm">Royal Albert Hall • London, England</p>
-                        <p class="text-gray-500 text-sm">1966-05-17</p>
-                        <p class="text-gray-300 mt-2">Famous for the 'Judas!' shout from audience member Keith Butler, captured the folk vs. electric tension</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>She Belongs to Me</li><li>Fourth Time Around</li><li>Visions of Johanna</li><li>Like a Rolling Stone</li><li>Ballad of a Thin Man</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/H-yP5xR0KDM"
-                                title="Concert for Bangladesh" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Concert for Bangladesh</h3>
-                        <p class="text-gray-400 text-sm">Madison Square Garden • New York City, USA</p>
-                        <p class="text-gray-500 text-sm">1971-08-01</p>
-                        <p class="text-gray-300 mt-2">Rare live appearance during his reclusive period, organized by George Harrison for humanitarian causes</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>A Hard Rain's a-Gonna Fall</li><li>It Takes a Lot to Laugh</li><li>Blowin' in the Wind</li><li>Mr. Tambourine Man</li><li>Just Like a Woman</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/VBdSqk78nHw"
-                                title="The Last Waltz" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">The Last Waltz</h3>
-                        <p class="text-gray-400 text-sm">Winterland Ballroom • San Francisco, USA</p>
-                        <p class="text-gray-500 text-sm">1976-11-25</p>
-                        <p class="text-gray-300 mt-2">Final concert of The Band, directed by Martin Scorsese, Dylan's surprise appearance</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Forever Young</li><li>Baby, Let Me Follow You Down</li><li>I Don't Believe You</li><li>I Shall Be Released</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/YqJAnQTwmJs"
-                                title="Live Aid Philadelphia" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Live Aid Philadelphia</h3>
-                        <p class="text-gray-400 text-sm">John F. Kennedy Stadium • Philadelphia, USA</p>
-                        <p class="text-gray-500 text-sm">1985-07-13</p>
-                        <p class="text-gray-300 mt-2">Controversial performance at the global charity concert, backed by Keith Richards and Ronnie Wood</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Ballad of Hollis Brown</li><li>When the Ship Comes In</li><li>Blowin' in the Wind</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/0RPkJeziNyQ"
-                                title="30th Anniversary Concert Celebration" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">30th Anniversary Concert Celebration</h3>
-                        <p class="text-gray-400 text-sm">Madison Square Garden • New York City, USA</p>
-                        <p class="text-gray-500 text-sm">1992-10-16</p>
-                        <p class="text-gray-300 mt-2">Star-studded tribute concert celebrating Dylan's 30 years in music</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Song to Woody</li><li>It's Alright, Ma</li><li>Girl From the North Country</li><li>My Back Pages</li></ul></p>
-                    </div>
-                </div>
+
                 </div>
             </section>
+
+            <!-- Classic Performances -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-yellow-500 mb-6">Classic Studio Recordings</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/IwOfCgkyEj0" title="Like a Rolling Stone" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Like a Rolling Stone (1965)</h3>
+                            <p class="text-gray-400 text-sm">Highway 61 Revisited</p>
+                            <p class="text-gray-300 mt-2">Voted the greatest song of all time by Rolling Stone magazine. Recorded June 15-16, 1965 at Columbia Studio A</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/MMFj8uDubsE" title="Blowin' in the Wind" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Blowin' in the Wind (1963)</h3>
+                            <p class="text-gray-400 text-sm">The Freewheelin' Bob Dylan</p>
+                            <p class="text-gray-300 mt-2">The anthem of the civil rights movement. Written in 10 minutes in April 1962 at a Greenwich Village cafe</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/bpZvg_FjL3Q" title="Hurricane" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Hurricane (1976)</h3>
+                            <p class="text-gray-400 text-sm">Desire</p>
+                            <p class="text-gray-300 mt-2">8-minute epic about boxer Rubin "Hurricane" Carter's wrongful imprisonment. Co-written with Jacques Levy</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/YwSZvHqf9qM" title="Tangled Up in Blue" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Tangled Up in Blue (1975)</h3>
+                            <p class="text-gray-400 text-sm">Blood on the Tracks</p>
+                            <p class="text-gray-300 mt-2">Dylan spent 2 years perfecting this narrative masterpiece, re-recording it multiple times</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/hUvcWXTIjcU" title="Desolation Row" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Desolation Row (1965)</h3>
+                            <p class="text-gray-400 text-sm">Highway 61 Revisited</p>
+                            <p class="text-gray-300 mt-2">11-minute surrealist epic featuring T.S. Eliot, Einstein, and Cinderella. Acoustic gem on an electric album</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/3NbQkyvbw18" title="Murder Most Foul" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Murder Most Foul (2020)</h3>
+                            <p class="text-gray-400 text-sm">Rough and Rowdy Ways</p>
+                            <p class="text-gray-300 mt-2">17-minute meditation on the JFK assassination and American culture. Dylan's longest song and first #1 hit</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- TV Appearances -->
             <section class="mb-16">
                 <h2 class="text-3xl font-bold text-yellow-500 mb-6">TV Appearances</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/vWwgrjjIMXA"
-                                title="The Ed Sullivan Show" frameborder="0" allowfullscreen></iframe>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/vWwgrjjIMXA" title="Blowin' in the Wind - Live TV 1963" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Blowin' in the Wind (Live TV, 1963)</h3>
+                            <p class="text-gray-400 text-sm">Historic Television Debut</p>
+                            <p class="text-gray-300 mt-2">Rare early TV appearance showcasing the young folk singer before his rise to fame</p>
+                        </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">The Ed Sullivan Show</h3>
-                        <p class="text-gray-400 text-sm">Ed Sullivan Theater • New York City, USA</p>
-                        <p class="text-gray-500 text-sm">1963-05-12</p>
-                        <p class="text-gray-300 mt-2">Early TV appearance that was cancelled when CBS censored his planned performance of 'Talkin' John Birch Society Blues'</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Blowin' in the Wind</li></ul></p>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/wC10VWDTzmU" title="Gotta Serve Somebody" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Gotta Serve Somebody (SNL 1979)</h3>
+                            <p class="text-gray-400 text-sm">Saturday Night Live</p>
+                            <p class="text-gray-300 mt-2">Dylan's Christian period debut on national TV. Won the Grammy for Best Rock Vocal Performance</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/wC10VWDTzmU"
-                                title="Saturday Night Live" frameborder="0" allowfullscreen></iframe>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/cJpB_AEZf6U" title="Knockin' On Heaven's Door - MTV Unplugged" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Knockin' On Heaven's Door (MTV Unplugged)</h3>
+                            <p class="text-gray-400 text-sm">1994 Acoustic Performance</p>
+                            <p class="text-gray-300 mt-2">Intimate acoustic version from the MTV Unplugged series, stripped down and powerful</p>
+                        </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Saturday Night Live</h3>
-                        <p class="text-gray-400 text-sm">NBC Studios • New York City, USA</p>
-                        <p class="text-gray-500 text-sm">1979-10-20</p>
-                        <p class="text-gray-300 mt-2">Performed during his Christian period, controversial religious songs</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Gotta Serve Somebody</li><li>I Believe in You</li><li>When You Gonna Wake Up</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/k6C8SX0mWP0"
-                                title="Late Night with David Letterman" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Late Night with David Letterman</h3>
-                        <p class="text-gray-400 text-sm">Ed Sullivan Theater • New York City, USA</p>
-                        <p class="text-gray-500 text-sm">1984-03-22</p>
-                        <p class="text-gray-300 mt-2">Rare TV appearance promoting 'Infidels' album</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Jokerman</li><li>License to Kill</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/SWnRq8270qk"
-                                title="Grammy Awards Performance" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Grammy Awards Performance</h3>
-                        <p class="text-gray-400 text-sm">Shrine Auditorium • Los Angeles, USA</p>
-                        <p class="text-gray-500 text-sm">1991-02-20</p>
-                        <p class="text-gray-300 mt-2">Lifetime Achievement Award acceptance and performance</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Masters of War</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/MGkwkz9FeGA"
-                                title="MTV Unplugged" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">MTV Unplugged</h3>
-                        <p class="text-gray-400 text-sm">Sony Studios • New York City, USA</p>
-                        <p class="text-gray-500 text-sm">1994-11-17</p>
-                        <p class="text-gray-300 mt-2">Acoustic performance with traditional folk songs and classics</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>The Times They Are a-Changin'</li><li>John Brown</li><li>Desolation Row</li><li>Dignity</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Theme Time Radio Hour</h3>
-                        <p class="text-gray-400 text-sm">XM Satellite Radio • New York City, USA</p>
-                        <p class="text-gray-500 text-sm">2006-2009</p>
-                        <p class="text-gray-300 mt-2">Dylan's radio show where he occasionally performed and spoke at length</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Various covers and snippets</li></ul></p>
-                    </div>
-                </div>
+
                 </div>
             </section>
+
+            <!-- Nobel Prize & Recent -->
             <section class="mb-16">
-                <h2 class="text-3xl font-bold text-yellow-500 mb-6">Award Shows</h2>
+                <h2 class="text-3xl font-bold text-yellow-500 mb-6">Nobel Prize & Recent Work</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/Rs0MRrLj5hc"
-                                title="Kennedy Center Honors" frameborder="0" allowfullscreen></iframe>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/6TlcPRlau2Q" title="Nobel Lecture" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Nobel Lecture in Literature (2016)</h3>
+                            <p class="text-gray-400 text-sm">Nobel Prize Official</p>
+                            <p class="text-gray-300 mt-2">Dylan's acceptance lecture for the Nobel Prize in Literature, reflecting on songs and storytelling</p>
+                        </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Kennedy Center Honors</h3>
-                        <p class="text-gray-400 text-sm">Kennedy Center Opera House • Washington D.C., USA</p>
-                        <p class="text-gray-500 text-sm">1997-12-07</p>
-                        <p class="text-gray-300 mt-2">Presidential honor attended by Bill Clinton, tribute performances by various artists</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Dylan was honored, others performed his songs</li></ul></p>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/Bi3Ws2Qm8ck" title="Nobel Banquet Speech" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Nobel Banquet Speech (2016)</h3>
+                            <p class="text-gray-400 text-sm">Stockholm, Sweden</p>
+                            <p class="text-gray-300 mt-2">Dylan's speech at the Nobel Banquet, delivered by the US Ambassador</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/dQD1i2OP8NQ"
-                                title="Oscar Performance" frameborder="0" allowfullscreen></iframe>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/941PHEJHCwU" title="Patti Smith - A Hard Rain's A-Gonna Fall" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">A Hard Rain's A-Gonna Fall (Nobel 2016)</h3>
+                            <p class="text-gray-400 text-sm">Patti Smith Tribute</p>
+                            <p class="text-gray-300 mt-2">Patti Smith's emotional performance at the Nobel Prize ceremony, briefly forgetting the lyrics in a touching moment</p>
+                        </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Oscar Performance</h3>
-                        <p class="text-gray-400 text-sm">Dolby Theatre • Los Angeles, USA</p>
-                        <p class="text-gray-500 text-sm">2001-03-25</p>
-                        <p class="text-gray-300 mt-2">Won Oscar for 'Things Have Changed' from Wonder Boys</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Things Have Changed</li></ul></p>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/hCc2SczzqWE" title="Forever Young - Shadow Kingdom" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Forever Young (Shadow Kingdom, 2021)</h3>
+                            <p class="text-gray-400 text-sm">Concert Film</p>
+                            <p class="text-gray-300 mt-2">From Dylan's acclaimed 2021 concert film, reimagining classics with a small band</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/8YWl7tDGUPA"
-                                title="White House Performance" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">White House Performance</h3>
-                        <p class="text-gray-400 text-sm">White House • Washington D.C., USA</p>
-                        <p class="text-gray-500 text-sm">2010-02-09</p>
-                        <p class="text-gray-300 mt-2">Performed for Barack Obama at White House music evening</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>The Times They Are a-Changin'</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/6gBV-Nzq7Pg"
-                                title="MusiCares Person of the Year" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">MusiCares Person of the Year</h3>
-                        <p class="text-gray-400 text-sm">Los Angeles Convention Center • Los Angeles, USA</p>
-                        <p class="text-gray-500 text-sm">2015-02-06</p>
-                        <p class="text-gray-300 mt-2">Honored by MusicCares with tribute performances by various artists</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Dylan honored, others performed</li></ul></p>
-                    </div>
-                </div>
+
                 </div>
             </section>
+
+            <!-- Interviews -->
             <section class="mb-16">
-                <h2 class="text-3xl font-bold text-yellow-500 mb-6">Festival Performances</h2>
+                <h2 class="text-3xl font-bold text-yellow-500 mb-6">Interviews & Documentaries</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Monterey Folk Festival</h3>
-                        <p class="text-gray-400 text-sm">Monterey County Fairgrounds • Monterey, California, USA</p>
-                        <p class="text-gray-500 text-sm">1963-05-18</p>
-                        <p class="text-gray-300 mt-2">Early festival appearance that helped establish his reputation</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>A Hard Rain's a-Gonna Fall</li><li>Masters of War</li></ul></p>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/bV-rwgktvpU" title="60 Minutes Interview" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">CBS 60 Minutes Interview (2004)</h3>
+                            <p class="text-gray-400 text-sm">Ed Bradley Interview</p>
+                            <p class="text-gray-300 mt-2">Rare in-depth interview with Ed Bradley. Dylan discusses songwriting, fame, and his place in music history</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/k9sB7MwipqM"
-                                title="Isle of Wight Festival" frameborder="0" allowfullscreen></iframe>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/MGxjIBEZvx0" title="Subterranean Homesick Blues" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Subterranean Homesick Blues (1965)</h3>
+                            <p class="text-gray-400 text-sm">Don't Look Back Film</p>
+                            <p class="text-gray-300 mt-2">The iconic cue card scene from D.A. Pennebaker's documentary, often called the first music video</p>
+                        </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Isle of Wight Festival</h3>
-                        <p class="text-gray-400 text-sm">Afton Down • Isle of Wight, England</p>
-                        <p class="text-gray-500 text-sm">1969-08-31</p>
-                        <p class="text-gray-300 mt-2">Return to live performance after motorcycle accident and reclusive period</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>She Belongs to Me</li><li>I Threw It All Away</li><li>Like a Rolling Stone</li><li>The Mighty Quinn</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/d2R5BPIiCqg"
-                                title="Woodstock '94" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Woodstock '94</h3>
-                        <p class="text-gray-400 text-sm">Winston Farm • Saugerties, New York, USA</p>
-                        <p class="text-gray-500 text-sm">1994-08-14</p>
-                        <p class="text-gray-300 mt-2">25th anniversary of original Woodstock, Dylan closed the festival</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Jokerman</li><li>Just Like a Woman</li><li>All Along the Watchtower</li><li>It's All Over Now, Baby Blue</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/RXBb2WC7xEs"
-                                title="Bonnaroo Music Festival" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Bonnaroo Music Festival</h3>
-                        <p class="text-gray-400 text-sm">Great Stage Park • Manchester, Tennessee, USA</p>
-                        <p class="text-gray-500 text-sm">2004-06-13</p>
-                        <p class="text-gray-300 mt-2">Introduction to a new generation of festival-goers</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Maggie's Farm</li><li>Masters of War</li><li>Ballad of a Thin Man</li><li>Like a Rolling Stone</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/SqxCLCgO_lk"
-                                title="Desert Trip Festival" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Desert Trip Festival</h3>
-                        <p class="text-gray-400 text-sm">Empire Polo Club • Indio, California, USA</p>
-                        <p class="text-gray-500 text-sm">2016-10-07</p>
-                        <p class="text-gray-300 mt-2">Oldchella - festival of classic rock legends</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Things Have Changed</li><li>Don't Think Twice</li><li>Highway 61 Revisited</li><li>Blowin' in the Wind</li></ul></p>
-                    </div>
-                </div>
+
                 </div>
             </section>
-            <section class="mb-16">
-                <h2 class="text-3xl font-bold text-yellow-500 mb-6">Unplugged/Acoustic Sessions</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Town Hall Hootenanny</h3>
-                        <p class="text-gray-400 text-sm">Town Hall • New York City, USA</p>
-                        <p class="text-gray-500 text-sm">1963-04-12</p>
-                        <p class="text-gray-300 mt-2">Solo acoustic concert, one of his first major NYC performances</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Blowin' in the Wind</li><li>A Hard Rain's a-Gonna Fall</li><li>Masters of War</li><li>Bob Dylan's Dream</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Carnegie Hall</h3>
-                        <p class="text-gray-400 text-sm">Carnegie Hall • New York City, USA</p>
-                        <p class="text-gray-500 text-sm">1963-10-26</p>
-                        <p class="text-gray-300 mt-2">Prestigious solo acoustic concert at iconic venue</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>The Times They Are a-Changin'</li><li>Ballad of Hollis Brown</li><li>With God on Our Side</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Gaslight Cafe Sessions</h3>
-                        <p class="text-gray-400 text-sm">Gaslight Cafe • Greenwich Village, New York, USA</p>
-                        <p class="text-gray-500 text-sm">1962-09-06</p>
-                        <p class="text-gray-300 mt-2">Early intimate performances in Greenwich Village folk scene</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>The Cuckoo Bird</li><li>West Texas</li><li>Poor Lazarus</li><li>Motherless Children</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/hqXLfEKzL3w"
-                                title="Supper Club Acoustic" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Supper Club Acoustic</h3>
-                        <p class="text-gray-400 text-sm">Supper Club • New York City, USA</p>
-                        <p class="text-gray-500 text-sm">1993-11-16</p>
-                        <p class="text-gray-300 mt-2">Rare intimate acoustic performance for small audience</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Absolutely Sweet Marie</li><li>The Times They Are a-Changin'</li><li>All Along the Watchtower</li></ul></p>
-                    </div>
-                </div>
-                </div>
-            </section>
-            <section class="mb-16">
-                <h2 class="text-3xl font-bold text-yellow-500 mb-6">Historical Performances</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/BSSf2jLjW0c"
-                                title="March on Washington" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">March on Washington</h3>
-                        <p class="text-gray-400 text-sm">Lincoln Memorial • Washington D.C., USA</p>
-                        <p class="text-gray-500 text-sm">1963-08-28</p>
-                        <p class="text-gray-300 mt-2">Civil rights march where Dylan performed alongside other folk artists</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Only a Pawn in Their Game</li><li>When the Ship Comes In</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/x9WhySWa7-4"
-                                title="Rolling Thunder Revue" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Rolling Thunder Revue</h3>
-                        <p class="text-gray-400 text-sm">Various venues • North American tour</p>
-                        <p class="text-gray-500 text-sm">1975-10-30</p>
-                        <p class="text-gray-300 mt-2">Theatrical traveling circus-like tour with many guest artists</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>The Times They Are a-Changin'</li><li>Hard Rain</li><li>Isis</li><li>Hurricane</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/bpZvg_FjL3Q"
-                                title="Hurricane Carter Benefit" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Hurricane Carter Benefit</h3>
-                        <p class="text-gray-400 text-sm">Madison Square Garden • New York City, USA</p>
-                        <p class="text-gray-500 text-sm">1975-12-08</p>
-                        <p class="text-gray-300 mt-2">Benefit concert for imprisoned boxer Rubin 'Hurricane' Carter</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Hurricane</li><li>Oh, Sister</li><li>Hard Rain</li><li>Blowin' in the Wind</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/H1zb8SU5Y0Y"
-                                title="Farm Aid" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Farm Aid</h3>
-                        <p class="text-gray-400 text-sm">Memorial Stadium • Champaign, Illinois, USA</p>
-                        <p class="text-gray-500 text-sm">1985-09-22</p>
-                        <p class="text-gray-300 mt-2">Benefit concert for American farmers, Dylan was a founding performer</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Clean Cut Kid</li><li>Shake</li><li>I'll Remember You</li><li>Trust Yourself</li></ul></p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    
-                    <div class="video-container rounded-lg overflow-hidden mb-4">
-                        <iframe src="https://www.youtube.com/embed/qC-KC7lZRTY"
-                                title="Sinatra Birthday Tribute" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg text-yellow-500">Sinatra Birthday Tribute</h3>
-                        <p class="text-gray-400 text-sm">Shrine Auditorium • Los Angeles, USA</p>
-                        <p class="text-gray-500 text-sm">1995-11-19</p>
-                        <p class="text-gray-300 mt-2">Tribute to Frank Sinatra's 80th birthday</p>
-                        <p class="text-sm text-gray-500 mt-2"><strong>Setlist:</strong> <ul class="list-disc list-inside"><li>Restless Farewell</li></ul></p>
-                    </div>
-                </div>
-                </div>
-            </section>
+
         </div>
     </section>
 
-    
     <footer class="bg-gray-900 border-t border-gray-800 py-12">
         <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
             <p>&copy; 2025 bobdylan.bio - A Biography Domains Site</p>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Dylan vs Jimi Hendrix - All Along the Watchtower | Who Did It Better?</title>
+    <meta name="description" content="Vote: Bob Dylan's original 1967 All Along the Watchtower vs Jimi Hendrix's legendary 1968 cover. Which version is better? Cast your vote!">
+    <meta name="keywords" content="Bob Dylan, Jimi Hendrix, All Along the Watchtower, cover vs original, who did it better, best cover songs">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Bob Dylan vs Jimi Hendrix - All Along the Watchtower">
+    <meta property="og:description" content="The ultimate battle: Original vs Cover. Which version wins?">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bobdylan.bio/vs-all-along-the-watchtower.html">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
+        .vs-gradient { background: linear-gradient(135deg, #dc2626 0%, #7c2d12 50%, #0c4a6e 100%); }
+        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .nav-link { transition: color 0.2s; }
+        .nav-link:hover { color: #f59e0b; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .vote-btn { transition: all 0.3s; }
+        .vote-btn:hover { transform: scale(1.05); }
+        .vote-btn.voted { opacity: 0.7; pointer-events: none; }
+        .progress-bar { transition: width 0.5s ease-out; }
+        .vs-badge {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            background: linear-gradient(135deg, #f59e0b, #dc2626);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.5); }
+            50% { box-shadow: 0 0 50px rgba(245, 158, 11, 0.8); }
+        }
+        .winner-crown { display: none; }
+        .is-winning .winner-crown { display: block; }
+    </style>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Bob Dylan vs Jimi Hendrix: All Along the Watchtower - Who Did It Better?",
+        "description": "Compare the original 1967 Bob Dylan recording with Jimi Hendrix's legendary 1968 cover version",
+        "author": {"@type": "Organization", "name": "bobdylan.bio"},
+        "datePublished": "2025-12-16",
+        "about": [
+            {"@type": "MusicRecording", "name": "All Along the Watchtower", "byArtist": {"@type": "Person", "name": "Bob Dylan"}},
+            {"@type": "MusicRecording", "name": "All Along the Watchtower", "byArtist": {"@type": "Person", "name": "Jimi Hendrix"}}
+        ]
+    }
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
+                <div class="hidden md:flex space-x-6 text-sm">
+                    <a href="/" class="nav-link text-gray-300">Home</a>
+                    <a href="about.html" class="nav-link text-gray-300">Biography</a>
+                    <a href="videos.html" class="nav-link text-gray-300">Videos</a>
+                    <a href="discography.html" class="nav-link text-gray-300">Discography</a>
+                    <a href="performances.html" class="nav-link text-gray-300">Performances</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="vs-gradient pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="inline-block bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-bold mb-4">ORIGINAL VS COVER</span>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Who Did It Better?</h1>
+            <h2 class="text-2xl md:text-3xl text-gray-300 mb-2">All Along the Watchtower</h2>
+            <p class="text-xl text-gray-400">Bob Dylan (1967) vs Jimi Hendrix (1968)</p>
+        </div>
+    </section>
+
+    <!-- Main Comparison Section -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <!-- Side by Side Videos -->
+            <div class="relative grid md:grid-cols-2 gap-8 mb-12">
+
+                <!-- VS Badge (centered between videos on desktop) -->
+                <div class="hidden md:flex vs-badge">VS</div>
+
+                <!-- Bob Dylan - Original -->
+                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden" id="dylan-card">
+                    <div class="bg-gradient-to-r from-amber-600 to-amber-800 p-4">
+                        <span class="winner-crown text-2xl">&#128081;</span>
+                        <span class="bg-white text-amber-800 px-3 py-1 rounded-full text-xs font-bold">ORIGINAL</span>
+                        <h3 class="text-2xl font-bold mt-2">Bob Dylan</h3>
+                        <p class="text-amber-200">John Wesley Harding (1967)</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/bT7Hj-ea0VE" title="Bob Dylan - All Along the Watchtower" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg text-yellow-500 mb-3">The Original Vision</h4>
+                        <ul class="text-gray-300 space-y-2 text-sm">
+                            <li>&#9834; Sparse acoustic arrangement</li>
+                            <li>&#9834; Harmonica-driven sound</li>
+                            <li>&#9834; Recorded in Nashville, October 1967</li>
+                            <li>&#9834; Biblical imagery & apocalyptic lyrics</li>
+                            <li>&#9834; 2 minutes 31 seconds</li>
+                        </ul>
+                        <div class="mt-4 p-3 bg-gray-700 rounded-lg">
+                            <p class="text-gray-400 text-xs italic">"There are many here among us who feel that life is but a joke..."</p>
+                        </div>
+                        <button onclick="vote('dylan')" id="vote-dylan" class="vote-btn w-full mt-6 bg-gradient-to-r from-amber-500 to-amber-700 text-white font-bold py-4 px-6 rounded-lg text-lg hover:from-amber-600 hover:to-amber-800">
+                            Vote for Dylan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Jimi Hendrix - Cover -->
+                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden" id="hendrix-card">
+                    <div class="bg-gradient-to-r from-purple-600 to-purple-900 p-4">
+                        <span class="winner-crown text-2xl">&#128081;</span>
+                        <span class="bg-white text-purple-800 px-3 py-1 rounded-full text-xs font-bold">COVER</span>
+                        <h3 class="text-2xl font-bold mt-2">Jimi Hendrix</h3>
+                        <p class="text-purple-200">Electric Ladyland (1968)</p>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/TLV4_xaYynY" title="Jimi Hendrix - All Along the Watchtower" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg text-purple-400 mb-3">The Electric Reinvention</h4>
+                        <ul class="text-gray-300 space-y-2 text-sm">
+                            <li>&#9834; Explosive electric guitar intro</li>
+                            <li>&#9834; Multiple guitar overdubs</li>
+                            <li>&#9834; Recorded in London, January 1968</li>
+                            <li>&#9834; Reached #20 on Billboard Hot 100</li>
+                            <li>&#9834; 4 minutes 1 second</li>
+                        </ul>
+                        <div class="mt-4 p-3 bg-gray-700 rounded-lg">
+                            <p class="text-gray-400 text-xs italic">Dylan himself later said: "Jimi's version... made me feel that it wasn't the same song anymore."</p>
+                        </div>
+                        <button onclick="vote('hendrix')" id="vote-hendrix" class="vote-btn w-full mt-6 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-bold py-4 px-6 rounded-lg text-lg hover:from-purple-600 hover:to-purple-800">
+                            Vote for Hendrix
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" class="bg-gray-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-center mb-6">Live Poll Results</h3>
+
+                <div class="max-w-2xl mx-auto space-y-6">
+                    <!-- Dylan Bar -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold text-amber-500">Bob Dylan (Original)</span>
+                            <span id="dylan-percent" class="font-bold">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-6 overflow-hidden">
+                            <div id="dylan-bar" class="progress-bar bg-gradient-to-r from-amber-500 to-amber-700 h-6 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1"><span id="dylan-votes">0</span> votes</p>
+                    </div>
+
+                    <!-- Hendrix Bar -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold text-purple-400">Jimi Hendrix (Cover)</span>
+                            <span id="hendrix-percent" class="font-bold">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-6 overflow-hidden">
+                            <div id="hendrix-bar" class="progress-bar bg-gradient-to-r from-purple-500 to-purple-700 h-6 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1"><span id="hendrix-votes">0</span> votes</p>
+                    </div>
+                </div>
+
+                <p id="total-votes" class="text-center text-gray-500 mt-6">Total votes: 0</p>
+                <p id="vote-status" class="text-center text-green-500 mt-2 hidden">Thanks for voting!</p>
+            </div>
+
+            <!-- The Story -->
+            <div class="bg-gray-800 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-yellow-500 mb-6">The Story Behind the Battle</h3>
+                <div class="grid md:grid-cols-2 gap-8 text-gray-300">
+                    <div>
+                        <h4 class="font-bold text-lg mb-3">Dylan's Original (1967)</h4>
+                        <p class="mb-4">Bob Dylan wrote "All Along the Watchtower" during his retreat in Woodstock following his 1966 motorcycle accident. The song appeared on <em>John Wesley Harding</em>, a stark departure from the electric sound of his previous albums.</p>
+                        <p>The stripped-down, acoustic arrangement reflects the album's biblical themes and Dylan's return to simplicity. The cryptic lyrics describe a conversation between a joker and a thief.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-3">Hendrix's Cover (1968)</h4>
+                        <p class="mb-4">Jimi Hendrix heard Dylan's version and immediately knew he had to record it. His interpretation, released on <em>Electric Ladyland</em>, transformed the song into a psychedelic rock epic.</p>
+                        <p>Hendrix's version became his highest-charting single in the US. Dylan was so impressed that he adopted elements of Hendrix's arrangement for his own live performances of the song.</p>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-gray-700 rounded-lg">
+                    <p class="text-yellow-500 font-bold mb-2">Dylan's Verdict:</p>
+                    <p class="text-gray-300 italic">"I liked Jimi Hendrix's record of this and ever since he died I've been doing it that way... Strange how when I sing it, I always feel it's a tribute to him in some kind of way."</p>
+                </div>
+            </div>
+
+            <!-- More Comparisons Coming Soon -->
+            <div class="text-center py-8">
+                <h3 class="text-xl font-bold text-gray-400 mb-4">More "Who Did It Better?" Coming Soon</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">Hurt: Johnny Cash vs Nine Inch Nails</span>
+                    <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">Knockin' on Heaven's Door: Dylan vs Guns N' Roses</span>
+                    <span class="bg-gray-800 px-4 py-2 rounded-full text-sm">Make You Feel My Love: Dylan vs Adele</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2025 bobdylan.bio - A Biography Domains Site</p>
+            <p class="text-sm mt-2">Vote for your favorite version!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize or get votes from localStorage
+        function getVotes() {
+            const stored = localStorage.getItem('watchtower_votes');
+            if (stored) {
+                return JSON.parse(stored);
+            }
+            // Start with some base votes for engagement
+            return { dylan: 1247, hendrix: 2834 };
+        }
+
+        function saveVotes(votes) {
+            localStorage.setItem('watchtower_votes', JSON.stringify(votes));
+        }
+
+        function hasVoted() {
+            return localStorage.getItem('watchtower_voted') === 'true';
+        }
+
+        function setVoted() {
+            localStorage.setItem('watchtower_voted', 'true');
+        }
+
+        function updateDisplay() {
+            const votes = getVotes();
+            const total = votes.dylan + votes.hendrix;
+            const dylanPercent = total > 0 ? Math.round((votes.dylan / total) * 100) : 0;
+            const hendrixPercent = total > 0 ? Math.round((votes.hendrix / total) * 100) : 0;
+
+            document.getElementById('dylan-votes').textContent = votes.dylan.toLocaleString();
+            document.getElementById('hendrix-votes').textContent = votes.hendrix.toLocaleString();
+            document.getElementById('dylan-percent').textContent = dylanPercent + '%';
+            document.getElementById('hendrix-percent').textContent = hendrixPercent + '%';
+            document.getElementById('dylan-bar').style.width = dylanPercent + '%';
+            document.getElementById('hendrix-bar').style.width = hendrixPercent + '%';
+            document.getElementById('total-votes').textContent = 'Total votes: ' + total.toLocaleString();
+
+            // Show winner crown
+            const dylanCard = document.getElementById('dylan-card');
+            const hendrixCard = document.getElementById('hendrix-card');
+
+            if (votes.dylan > votes.hendrix) {
+                dylanCard.classList.add('is-winning');
+                hendrixCard.classList.remove('is-winning');
+            } else if (votes.hendrix > votes.dylan) {
+                hendrixCard.classList.add('is-winning');
+                dylanCard.classList.remove('is-winning');
+            }
+
+            // Disable buttons if already voted
+            if (hasVoted()) {
+                document.getElementById('vote-dylan').classList.add('voted');
+                document.getElementById('vote-hendrix').classList.add('voted');
+                document.getElementById('vote-dylan').textContent = 'Already Voted';
+                document.getElementById('vote-hendrix').textContent = 'Already Voted';
+                document.getElementById('vote-status').classList.remove('hidden');
+            }
+        }
+
+        function vote(artist) {
+            if (hasVoted()) {
+                alert('You have already voted!');
+                return;
+            }
+
+            const votes = getVotes();
+            votes[artist]++;
+            saveVotes(votes);
+            setVoted();
+            updateDisplay();
+
+            // Scroll to results
+            document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', updateDisplay);
+    </script>
+</body>
+</html>
