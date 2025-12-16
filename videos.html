@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videos - Bob Dylan</title>
-    <meta name="description" content="Watch videos featuring Bob Dylan">
+    <meta name="description" content="Watch legendary performances and interviews featuring Bob Dylan">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .hero-gradient { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
@@ -14,30 +14,39 @@
         .nav-link:hover { color: #f59e0b; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .lyrics-text { white-space: pre-wrap; font-family: Georgia, serif; line-height: 1.8; }
-        .chord { color: #f59e0b; font-weight: bold; }
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: block; }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
-    
+
     <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-yellow-500">BOB</a>
+                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
                 <div class="hidden md:flex space-x-6 text-sm">
                     <a href="/" class="nav-link text-gray-300">Home</a>
-<a href="about.html" class="nav-link text-gray-300">Biography</a>
-<a href="timeline.html" class="nav-link text-gray-300">Timeline</a>
-<a href="videos.html" class="nav-link text-white">Videos</a>
-<a href="gallery.html" class="nav-link text-gray-300">Gallery</a>
-<a href="discography.html" class="nav-link text-gray-300">Discography</a>
-<a href="songs.html" class="nav-link text-gray-300">Songs & Lyrics</a>
-<a href="performances.html" class="nav-link text-gray-300">Performances</a>
-<a href="legacy.html" class="nav-link text-gray-300">Legacy</a>
-<a href="sources.html" class="nav-link text-gray-300">Sources</a>
-
+                    <a href="about.html" class="nav-link text-gray-300">Biography</a>
+                    <a href="timeline.html" class="nav-link text-gray-300">Timeline</a>
+                    <a href="videos.html" class="nav-link text-white">Videos</a>
+                    <a href="gallery.html" class="nav-link text-gray-300">Gallery</a>
+                    <a href="discography.html" class="nav-link text-gray-300">Discography</a>
+                    <a href="songs.html" class="nav-link text-gray-300">Songs</a>
+                    <a href="performances.html" class="nav-link text-gray-300">Performances</a>
+                    <a href="legacy.html" class="nav-link text-gray-300">Legacy</a>
                 </div>
-                <button class="md:hidden text-white" onclick="toggleMobileMenu()">☰</button>
+                <button class="md:hidden text-white text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('open')">&#9776;</button>
+            </div>
+            <div id="mobile-menu" class="md:hidden mt-4 space-y-2">
+                <a href="/" class="block py-2 text-gray-300">Home</a>
+                <a href="about.html" class="block py-2 text-gray-300">Biography</a>
+                <a href="timeline.html" class="block py-2 text-gray-300">Timeline</a>
+                <a href="videos.html" class="block py-2 text-white">Videos</a>
+                <a href="gallery.html" class="block py-2 text-gray-300">Gallery</a>
+                <a href="discography.html" class="block py-2 text-gray-300">Discography</a>
+                <a href="songs.html" class="block py-2 text-gray-300">Songs</a>
+                <a href="performances.html" class="block py-2 text-gray-300">Performances</a>
+                <a href="legacy.html" class="block py-2 text-gray-300">Legacy</a>
             </div>
         </div>
     </nav>
@@ -45,20 +54,334 @@
     <section class="hero-gradient pt-32 pb-20">
         <div class="max-w-7xl mx-auto px-4">
             <h1 class="text-5xl font-bold mb-4">Video Library</h1>
-            <p class="text-xl text-gray-300">34 videos featuring Bob Dylan</p>
+            <p class="text-xl text-gray-300">Legendary performances, interviews, and documentaries</p>
         </div>
     </section>
 
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4">
-            
+
+            <!-- Legendary Live Performances -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-yellow-500 mb-8">Legendary Live Performances</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/lzI0hvSVpzY" title="Newport Folk Festival 1965" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Newport Folk Festival 1965</h3>
+                            <p class="text-gray-400 text-sm">The controversial electric performance</p>
+                            <p class="text-gray-500 text-xs mt-2">Dylan "goes electric" and changes music history forever</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/I5lFeyUPKq4" title="Royal Albert Hall 1966 - Judas!" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Royal Albert Hall 1966 - "Judas!"</h3>
+                            <p class="text-gray-400 text-sm">The infamous confrontation with fans</p>
+                            <p class="text-gray-500 text-xs mt-2">Features the legendary audience shout and Dylan's response</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/H-yP5xR0KDM" title="Concert for Bangladesh 1971" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Concert for Bangladesh (1971)</h3>
+                            <p class="text-gray-400 text-sm">Madison Square Garden</p>
+                            <p class="text-gray-500 text-xs mt-2">Rare appearance with George Harrison</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/VBdSqk78nHw" title="The Last Waltz 1976" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">The Last Waltz (1976)</h3>
+                            <p class="text-gray-400 text-sm">The Band's farewell concert</p>
+                            <p class="text-gray-500 text-xs mt-2">Performing "Forever Young" with The Band</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/x9WhySWa7-4" title="Rolling Thunder Revue 1975" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Rolling Thunder Revue (1975)</h3>
+                            <p class="text-gray-400 text-sm">Dylan's theatrical touring circus</p>
+                            <p class="text-gray-500 text-xs mt-2">White face paint era performances</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/YqJAnQTwmJs" title="Live Aid 1985" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Live Aid (1985)</h3>
+                            <p class="text-gray-400 text-sm">Philadelphia with Keith Richards</p>
+                            <p class="text-gray-500 text-xs mt-2">The legendary (chaotic) charity set</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Television Appearances -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-yellow-500 mb-8">Television Appearances</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/vWwgrjjIMXA" title="The Ed Sullivan Show" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">The Ed Sullivan Show</h3>
+                            <p class="text-gray-400 text-sm">1963 - Censorship controversy</p>
+                            <p class="text-gray-500 text-xs mt-2">CBS refused to let him play "Talkin' John Birch"</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/wC10VWDTzmU" title="Saturday Night Live 1979" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Saturday Night Live (1979)</h3>
+                            <p class="text-gray-400 text-sm">Christian period performances</p>
+                            <p class="text-gray-500 text-xs mt-2">"Gotta Serve Somebody" era</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/k6C8SX0mWP0" title="Late Night with David Letterman" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Late Night with Letterman (1984)</h3>
+                            <p class="text-gray-400 text-sm">Rare TV interview and performance</p>
+                            <p class="text-gray-500 text-xs mt-2">Promoting "Infidels"</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/MGkwkz9FeGA" title="MTV Unplugged 1994" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">MTV Unplugged (1994)</h3>
+                            <p class="text-gray-400 text-sm">Acoustic return to classics</p>
+                            <p class="text-gray-500 text-xs mt-2">Intimate acoustic performances</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/SWnRq8270qk" title="Grammy Awards 1991" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Grammy Awards (1991)</h3>
+                            <p class="text-gray-400 text-sm">Lifetime Achievement Award</p>
+                            <p class="text-gray-500 text-xs mt-2">Powerful "Masters of War" during Gulf War</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/8YWl7tDGUPA" title="White House Performance 2010" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">White House (2010)</h3>
+                            <p class="text-gray-400 text-sm">For President Obama</p>
+                            <p class="text-gray-500 text-xs mt-2">"The Times They Are a-Changin'"</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Festival Performances -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-yellow-500 mb-8">Festival Performances</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/k9sB7MwipqM" title="Isle of Wight 1969" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Isle of Wight Festival (1969)</h3>
+                            <p class="text-gray-400 text-sm">Return from seclusion</p>
+                            <p class="text-gray-500 text-xs mt-2">First major concert after motorcycle accident</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/d2R5BPIiCqg" title="Woodstock '94" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Woodstock '94</h3>
+                            <p class="text-gray-400 text-sm">25th Anniversary</p>
+                            <p class="text-gray-500 text-xs mt-2">Dylan closes the festival</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/RXBb2WC7xEs" title="Bonnaroo 2004" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Bonnaroo (2004)</h3>
+                            <p class="text-gray-400 text-sm">Manchester, Tennessee</p>
+                            <p class="text-gray-500 text-xs mt-2">Introducing Dylan to a new generation</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/SqxCLCgO_lk" title="Desert Trip 2016" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Desert Trip / Oldchella (2016)</h3>
+                            <p class="text-gray-400 text-sm">Indio, California</p>
+                            <p class="text-gray-500 text-xs mt-2">Rock legends reunion festival</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Historical & Award Ceremonies -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-yellow-500 mb-8">Historical Moments & Awards</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/BSSf2jLjW0c" title="March on Washington 1963" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">March on Washington (1963)</h3>
+                            <p class="text-gray-400 text-sm">Civil Rights Movement</p>
+                            <p class="text-gray-500 text-xs mt-2">Performing at the Lincoln Memorial</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/bpZvg_FjL3Q" title="Hurricane Carter Benefit 1975" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Hurricane Carter Benefit (1975)</h3>
+                            <p class="text-gray-400 text-sm">Madison Square Garden</p>
+                            <p class="text-gray-500 text-xs mt-2">Premiering "Hurricane"</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/H1zb8SU5Y0Y" title="Farm Aid 1985" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Farm Aid (1985)</h3>
+                            <p class="text-gray-400 text-sm">Founding performer</p>
+                            <p class="text-gray-500 text-xs mt-2">Supporting American farmers</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/0RPkJeziNyQ" title="30th Anniversary Concert 1992" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">30th Anniversary Concert (1992)</h3>
+                            <p class="text-gray-400 text-sm">Madison Square Garden</p>
+                            <p class="text-gray-500 text-xs mt-2">Star-studded tribute celebration</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/Rs0MRrLj5hc" title="Kennedy Center Honors 1997" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Kennedy Center Honors (1997)</h3>
+                            <p class="text-gray-400 text-sm">Presidential honor</p>
+                            <p class="text-gray-500 text-xs mt-2">Bruce Springsteen's moving speech</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/dQD1i2OP8NQ" title="Oscar Win 2001" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Oscar Win - "Things Have Changed" (2001)</h3>
+                            <p class="text-gray-400 text-sm">Academy Awards</p>
+                            <p class="text-gray-500 text-xs mt-2">Best Original Song for Wonder Boys</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Acoustic & Intimate -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-yellow-500 mb-8">Acoustic & Intimate Performances</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/hqXLfEKzL3w" title="Supper Club 1993" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Supper Club Acoustic (1993)</h3>
+                            <p class="text-gray-400 text-sm">New York City</p>
+                            <p class="text-gray-500 text-xs mt-2">Rare intimate club performance</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/6gBV-Nzq7Pg" title="MusiCares 2015" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">MusiCares Person of the Year (2015)</h3>
+                            <p class="text-gray-400 text-sm">33-minute acceptance speech</p>
+                            <p class="text-gray-500 text-xs mt-2">Dylan reflects on his entire career</p>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/qC-KC7lZRTY" title="Sinatra Tribute 1995" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-yellow-500">Sinatra 80th Birthday (1995)</h3>
+                            <p class="text-gray-400 text-sm">Shrine Auditorium</p>
+                            <p class="text-gray-500 text-xs mt-2">"Restless Farewell" tribute</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </section>
 
-    
     <footer class="bg-gray-900 border-t border-gray-800 py-12">
         <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
-            <p>&copy; 2025 bob-dylan.bio - A Biography Domains Site</p>
+            <p>&copy; 2025 bobdylan.bio - A Biography Domains Site</p>
             <p class="text-sm mt-2">Research-based biography with documented sources</p>
         </div>
     </footer>

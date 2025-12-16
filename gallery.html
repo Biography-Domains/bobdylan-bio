@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Bob Dylan</title>
-    <meta name="description" content="Photo gallery of Bob Dylan">
+    <title>Visual Archive - Bob Dylan</title>
+    <meta name="description" content="A visual archive documenting Bob Dylan's life and career through iconic photographs">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .hero-gradient { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
@@ -12,581 +12,219 @@
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
         .nav-link { transition: color 0.2s; }
         .nav-link:hover { color: #f59e0b; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .lyrics-text { white-space: pre-wrap; font-family: Georgia, serif; line-height: 1.8; }
-        .chord { color: #f59e0b; font-weight: bold; }
+        .era-card { border-left: 4px solid #f59e0b; }
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: block; }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
-    
+
     <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-yellow-500">BOB</a>
+                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
                 <div class="hidden md:flex space-x-6 text-sm">
                     <a href="/" class="nav-link text-gray-300">Home</a>
-<a href="about.html" class="nav-link text-gray-300">Biography</a>
-<a href="timeline.html" class="nav-link text-gray-300">Timeline</a>
-<a href="videos.html" class="nav-link text-gray-300">Videos</a>
-<a href="gallery.html" class="nav-link text-white">Gallery</a>
-<a href="discography.html" class="nav-link text-gray-300">Discography</a>
-<a href="songs.html" class="nav-link text-gray-300">Songs & Lyrics</a>
-<a href="performances.html" class="nav-link text-gray-300">Performances</a>
-<a href="legacy.html" class="nav-link text-gray-300">Legacy</a>
-<a href="sources.html" class="nav-link text-gray-300">Sources</a>
-
+                    <a href="about.html" class="nav-link text-gray-300">Biography</a>
+                    <a href="timeline.html" class="nav-link text-gray-300">Timeline</a>
+                    <a href="videos.html" class="nav-link text-gray-300">Videos</a>
+                    <a href="gallery.html" class="nav-link text-white">Gallery</a>
+                    <a href="discography.html" class="nav-link text-gray-300">Discography</a>
+                    <a href="songs.html" class="nav-link text-gray-300">Songs</a>
+                    <a href="performances.html" class="nav-link text-gray-300">Performances</a>
+                    <a href="legacy.html" class="nav-link text-gray-300">Legacy</a>
                 </div>
-                <button class="md:hidden text-white" onclick="toggleMobileMenu()">☰</button>
+                <button class="md:hidden text-white text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('open')">&#9776;</button>
+            </div>
+            <div id="mobile-menu" class="md:hidden mt-4 space-y-2">
+                <a href="/" class="block py-2 text-gray-300">Home</a>
+                <a href="about.html" class="block py-2 text-gray-300">Biography</a>
+                <a href="timeline.html" class="block py-2 text-gray-300">Timeline</a>
+                <a href="videos.html" class="block py-2 text-gray-300">Videos</a>
+                <a href="gallery.html" class="block py-2 text-white">Gallery</a>
+                <a href="discography.html" class="block py-2 text-gray-300">Discography</a>
+                <a href="songs.html" class="block py-2 text-gray-300">Songs</a>
+                <a href="performances.html" class="block py-2 text-gray-300">Performances</a>
+                <a href="legacy.html" class="block py-2 text-gray-300">Legacy</a>
             </div>
         </div>
     </nav>
 
     <section class="hero-gradient pt-32 pb-20">
         <div class="max-w-7xl mx-auto px-4">
-            <h1 class="text-5xl font-bold mb-4">Photo Gallery</h1>
-            <p class="text-xl text-gray-300">41 images from Bob Dylan's life and career</p>
+            <h1 class="text-5xl font-bold mb-4">Visual Archive</h1>
+            <p class="text-xl text-gray-300">Documenting six decades of an American icon</p>
         </div>
     </section>
 
     <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            
-            <section class="mb-16">
-                <h2 class="text-2xl font-bold text-yellow-500 mb-6">Portraits</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-                    
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Bob Dylan with Harmo" alt="Bob Dylan with Harmonica, 1963"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+        <div class="max-w-5xl mx-auto px-4">
+
+            <!-- Introduction -->
+            <div class="mb-16 text-center">
+                <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+                    From the coffeehouses of Greenwich Village to the stages of the world,
+                    Bob Dylan's visual history captures the evolution of an artist who
+                    continuously reinvented himself while remaining unmistakably himself.
+                </p>
+            </div>
+
+            <!-- Era: Folk Period 1961-1964 -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-lg mr-4">1961-1964</div>
+                    <h2 class="text-3xl font-bold">The Folk Prophet</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Gerde's Folk City, 1961</h3>
+                        <p class="text-gray-400 text-sm mb-3">Photographer: Joe Alper</p>
+                        <p class="text-gray-300">The 20-year-old Dylan performing at the legendary Greenwich Village club where he was discovered. Harmonica holder around his neck, worn guitar in hand, eyes closed in concentration. This image captures the raw hunger of a young artist on the verge of transforming American music.</p>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Bob Dylan with Harmonica, 1963</h3>
-                        <p class="text-gray-400 text-xs">1963 • Don Hunstein</p>
-                        <p class="text-gray-500 text-xs mt-2">Young Dylan with harmonica around his neck, early Columbia Records promotional p...</p>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">The Freewheelin' Sessions, 1963</h3>
+                        <p class="text-gray-400 text-sm mb-3">Photographer: Don Hunstein</p>
+                        <p class="text-gray-300">Dylan and Suze Rotolo walking arm-in-arm down Jones Street in Greenwich Village. The outtakes from this session became some of the most iconic images in rock history, capturing young love and artistic freedom in the cold New York winter.</p>
+                    </div>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">March on Washington, 1963</h3>
+                        <p class="text-gray-400 text-sm mb-3">Press Photography</p>
+                        <p class="text-gray-300">Dylan performing at the Lincoln Memorial steps during the historic civil rights march. Standing beside Joan Baez, his acoustic guitar a weapon of conscience, his presence linked music to social change in a way that would define a generation.</p>
+                    </div>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Newport Folk Festival, 1963</h3>
+                        <p class="text-gray-400 text-sm mb-3">Photographer: Jim Marshall</p>
+                        <p class="text-gray-300">The young folk messiah on the Newport stage, acoustic guitar and harmonica, crowned by the folk establishment. Within two years, this same stage would witness one of the most controversial moments in music history.</p>
                     </div>
                 </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Dylan Freewheelin' A" alt="Dylan Freewheelin' Album Cover Outtake"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+            </div>
+
+            <!-- Era: Electric Revolution 1965-1966 -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-lg mr-4">1965-1966</div>
+                    <h2 class="text-3xl font-bold">Electric Revolution</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Newport Goes Electric, 1965</h3>
+                        <p class="text-gray-400 text-sm mb-3">Press Photography</p>
+                        <p class="text-gray-300">The moment that split folk music in two. Dylan in a leather jacket with a Fender Stratocaster, backed by the Paul Butterfield Blues Band. The audience's reaction - boos mixing with cheers - marked the end of one era and the birth of another.</p>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Dylan Freewheelin' Album Cover Outtake</h3>
-                        <p class="text-gray-400 text-xs">1963 • Don Hunstein</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan walking down Jones Street in Greenwich Village...</p>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Highway 61 Sessions, 1965</h3>
+                        <p class="text-gray-400 text-sm mb-3">Photographer: Daniel Kramer</p>
+                        <p class="text-gray-300">Wild curly hair, Ray-Ban sunglasses, polka-dot shirt - the visual transformation was as radical as the musical one. Daniel Kramer's photographs from this period captured Dylan at his most iconic and confrontational.</p>
+                    </div>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Don't Look Back Tour, 1965</h3>
+                        <p class="text-gray-400 text-sm mb-3">Cinematography: D.A. Pennebaker</p>
+                        <p class="text-gray-300">Behind-the-scenes footage and stills from the legendary documentary. Dylan in hotel rooms, backstage, in limos - the myth-making machine in full operation, revealing and concealing in equal measure.</p>
+                    </div>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">The Manchester "Judas" Concert, 1966</h3>
+                        <p class="text-gray-400 text-sm mb-3">Audience Photography</p>
+                        <p class="text-gray-300">Grainy images from the infamous concert where an audience member screamed "Judas!" and Dylan responded by turning to his band and saying "Play it loud." The tension between artist and audience frozen in time.</p>
                     </div>
                 </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Highway 61 Revisited" alt="Highway 61 Revisited Era Portrait"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+            </div>
+
+            <!-- Era: Basement Tapes & Nashville 1967-1974 -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-lg mr-4">1967-1974</div>
+                    <h2 class="text-3xl font-bold">The Reclusive Years</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Big Pink Sessions, 1967</h3>
+                        <p class="text-gray-400 text-sm mb-3">Informal Photography</p>
+                        <p class="text-gray-300">Rare images from the basement of Big Pink in Woodstock, where Dylan and The Band recorded the legendary Basement Tapes. Bearded, recovering from his motorcycle accident, surrounded by instruments and creative chaos.</p>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Highway 61 Revisited Era Portrait</h3>
-                        <p class="text-gray-400 text-xs">1965 • Daniel Kramer</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan in leather jacket with curly hair during electric period...</p>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Isle of Wight Festival, 1969</h3>
+                        <p class="text-gray-400 text-sm mb-3">Press Photography</p>
+                        <p class="text-gray-300">Dylan's return to live performance after years of seclusion. White suit, trimmed beard, a more subdued presence than the manic energy of 1966. A quarter million people came to witness the recluse emerge.</p>
+                    </div>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Nashville Skyline, 1969</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300">The album cover that shocked fans: Dylan smiling. The most famously enigmatic artist in rock history looking genuinely happy, country style hat tilted back, a complete departure from the scowling prophet of the '60s.</p>
+                    </div>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Blood on the Tracks Era, 1974</h3>
+                        <p class="text-gray-400 text-sm mb-3">Columbia Records</p>
+                        <p class="text-gray-300">Promotional shots for the comeback album. The curly hair returned, but the eyes told a different story - the pain of his divorce with Sara evident in every frame. Art imitating life at its most raw.</p>
                     </div>
                 </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Blood on the Tracks " alt="Blood on the Tracks Session Portrait"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+            </div>
+
+            <!-- Era: Rolling Thunder 1975-1976 -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-lg mr-4">1975-1976</div>
+                    <h2 class="text-3xl font-bold">Rolling Thunder Revue</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">White Face Paint Era</h3>
+                        <p class="text-gray-400 text-sm mb-3">Various Press</p>
+                        <p class="text-gray-300">Dylan in flowing scarves, wide-brimmed hat, face painted white in commedia dell'arte style. The Rolling Thunder Revue transformed rock concert into traveling circus, and Dylan into a character from his own mythology.</p>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Blood on the Tracks Session Portrait</h3>
-                        <p class="text-gray-400 text-xs">1974 • Unknown</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan during recording sessions for Blood on the Tracks...</p>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Hurricane Carter Benefit, 1975</h3>
+                        <p class="text-gray-400 text-sm mb-3">Press Photography</p>
+                        <p class="text-gray-300">Madison Square Garden, flowers in his hat, performing alongside Muhammad Ali and a constellation of stars. Dylan the activist returned, championing the wrongly imprisoned boxer with passion and spectacle.</p>
                     </div>
                 </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Never Ending Tour Po" alt="Never Ending Tour Portrait"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+            </div>
+
+            <!-- Era: Later Years -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-lg mr-4">1988-Present</div>
+                    <h2 class="text-3xl font-bold">The Never Ending Tour</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Rock and Roll Hall of Fame, 1988</h3>
+                        <p class="text-gray-400 text-sm mb-3">Press Photography</p>
+                        <p class="text-gray-300">Inducted by Bruce Springsteen, Dylan accepted with characteristic obliqueness. "I learned my trade from Woody Guthrie, but I learned from Robert Johnson." A passing of torches in both directions.</p>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Never Ending Tour Portrait</h3>
-                        <p class="text-gray-400 text-xs">1988 • Various</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan in performance attire from the Never Ending Tour era...</p>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Nobel Prize Reception, 2016</h3>
+                        <p class="text-gray-400 text-sm mb-3">Swedish Academy</p>
+                        <p class="text-gray-300">Though he didn't attend the ceremony in person, the images of his Nobel Prize represent the ultimate recognition of songwriting as literature. Patti Smith performed in his stead, overcome with emotion.</p>
+                    </div>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">Modern Tour Photography</h3>
+                        <p class="text-gray-400 text-sm mb-3">Various</p>
+                        <p class="text-gray-300">Contemporary images show Dylan at the piano now more often than with guitar, his voice evolved into something rawer and more ancient. The Never Ending Tour continues, 3,000+ shows and counting.</p>
+                    </div>
+                    <div class="era-card bg-gray-800 rounded-r-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-2">The Painter</h3>
+                        <p class="text-gray-400 text-sm mb-3">Exhibition Photography</p>
+                        <p class="text-gray-300">Dylan's visual art exhibitions have revealed another dimension of his creativity. His paintings and ironwork sculptures, often depicting American landscapes and figures, continue the conversation between word and image.</p>
                     </div>
                 </div>
-                </div>
-            </section>
-            <section class="mb-16">
-                <h2 class="text-2xl font-bold text-yellow-500 mb-6">Career Milestones</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-                    
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://commons.wikimedia.org/wiki/File:Bob_Dylan_Newport_1963.jpg" alt="Bob Dylan Performs at Newport Folk Festival"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Bob Dylan Performs at Newport Folk Festival</h3>
-                        <p class="text-gray-400 text-xs">1963 • Jim Marshall</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan performing acoustic set at Newport Folk Festival...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Dylan Goes Electric " alt="Dylan Goes Electric at Newport"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Dylan Goes Electric at Newport</h3>
-                        <p class="text-gray-400 text-xs">1965 • Various press photographers</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan with electric guitar and backing band at Newport...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Recording Blonde on " alt="Recording Blonde on Blonde"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Recording Blonde on Blonde</h3>
-                        <p class="text-gray-400 text-xs">1966 • Jerry Schatzberg</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan in Columbia Studios recording his double album...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=The Band Basement Ta" alt="The Band Basement Tapes Sessions"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">The Band Basement Tapes Sessions</h3>
-                        <p class="text-gray-400 text-xs">1967 • Unknown</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan and The Band during Woodstock sessions...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Rolling Thunder Revu" alt="Rolling Thunder Revue Tour"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Rolling Thunder Revue Tour</h3>
-                        <p class="text-gray-400 text-xs">1975 • Ken Regan</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan in white face paint during the Rolling Thunder Revue...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Oh Mercy Recording S" alt="Oh Mercy Recording Sessions"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Oh Mercy Recording Sessions</h3>
-                        <p class="text-gray-400 text-xs">1989 • Various</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan working with producer Daniel Lanois in New Orleans...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Time Out of Mind Era" alt="Time Out of Mind Era"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Time Out of Mind Era</h3>
-                        <p class="text-gray-400 text-xs">1997 • Mark Seliger</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan during promotion for Time Out of Mind album...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Nobel Prize in Liter" alt="Nobel Prize in Literature Announcement"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Nobel Prize in Literature Announcement</h3>
-                        <p class="text-gray-400 text-xs">2016 • Press pool</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan performing when Nobel Prize announcement was made...</p>
-                    </div>
-                </div>
-                </div>
-            </section>
-            <section class="mb-16">
-                <h2 class="text-2xl font-bold text-yellow-500 mb-6">Personal Life</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-                    
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Bob Dylan and Joan B" alt="Bob Dylan and Joan Baez"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Bob Dylan and Joan Baez</h3>
-                        <p class="text-gray-400 text-xs">1963 • Various</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan and Baez performing together during their romantic period...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Dylan with First Wif" alt="Dylan with First Wife Sara"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Dylan with First Wife Sara</h3>
-                        <p class="text-gray-400 text-xs">1965 • Barry Feinstein</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan and Sara Lownds on their wedding day...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Family Life in Woods" alt="Family Life in Woodstock"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Family Life in Woodstock</h3>
-                        <p class="text-gray-400 text-xs">1968 • Elliott Landy</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan with children at his Woodstock home...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Motorcycle Accident " alt="Motorcycle Accident Aftermath"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Motorcycle Accident Aftermath</h3>
-                        <p class="text-gray-400 text-xs">1966 • Press pool</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan's damaged Triumph motorcycle...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Dylan's Malibu Home" alt="Dylan's Malibu Home"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Dylan's Malibu Home</h3>
-                        <p class="text-gray-400 text-xs">1970 • Various</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan's Point Dume estate in Malibu...</p>
-                    </div>
-                </div>
-                </div>
-            </section>
-            <section class="mb-16">
-                <h2 class="text-2xl font-bold text-yellow-500 mb-6">Events & Appearances</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-                    
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://commons.wikimedia.org/wiki/File:March_on_Washington_Dylan.jpg" alt="March on Washington"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">March on Washington</h3>
-                        <p class="text-gray-400 text-xs">1963 • Various press</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan performing at the March on Washington...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Concert for Banglade" alt="Concert for Bangladesh"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Concert for Bangladesh</h3>
-                        <p class="text-gray-400 text-xs">1971 • Various</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan's surprise appearance at George Harrison's benefit concert...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=The Last Waltz" alt="The Last Waltz"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">The Last Waltz</h3>
-                        <p class="text-gray-400 text-xs">1976 • Martin Scorsese film crew</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan performing with The Band at their farewell concert...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Live Aid Appearance" alt="Live Aid Appearance"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Live Aid Appearance</h3>
-                        <p class="text-gray-400 text-xs">1985 • TV broadcast stills</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan's controversial Live Aid performance...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Rock and Roll Hall o" alt="Rock and Roll Hall of Fame Induction"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Rock and Roll Hall of Fame Induction</h3>
-                        <p class="text-gray-400 text-xs">1988 • Various press</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan being inducted into Rock and Roll Hall of Fame...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=30th Anniversary Con" alt="30th Anniversary Concert Celebration"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">30th Anniversary Concert Celebration</h3>
-                        <p class="text-gray-400 text-xs">1992 • Various</p>
-                        <p class="text-gray-500 text-xs mt-2">All-star tribute concert at Madison Square Garden...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=White House Performa" alt="White House Performance"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">White House Performance</h3>
-                        <p class="text-gray-400 text-xs">2010 • White House photographer</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan performing at White House civil rights celebration...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=MusiCares Person of " alt="MusiCares Person of the Year"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">MusiCares Person of the Year</h3>
-                        <p class="text-gray-400 text-xs">2015 • Various press</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan receiving MusiCares honor...</p>
-                    </div>
-                </div>
-                </div>
-            </section>
-            <section class="mb-16">
-                <h2 class="text-2xl font-bold text-yellow-500 mb-6">Historical Context</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-                    
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Greenwich Village Fo" alt="Greenwich Village Folk Scene"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Greenwich Village Folk Scene</h3>
-                        <p class="text-gray-400 text-xs">1961 • Fred W. McDarrah</p>
-                        <p class="text-gray-500 text-xs mt-2">The Gaslight Cafe and other Village venues where Dylan started...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Woody Guthrie Hospit" alt="Woody Guthrie Hospital Visit"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Woody Guthrie Hospital Visit</h3>
-                        <p class="text-gray-400 text-xs">1961 • Unknown</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan visiting his idol Woody Guthrie in hospital...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://commons.wikimedia.org/wiki/File:Civil_Rights_March_Dylan.jpg" alt="1960s Protest Movement"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">1960s Protest Movement</h3>
-                        <p class="text-gray-400 text-xs">1963 • Various news photographers</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan at various civil rights demonstrations...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Chelsea Hotel" alt="Chelsea Hotel"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Chelsea Hotel</h3>
-                        <p class="text-gray-400 text-xs">1965 • Various</p>
-                        <p class="text-gray-500 text-xs mt-2">The bohemian hotel where Dylan lived and wrote...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Electric Guitar Revo" alt="Electric Guitar Revolution"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Electric Guitar Revolution</h3>
-                        <p class="text-gray-400 text-xs">1965 • Press photographers</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan with Fender Stratocaster...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Woodstock Festival A" alt="Woodstock Festival Absence"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Woodstock Festival Absence</h3>
-                        <p class="text-gray-400 text-xs">1969 • Various</p>
-                        <p class="text-gray-500 text-xs mt-2">The festival held near Dylan's home, which he skipped...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Born Again Christian" alt="Born Again Christian Period"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Born Again Christian Period</h3>
-                        <p class="text-gray-400 text-xs">1979 • Various</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan during his evangelical Christian phase...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=MTV Unplugged Era" alt="MTV Unplugged Era"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">MTV Unplugged Era</h3>
-                        <p class="text-gray-400 text-xs">1994 • MTV</p>
-                        <p class="text-gray-500 text-xs mt-2">Dylan's acoustic performance for MTV...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Never Ending Tour St" alt="Never Ending Tour Statistics"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Never Ending Tour Statistics</h3>
-                        <p class="text-gray-400 text-xs">1988 • Infographic</p>
-                        <p class="text-gray-500 text-xs mt-2">Visual representation of his continuous touring...</p>
-                    </div>
-                </div>
-                </div>
-            </section>
-            <section class="mb-16">
-                <h2 class="text-2xl font-bold text-yellow-500 mb-6">Album Covers & Promotional Materials</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-                    
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Bob Dylan (Debut Alb" alt="Bob Dylan (Debut Album Cover)"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Bob Dylan (Debut Album Cover)</h3>
-                        <p class="text-gray-400 text-xs">1962 • Don Hunstein</p>
-                        <p class="text-gray-500 text-xs mt-2">Young Dylan with guitar on his debut album...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=The Freewheelin' Bob" alt="The Freewheelin' Bob Dylan"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">The Freewheelin' Bob Dylan</h3>
-                        <p class="text-gray-400 text-xs">1963 • Don Hunstein</p>
-                        <p class="text-gray-500 text-xs mt-2">Iconic cover with Dylan and Suze Rotolo walking in Greenwich Village...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Highway 61 Revisited" alt="Highway 61 Revisited Cover"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Highway 61 Revisited Cover</h3>
-                        <p class="text-gray-400 text-xs">1965 • Daniel Kramer</p>
-                        <p class="text-gray-500 text-xs mt-2">Surreal collage-style cover with Dylan in sunglasses...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Blonde on Blonde Dou" alt="Blonde on Blonde Double Album"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Blonde on Blonde Double Album</h3>
-                        <p class="text-gray-400 text-xs">1966 • Jerry Schatzberg</p>
-                        <p class="text-gray-500 text-xs mt-2">Blurred portrait of Dylan in scarf...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Nashville Skyline Co" alt="Nashville Skyline Country Era"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Nashville Skyline Country Era</h3>
-                        <p class="text-gray-400 text-xs">1969 • Elliott Landy</p>
-                        <p class="text-gray-500 text-xs mt-2">Clean-shaven Dylan in country music period...</p>
-                    </div>
-                </div>
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center">
-                        <img src="https://via.placeholder.com/400x300?text=Blood on the Tracks " alt="Blood on the Tracks Cover"
-                             class="max-h-full max-w-full object-contain"
-                             onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-sm mb-1">Blood on the Tracks Cover</h3>
-                        <p class="text-gray-400 text-xs">1975 • Paul Till</p>
-                        <p class="text-gray-500 text-xs mt-2">Profile portrait during his divorce period...</p>
-                    </div>
-                </div>
-                </div>
-            </section>
+            </div>
+
+            <!-- Photo Credits Note -->
+            <div class="bg-gray-800 rounded-xl p-8 text-center">
+                <h3 class="text-xl font-bold text-yellow-500 mb-4">About This Archive</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    This visual archive documents the photographic history of Bob Dylan through descriptions and historical context.
+                    Original photographs are held by various archives including Columbia Records, Getty Images, and the photographers' estates.
+                    For licensing inquiries, please contact the respective rights holders.
+                </p>
+            </div>
+
         </div>
     </section>
 
-    
     <footer class="bg-gray-900 border-t border-gray-800 py-12">
         <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
-            <p>&copy; 2025 bob-dylan.bio - A Biography Domains Site</p>
+            <p>&copy; 2025 bobdylan.bio - A Biography Domains Site</p>
             <p class="text-sm mt-2">Research-based biography with documented sources</p>
         </div>
     </footer>

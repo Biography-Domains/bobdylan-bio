@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biography - Robert Allen Zimmerman</title>
+    <title>Biography - Bob Dylan</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .hero-gradient { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
@@ -15,17 +15,34 @@
     <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-yellow-500">ROBERT</a>
-                <div class="hidden md:flex space-x-8">
+                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
+                <div class="hidden md:flex space-x-6 text-sm">
                     <a href="/" class="nav-link text-gray-300">Home</a>
                     <a href="about.html" class="nav-link text-white">Biography</a>
                     <a href="timeline.html" class="nav-link text-gray-300">Timeline</a>
+                    <a href="videos.html" class="nav-link text-gray-300">Videos</a>
+                    <a href="gallery.html" class="nav-link text-gray-300">Gallery</a>
+                    <a href="discography.html" class="nav-link text-gray-300">Discography</a>
+                    <a href="songs.html" class="nav-link text-gray-300">Songs</a>
+                    <a href="performances.html" class="nav-link text-gray-300">Performances</a>
                     <a href="legacy.html" class="nav-link text-gray-300">Legacy</a>
-                    <a href="sources.html" class="nav-link text-gray-300">Sources</a>
                 </div>
+                <button class="md:hidden text-white text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('open')">&#9776;</button>
+            </div>
+            <div id="mobile-menu" class="md:hidden mt-4 space-y-2">
+                <a href="/" class="block py-2 text-gray-300">Home</a>
+                <a href="about.html" class="block py-2 text-white">Biography</a>
+                <a href="timeline.html" class="block py-2 text-gray-300">Timeline</a>
+                <a href="videos.html" class="block py-2 text-gray-300">Videos</a>
+                <a href="gallery.html" class="block py-2 text-gray-300">Gallery</a>
+                <a href="discography.html" class="block py-2 text-gray-300">Discography</a>
+                <a href="songs.html" class="block py-2 text-gray-300">Songs</a>
+                <a href="performances.html" class="block py-2 text-gray-300">Performances</a>
+                <a href="legacy.html" class="block py-2 text-gray-300">Legacy</a>
             </div>
         </div>
     </nav>
+    <style>#mobile-menu { display: none; } #mobile-menu.open { display: block; }</style>
 
     <!-- Hero -->
     <section class="hero-gradient pt-32 pb-20">
@@ -158,7 +175,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-800 py-12">
         <div class="max-w-7xl mx-auto px-4 text-center text-gray-500">
-            <p>&copy; 2025 bob-dylan.bio - A Biography Domains Site</p>
+            <p>&copy; 2025 bobdylan.bio - A Biography Domains Site</p>
         </div>
     </footer>
 </body>
