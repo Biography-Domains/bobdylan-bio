@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Dylan - Interviews & Documentaries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --text: #eee;
+            --text-muted: #aaa;
+            --card-bg: #1f1f3d;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: var(--accent);
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.2);
+        }
+
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info {
+            padding: 1rem;
+        }
+
+        .video-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .video-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .video-meta span {
+            margin-right: 1rem;
+        }
+
+        .video-type {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .type-official { background: #4CAF50; color: white; }
+        .type-live { background: #FF9800; color: white; }
+        .type-cover { background: #9C27B0; color: white; }
+        .type-interview { background: #2196F3; color: white; }
+        .type-documentary { background: #F44336; color: white; }
+        .type-podcast { background: #00BCD4; color: white; }
+
+        .section-intro {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .song-section {
+            background: var(--secondary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .song-title {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 1rem;
+            background: var(--secondary);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            background: var(--secondary);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .video-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+            nav { gap: 0.5rem; }
+            .nav-link { padding: 0.3rem 0.6rem; font-size: 0.9rem; }
+        }
+        </style>
+<meta name="google-site-verification" content="lpN-knW_P6ZOPWXkw5jX-G9Y8VzXKFjirBc8XGTCrPA">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X0XPQKF54"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5X0XPQKF54');
+</script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+<a href="videos.html" class="nav-link">Videos</a>
+<a href="interviews.html" class="nav-link">Interviews</a>
+<a href="covers.html" class="nav-link">Covers</a>
+<a href="timeline.html" class="nav-link">Timeline</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Interviews & Documentaries</h1>
+<p class="subtitle">In-depth content about Bob Dylan</p>
+
+        <div class="stats-bar">
+            <div class="stat"><div class="stat-number">3</div><div class="stat-label">Interviews</div></div>
+            <div class="stat"><div class="stat-number">3</div><div class="stat-label">Documentaries</div></div>
+            <div class="stat"><div class="stat-number">2</div><div class="stat-label">Podcasts</div></div>
+            <div class="stat"><div class="stat-number">1</div><div class="stat-label">Behind the Scenes</div></div>
+        </div>
+        
+<h2>Documentaries</h2>
+<p class="section-intro">Full-length documentaries and biographical films.</p>
+<div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/W1YZOq-Tf5I"
+                        title="No Direction Home: Bob Dylan (2005) - Full Documentary"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-documentary">Documentary</span>
+                <h3 class="video-title">No Direction Home: Bob Dylan (2005) - Full Documentary</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Martin Scorsese's acclaimed documentary about Bob Dylan's life and career from 1961 to 1966. Featuring rare footage and interviews.</p>
+                <div class="video-meta">
+                    <span>Movie Central</span><span>2017</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/wD6Y1k2qgWA"
+                        title="Rolling Thunder Revue: A Bob Dylan Story by Martin Scorsese | Official Trailer | Netflix"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-documentary">Documentary</span>
+                <h3 class="video-title">Rolling Thunder Revue: A Bob Dylan Story by Martin Scorsese ...</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">A trailer for Martin Scorsese's film Rolling Thunder Revue: A Bob Dylan Story. Docudrama about the 1975-76 Rolling Thunder Revue tour.</p>
+                <div class="video-meta">
+                    <span>Netflix</span><span>2019</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/1yXo-z6i0q0"
+                        title="Bob Dylan: Trouble No More"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-documentary">Documentary</span>
+                <h3 class="video-title">Bob Dylan: Trouble No More</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Bob Dylan: Trouble No More, explores a specific time in Bob Dylan's career. The film showcases Dylan's shift to gospel music.</p>
+                <div class="video-meta">
+                    <span>Bob Dylan - Topic</span><span>2017</span>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<h2>Interviews</h2>
+<p class="section-intro">TV interviews, press conferences, and conversations.</p>
+<div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/QG6R7t7NGtM"
+                        title="Bob Dylan - CBS 60 Minutes Interview (2004)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-interview">Interview</span>
+                <h3 class="video-title">Bob Dylan - CBS 60 Minutes Interview (2004)</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Bob Dylan interview with Ed Bradley on 60 Minutes in 2004, discussing his career, songwriting, and personal life. This is a shorter clip of the full interview.</p>
+                <div class="video-meta">
+                    <span>theguitarbard</span><span>2017</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/N6-7xI2U5cE"
+                        title="Bob Dylan Interview - 'The Bootleg Series Vol. 5: Bob Dylan Live 1975' (2002)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-interview">Interview</span>
+                <h3 class="video-title">Bob Dylan Interview - 'The Bootleg Series Vol. 5: Bob Dylan ...</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Bob Dylan talks about the Rolling Thunder Revue and the Bootleg Series Volume 5.</p>
+                <div class="video-meta">
+                    <span>BobDylanVEVO</span><span>2010</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/U4c3e-uHn50"
+                        title="Bob Dylan Interview 1965 - The Queen Jane Approximately Interview"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-interview">Interview</span>
+                <h3 class="video-title">Bob Dylan Interview 1965 - The Queen Jane Approximately Inte...</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Rare audio interview with Bob Dylan from 1965, touching on his songwriting process and cultural impact. Queen Jane Approximately discussion.</p>
+                <div class="video-meta">
+                    <span>The World of Bob Dylan</span><span>2017</span>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<h2>Podcasts & Discussions</h2>
+<p class="section-intro">Podcast episodes and discussions about Bob Dylan.</p>
+<div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/u3hO9R5G1Wk"
+                        title="Broken Record Podcast: Rick Rubin and Malcolm Gladwell on Bob Dylan"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-podcast">Podcast</span>
+                <h3 class="video-title">Broken Record Podcast: Rick Rubin and Malcolm Gladwell on Bo...</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Rick Rubin and Malcolm Gladwell discuss Bob Dylan's artistry, songwriting, and cultural impact on the Broken Record podcast.</p>
+                <div class="video-meta">
+                    <span>Pushkin Industries</span><span>2020</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/l1_eGj1QjJ8"
+                        title="Bob Dylan's Greatest Song, Blowin' In The Wind | What Makes This Song Great? Ep. 94"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-podcast">Podcast</span>
+                <h3 class="video-title">Bob Dylan's Greatest Song, Blowin' In The Wind | What Makes ...</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Rick Beato analyzes the musical elements and cultural significance of Bob Dylan's "Blowin' in the Wind" in his "What Makes This Song Great?" series.</p>
+                <div class="video-meta">
+                    <span>Rick Beato</span><span>2020</span>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<h2>Behind the Scenes</h2>
+<p class="section-intro">Studio sessions, rehearsals, and making-of content.</p>
+<div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/dD7Jm-2h1X0"
+                        title="Bob Dylan - Blind Willie McTell (Alternate Take)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-documentary">Behind Scenes</span>
+                <h3 class="video-title">Bob Dylan - Blind Willie McTell (Alternate Take)</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">An alternate take of Blind Willie McTell, giving a rare glimpse into a studio session.</p>
+                <div class="video-meta">
+                    <span>BobDylanVEVO</span><span>2013</span>
+                </div>
+            </div>
+        </div>
+        
+</div>
+    </main>
+    <footer>
+        <p>&copy; 2025 | Video research powered by AI</p>
+    </footer>
+</body>
+</html>

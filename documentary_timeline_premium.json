@@ -1,0 +1,67 @@
+[
+  {
+    "id": "cold_open",
+    "title": "Cold Open",
+    "start_seconds": 0.0
+  },
+  {
+    "id": "premise",
+    "title": "Premise",
+    "start_seconds": 31.934
+  },
+  {
+    "id": "chapter_1",
+    "title": "Hibbing Iron: The Forging of Robert Zimmerman",
+    "start_seconds": 109.828
+  },
+  {
+    "id": "chapter_2",
+    "title": "Greenwich Village Prophet: The Folk Messiah Emerges",
+    "start_seconds": 231.403
+  },
+  {
+    "id": "chapter_3",
+    "title": "The Voice of a Generation",
+    "start_seconds": 352.377
+  },
+  {
+    "id": "chapter_4",
+    "title": "Electric Shock: The Rock Revolution",
+    "start_seconds": 452.591
+  },
+  {
+    "id": "chapter_5",
+    "title": "Retreat and Return: Woodstock and Rebirth",
+    "start_seconds": 602.666
+  },
+  {
+    "id": "chapter_6",
+    "title": "Blood on the Tracks: The Masterpiece of Heartbreak",
+    "start_seconds": 738.82
+  },
+  {
+    "id": "chapter_7",
+    "title": "Born Again: The Christian Years",
+    "start_seconds": 842.814
+  },
+  {
+    "id": "chapter_8",
+    "title": "Lost in the Eighties",
+    "start_seconds": 941.228
+  },
+  {
+    "id": "chapter_9",
+    "title": "The Never Ending Tour",
+    "start_seconds": 1051.943
+  },
+  {
+    "id": "chapter_10",
+    "title": "Nobel Laureate: Recognition and Legacy",
+    "start_seconds": 1151.317
+  },
+  {
+    "id": "outro",
+    "title": "Outro",
+    "start_seconds": 1293.711
+  }
+]

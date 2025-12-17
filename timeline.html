@@ -3,682 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline - Bob Dylan | Complete Chronology</title>
-    <meta name="description" content="Bob Dylan timeline - chronological history from birth in 1941 through career milestones, major albums, awards, Nobel Prize, and continuing legacy.">
-        <link rel="canonical" href="https://bobdylan.bio/timeline.html">
-    <meta property="og:title" content="Timeline - Bob Dylan | Complete Chronology">
-    <meta property="og:description" content="Bob Dylan timeline - chronological history from birth in 1941 through career milestones, major albums, awards, Nobel Prize, and continuing legacy.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bobdylan.bio/timeline.html">
-    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/0/02/Bob_Dylan_-_Azkena_Rock_Festival_2010_2.jpg">
-    <meta property="og:site_name" content="Bob Dylan Biography">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Timeline - Bob Dylan | Complete Chronology">
-    <meta name="twitter:description" content="Bob Dylan timeline - chronological history from birth in 1941 through career milestones, major albums, awards, Nobel Prize, and continuing legacy.">
-
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Bob Dylan - Biography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        .hero-gradient { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
-        .nav-link:hover { color: #f59e0b; }
-        .decade-marker { position: relative; }
-        .decade-marker::before { content: ''; position: absolute; left: -30px; top: 50%; width: 20px; height: 2px; background: #f59e0b; }
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --text: #eee;
+            --text-muted: #aaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            padding: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            background: var(--accent);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--accent);
+            padding: 1rem 2rem;
+            margin: 2rem 0;
+            background: var(--secondary);
+            font-style: italic;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 0.5rem;
+            color: var(--text-muted);
+            font-style: normal;
+            font-size: 0.9rem;
+        }
+
+        .confidence-note {
+            background: rgba(233, 69, 96, 0.1);
+            border: 1px solid var(--accent);
+            padding: 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin: 1.5rem 0;
+        }
+
+        .confidence-note strong {
+            color: var(--accent);
+        }
+
+        .myth-box {
+            background: var(--secondary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .myth-box .myth {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .myth-box .correction {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid var(--accent);
+        }
+
+        .timeline-event {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: -2.35rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .disclosures {
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        .disclosures h3 {
+            color: var(--accent);
+        }
+
+        .disclosures ul {
+            list-style-position: inside;
+            color: var(--text-muted);
+        }
+
+        footer {
+            background: var(--secondary);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            nav { gap: 1rem; }
+            .nav-link { padding: 0.3rem 0.8rem; font-size: 0.9rem; }
+        }
     </style>
-
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Timeline - Bob Dylan | Complete Chronology",
-    "description": "Complete timeline of Bob Dylan",
-    "url": "https://bobdylan.bio/timeline.html",
-    "about": {
-        "@type": "Person",
-        "name": "Bob Dylan"
-    }
-}
-    </script>
+<meta name="google-site-verification" content="lpN-knW_P6ZOPWXkw5jX-G9Y8VzXKFjirBc8XGTCrPA">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X0XPQKF54"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5X0XPQKF54');
+</script>
 </head>
-<body class="bg-gray-900 text-white">
-    <!-- Navigation -->
-        <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
-                <div class="hidden md:flex space-x-6 text-sm">
-                    <a href="/" class="nav-link text-gray-300">Home</a>
-                    <a href="about.html" class="nav-link text-gray-300">Biography</a>
-                    <a href="discography.html" class="nav-link text-gray-300">Discography</a>
-                    <a href="videos.html" class="nav-link text-gray-300">Videos</a>
-                    <a href="songs.html" class="nav-link text-gray-300">Songs</a>
-                    <a href="covers.html" class="nav-link text-gray-300">Covers</a>
-                    <a href="gallery.html" class="nav-link text-gray-300">Gallery</a>
-                </div>
-                <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-                <a href="/" class="block py-2 text-gray-300">Home</a>
-                <a href="about.html" class="block py-2 text-gray-300">Biography</a>
-                <a href="discography.html" class="block py-2 text-gray-300">Discography</a>
-                <a href="videos.html" class="block py-2 text-gray-300">Videos</a>
-                <a href="songs.html" class="block py-2 text-gray-300">Songs</a>
-                <a href="covers.html" class="block py-2 text-gray-300">Covers</a>
-                <a href="gallery.html" class="block py-2 text-gray-300">Gallery</a>
-            </div>
-        </div>
-    </nav>
-    
-
-    <!-- Hero -->
-    <section class="hero-gradient pt-32 pb-20">
-        <div class="max-w-7xl mx-auto px-4">
-            <h1 class="text-5xl font-bold mb-4">Complete Timeline</h1>
-            <p class="text-xl text-gray-300">Over 80 years of Bob Dylan's life and career</p>
-        </div>
-    </section>
-
-    <!-- Timeline Stats -->
-    <section class="py-8 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div>
-                    <p class="text-3xl font-bold text-yellow-500">55+</p>
-                    <p class="text-gray-400">Key Events</p>
-                </div>
-                <div>
-                    <p class="text-3xl font-bold text-yellow-500">1941</p>
-                    <p class="text-gray-400">Born</p>
-                </div>
-                <div>
-                    <p class="text-3xl font-bold text-yellow-500">1962</p>
-                    <p class="text-gray-400">First Album</p>
-                </div>
-                <div>
-                    <p class="text-3xl font-bold text-yellow-500">2020</p>
-                    <p class="text-gray-400">Latest Album</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline by Decade -->
-    <section class="py-16">
-        <div class="max-w-4xl mx-auto px-4">
-
-            <!-- 1940s-1950s -->
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold text-yellow-500 mb-8 decade-marker ml-8">1940s-1950s: Origins</h2>
-                <div class="space-y-4">
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-yellow-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-yellow-500 text-gray-900 font-bold px-4 py-1 rounded-lg mr-4">May 24, 1941</span>
-                            <span class="text-sm text-gray-400 uppercase">Birth</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Robert Allen Zimmerman Born in Duluth, Minnesota</h3>
-                        <p class="text-gray-400">Born to Abram and Beatrice Zimmerman at St. Mary's Hospital in Duluth.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-blue-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-blue-500 text-white font-bold px-4 py-1 rounded-lg mr-4">1947</span>
-                            <span class="text-sm text-gray-400 uppercase">Personal</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Family Moves to Hibbing, Minnesota</h3>
-                        <p class="text-gray-400">The Zimmerman family relocates to the iron mining town that will shape young Bobby's worldview.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">1954</span>
-                            <span class="text-sm text-gray-400 uppercase">Music</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Teaches Himself Piano and Guitar</h3>
-                        <p class="text-gray-400">Begins absorbing rock and roll, blues, and country music from the radio.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">1956</span>
-                            <span class="text-sm text-gray-400 uppercase">Music</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Forms First Band: The Golden Chords</h3>
-                        <p class="text-gray-400">High school rock and roll band performs at local talent shows in Hibbing.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-blue-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-blue-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Fall 1959</span>
-                            <span class="text-sm text-gray-400 uppercase">Personal</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Enrolls at University of Minnesota</h3>
-                        <p class="text-gray-400">Begins college but spends most time in Dinkytown coffeehouses discovering folk music.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 1960s -->
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold text-yellow-500 mb-8 decade-marker ml-8">1960s: The Revolution</h2>
-                <div class="space-y-4">
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-blue-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-blue-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Dec 1960</span>
-                            <span class="text-sm text-gray-400 uppercase">Personal</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Drops Out of University of Minnesota</h3>
-                        <p class="text-gray-400">Leaves college after less than two years to pursue music full-time.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jan 24, 1961</span>
-                            <span class="text-sm text-gray-400 uppercase">Career</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Arrives in New York City</h3>
-                        <p class="text-gray-400">Hitchhikes to NYC to meet his hero Woody Guthrie and enter the Greenwich Village folk scene.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Apr 11, 1961</span>
-                            <span class="text-sm text-gray-400 uppercase">Career</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">First Gerde's Folk City Performance</h3>
-                        <p class="text-gray-400">Opens for John Lee Hooker at the legendary Greenwich Village venue.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Sep 29, 1961</span>
-                            <span class="text-sm text-gray-400 uppercase">Milestone</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">New York Times Review by Robert Shelton</h3>
-                        <p class="text-gray-400">Glowing review calls Dylan "one of the most distinctive stylists to play in a Manhattan cabaret in months."</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-pink-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-pink-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Oct 1961</span>
-                            <span class="text-sm text-gray-400 uppercase">Business</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Signs with Columbia Records</h3>
-                        <p class="text-gray-400">Legendary producer John Hammond signs the 20-year-old to a major label deal.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-blue-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-blue-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Aug 9, 1962</span>
-                            <span class="text-sm text-gray-400 uppercase">Personal</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Legally Changes Name to Bob Dylan</h3>
-                        <p class="text-gray-400">Robert Zimmerman officially becomes Bob Dylan in New York Supreme Court.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Mar 19, 1962</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases Debut Album "Bob Dylan"</h3>
-                        <p class="text-gray-400">First album features mostly traditional folk covers. Sells poorly but establishes his recording career.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">May 27, 1963</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "The Freewheelin' Bob Dylan"</h3>
-                        <p class="text-gray-400">Breakthrough album featuring "Blowin' in the Wind" establishes Dylan as the voice of a generation.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jul 1963</span>
-                            <span class="text-sm text-gray-400 uppercase">Milestone</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">First Newport Folk Festival Appearance</h3>
-                        <p class="text-gray-400">Performs with Joan Baez, becoming the star of the folk revival.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Aug 28, 1963</span>
-                            <span class="text-sm text-gray-400 uppercase">Achievement</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Performs at March on Washington</h3>
-                        <p class="text-gray-400">Sings "Only a Pawn in Their Game" at the historic civil rights rally.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jan 13, 1964</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "The Times They Are a-Changin'"</h3>
-                        <p class="text-gray-400">Title track becomes a generational anthem. Peak of his protest singer period.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Aug 8, 1964</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Another Side of Bob Dylan"</h3>
-                        <p class="text-gray-400">Turn toward introspective material signals move away from protest songs.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Mar 22, 1965</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Bringing It All Back Home"</h3>
-                        <p class="text-gray-400">Goes electric on side one. "Subterranean Homesick Blues" becomes first Top 40 hit.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-red-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-red-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jul 25, 1965</span>
-                            <span class="text-sm text-gray-400 uppercase">Controversy</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Goes Electric at Newport Folk Festival</h3>
-                        <p class="text-gray-400">The most controversial performance in rock history. Folk purists are outraged.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Aug 30, 1965</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Highway 61 Revisited"</h3>
-                        <p class="text-gray-400">"Like a Rolling Stone" tops charts. Considered one of the greatest rock albums ever made.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-blue-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-blue-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Nov 22, 1965</span>
-                            <span class="text-sm text-gray-400 uppercase">Personal</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Marries Sara Lownds</h3>
-                        <p class="text-gray-400">Secret wedding to Sara Lownds in a civil ceremony on Long Island.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">May 16, 1966</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Blonde on Blonde"</h3>
-                        <p class="text-gray-400">Rock's first double album. Recorded in Nashville with legendary session musicians.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-red-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-red-500 text-white font-bold px-4 py-1 rounded-lg mr-4">May 17, 1966</span>
-                            <span class="text-sm text-gray-400 uppercase">Controversy</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">"Judas!" Heckle at Manchester Free Trade Hall</h3>
-                        <p class="text-gray-400">Fan yells "Judas!" during electric set. Dylan responds: "I don't believe you... you're a liar!"</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-blue-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-blue-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jul 29, 1966</span>
-                            <span class="text-sm text-gray-400 uppercase">Personal</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Motorcycle Accident Near Woodstock</h3>
-                        <p class="text-gray-400">Crashes motorcycle, leading to complete withdrawal from public life.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Dec 27, 1967</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "John Wesley Harding"</h3>
-                        <p class="text-gray-400">Stripped-down return. "All Along the Watchtower" later immortalized by Hendrix.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Apr 9, 1969</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Nashville Skyline"</h3>
-                        <p class="text-gray-400">Full country embrace with transformed vocal style. Duet with Johnny Cash.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 1970s -->
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold text-yellow-500 mb-8 decade-marker ml-8">1970s: Reinvention</h2>
-                <div class="space-y-4">
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jun 8, 1970</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Self Portrait"</h3>
-                        <p class="text-gray-400">Controversial double album. Rolling Stone asks "What is this shit?"</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jun 9, 1970</span>
-                            <span class="text-sm text-gray-400 uppercase">Achievement</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Receives Honorary Doctorate from Princeton</h3>
-                        <p class="text-gray-400">First of many honorary degrees, though Dylan did not attend the ceremony.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Aug 1, 1971</span>
-                            <span class="text-sm text-gray-400 uppercase">Performance</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Concert for Bangladesh</h3>
-                        <p class="text-gray-400">Surprise appearance at George Harrison's benefit concert at Madison Square Garden.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jan 3, 1974</span>
-                            <span class="text-sm text-gray-400 uppercase">Tour</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Tour 74 Begins with The Band</h3>
-                        <p class="text-gray-400">First major tour in eight years. Massive demand - over 5 million ticket requests.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jan 17, 1975</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Blood on the Tracks"</h3>
-                        <p class="text-gray-400">Masterpiece of heartbreak. Often called his greatest album.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Oct 30, 1975</span>
-                            <span class="text-sm text-gray-400 uppercase">Tour</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Rolling Thunder Revue Begins</h3>
-                        <p class="text-gray-400">Theatrical touring carnival featuring Joan Baez, Allen Ginsberg, and others.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jan 16, 1976</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Desire"</h3>
-                        <p class="text-gray-400">#1 album featuring "Hurricane" and violin throughout. Scarlet Rivera joins.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-blue-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-blue-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jun 29, 1977</span>
-                            <span class="text-sm text-gray-400 uppercase">Personal</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Divorce from Sara Finalized</h3>
-                        <p class="text-gray-400">Marriage ends after custody battle. Five children from the union.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-blue-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-blue-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Late 1978</span>
-                            <span class="text-sm text-gray-400 uppercase">Personal</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Becomes Born-Again Christian</h3>
-                        <p class="text-gray-400">Religious conversion that will define the next several years of his career.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Aug 20, 1979</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Slow Train Coming"</h3>
-                        <p class="text-gray-400">First Christian album. "Gotta Serve Somebody" wins Grammy.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 1980s -->
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold text-yellow-500 mb-8 decade-marker ml-8">1980s: Struggles & Revival</h2>
-                <div class="space-y-4">
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Feb 27, 1980</span>
-                            <span class="text-sm text-gray-400 uppercase">Award</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Wins First Grammy Award</h3>
-                        <p class="text-gray-400">Best Male Rock Vocal Performance for "Gotta Serve Somebody."</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jul 13, 1985</span>
-                            <span class="text-sm text-gray-400 uppercase">Performance</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Performs at Live Aid</h3>
-                        <p class="text-gray-400">Closes Philadelphia concert with Keith Richards and Ronnie Wood.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">1988</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Traveling Wilburys Volume 1</h3>
-                        <p class="text-gray-400">Supergroup with George Harrison, Roy Orbison, Tom Petty, Jeff Lynne.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jan 20, 1988</span>
-                            <span class="text-sm text-gray-400 uppercase">Achievement</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Inducted into Rock and Roll Hall of Fame</h3>
-                        <p class="text-gray-400">Inducted by Bruce Springsteen, who calls him "the father of my country."</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jun 7, 1988</span>
-                            <span class="text-sm text-gray-400 uppercase">Tour</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">"Never Ending Tour" Begins</h3>
-                        <p class="text-gray-400">Begins relentless touring schedule that will continue for over 30 years.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Sep 22, 1989</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Oh Mercy"</h3>
-                        <p class="text-gray-400">Daniel Lanois-produced comeback. Critics welcome return to form.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 1990s -->
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold text-yellow-500 mb-8 decade-marker ml-8">1990s: Renaissance</h2>
-                <div class="space-y-4">
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Feb 1991</span>
-                            <span class="text-sm text-gray-400 uppercase">Award</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Receives Grammy Lifetime Achievement Award</h3>
-                        <p class="text-gray-400">Jack Nicholson presents the award at the 33rd Grammy ceremony.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Oct 16, 1992</span>
-                            <span class="text-sm text-gray-400 uppercase">Achievement</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">30th Anniversary Concert at Madison Square Garden</h3>
-                        <p class="text-gray-400">All-star tribute featuring Neil Young, Eric Clapton, George Harrison, and more.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Sep 30, 1997</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Time Out of Mind"</h3>
-                        <p class="text-gray-400">Late-career masterpiece wins Album of the Year Grammy. Critical triumph.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Dec 1997</span>
-                            <span class="text-sm text-gray-400 uppercase">Achievement</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Kennedy Center Honors</h3>
-                        <p class="text-gray-400">Receives lifetime achievement honor from the Kennedy Center for the Performing Arts.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2000s-Present -->
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold text-yellow-500 mb-8 decade-marker ml-8">2000s-Present: Legacy</h2>
-                <div class="space-y-4">
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Mar 26, 2001</span>
-                            <span class="text-sm text-gray-400 uppercase">Award</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Wins Academy Award</h3>
-                        <p class="text-gray-400">Best Original Song for "Things Have Changed" from the film "Wonder Boys."</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Sep 11, 2001</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Love and Theft"</h3>
-                        <p class="text-gray-400">Acclaimed album released on the day of the September 11 attacks.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Oct 5, 2004</span>
-                            <span class="text-sm text-gray-400 uppercase">Achievement</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Publishes "Chronicles: Volume One"</h3>
-                        <p class="text-gray-400">Memoir becomes New York Times bestseller and critical success.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Aug 29, 2006</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Modern Times"</h3>
-                        <p class="text-gray-400">Debuts at #1 - first chart-topping album since 1976's "Desire."</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">2008</span>
-                            <span class="text-sm text-gray-400 uppercase">Award</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Receives Pulitzer Prize Special Citation</h3>
-                        <p class="text-gray-400">"For his profound impact on popular music and American culture."</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white font-bold px-4 py-1 rounded-lg mr-4">May 29, 2012</span>
-                            <span class="text-sm text-gray-400 uppercase">Achievement</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Receives Presidential Medal of Freedom</h3>
-                        <p class="text-gray-400">President Obama presents the nation's highest civilian honor.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-yellow-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-yellow-500 text-gray-900 font-bold px-4 py-1 rounded-lg mr-4">Oct 13, 2016</span>
-                            <span class="text-sm text-gray-400 uppercase">Nobel Prize</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Awarded Nobel Prize in Literature</h3>
-                        <p class="text-gray-400">"For having created new poetic expressions within the great American song tradition."</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Jun 19, 2020</span>
-                            <span class="text-sm text-gray-400 uppercase">Album</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Releases "Rough and Rowdy Ways"</h3>
-                        <p class="text-gray-400">First original album in 8 years. "Murder Most Foul" becomes first #1 single at age 79.</p>
-                    </div>
-
-                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-pink-500">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-pink-500 text-white font-bold px-4 py-1 rounded-lg mr-4">Dec 2020</span>
-                            <span class="text-sm text-gray-400 uppercase">Business</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Sells Entire Song Catalog to Universal Music</h3>
-                        <p class="text-gray-400">Reported $300+ million deal for over 600 copyrights spanning 60 years.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-        <footer class="bg-gray-900 border-t border-gray-800 py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-yellow-500 font-bold mb-4">BOB DYLAN</h3>
-                    <p class="text-gray-400 text-sm">The official biography site celebrating six decades of music.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Explore</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="about.html" class="hover:text-yellow-500">Biography</a></li>
-                        <li><a href="discography.html" class="hover:text-yellow-500">Discography</a></li>
-                        <li><a href="songs.html" class="hover:text-yellow-500">Songs</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Media</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="videos.html" class="hover:text-yellow-500">Videos</a></li>
-                        <li><a href="gallery.html" class="hover:text-yellow-500">Gallery</a></li>
-                        <li><a href="covers.html" class="hover:text-yellow-500">Covers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">More</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="timeline.html" class="hover:text-yellow-500">Timeline</a></li>
-                        <li><a href="performances.html" class="hover:text-yellow-500">Performances</a></li>
-                        <li><a href="legacy.html" class="hover:text-yellow-500">Legacy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2025 bobdylan.bio - A Biography Domains Site</p>
-            </div>
-        </div>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+<a href="timeline.html" class="nav-link">Timeline</a>
+<a href="methodology.html" class="nav-link">Methodology</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Bob Dylan: Timeline</h1>
+<p>A chronological view of verified events and milestones.</p>
+<div class="timeline">
+</div>
+    </main>
+    <footer>
+        <p>Research-verified biography. <a href="methodology.html" style="color: var(--accent);">View methodology</a></p>
+        <p>&copy; 2025 | Epistemic research pipeline</p>
     </footer>
 </body>
 </html>

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Along the Watchtower: Dylan vs Hendrix Covers</title>
-    <meta name="description" content="Compare Bob Dylan Bob Dylan vs <a href="https://jimihendrix.bio" class="bio-link" target="_blank">Jimi Hendrix</a> with famous covers. Watch videos, vote for favorites, and explore what makes each interpretation unique.">
-    <meta name="keywords" content="Bob Dylan, <a href="https://jimihendrix.bio" class="bio-link" target="_blank">Jimi Hendrix</a>, All Along the Watchtower, cover vs original, who did it better, best cover songs">
+    <meta name="description" content="Compare Bob Dylan Bob Dylan vs Jimi Hendrix with famous covers. Watch videos, vote for favorites, and explore what makes each interpretation unique.">
+    <meta name="keywords" content="Bob Dylan, Jimi Hendrix, All Along the Watchtower, cover vs original, who did it better, best cover songs">
 
     <!-- Open Graph / Social -->
     <meta property="og:title" content="All Along the Watchtower: Dylan vs Hendrix Covers">
-    <meta property="og:description" content="Compare Bob Dylan Bob Dylan vs <a href="https://jimihendrix.bio" class="bio-link" target="_blank">Jimi Hendrix</a> with famous covers. Watch videos, vote for favorites, and explore what makes each interpretation unique.">
+    <meta property="og:description" content="Compare Bob Dylan Bob Dylan vs Jimi Hendrix with famous covers. Watch videos, vote for favorites, and explore what makes each interpretation unique.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bobdylan.bio/vs-all-along-the-watchtower.html">
 
@@ -59,8 +59,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Bob Dylan vs <a href="https://jimihendrix.bio" class="bio-link" target="_blank">Jimi Hendrix</a>: All Along the Watchtower - Who Did It Better?",
-        "description": "Compare the original 1967 Bob Dylan recording with <a href="https://jimihendrix.bio" class="bio-link" target="_blank">Jimi Hendrix</a>'s legendary 1968 cover version",
+        "headline": "Bob Dylan vs Jimi Hendrix: All Along the Watchtower - Who Did It Better?",
+        "description": "Compare the original 1967 Bob Dylan recording with Jimi Hendrix's legendary 1968 cover version",
         "author": {"@type": "Organization", "name": "bobdylan.bio"},
         "datePublished": "2025-12-16",
         "about": [
@@ -69,6 +69,15 @@
         ]
     }
     </script>
+<meta name="google-site-verification" content="lpN-knW_P6ZOPWXkw5jX-G9Y8VzXKFjirBc8XGTCrPA">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X0XPQKF54"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5X0XPQKF54');
+</script>
 </head>
 <body class="bg-gray-900 text-white">
 
@@ -132,7 +141,7 @@
                         <p class="text-amber-200">John Wesley Harding (1967)</p>
                     </div>
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/bT7Hj-ea0VE" title="Bob Dylan - All Along the Watchtower" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/bT7Hj-ea0VE?enablejsapi=1" title="Bob Dylan - All Along the Watchtower" frameborder="0" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="p-6">
                         <h4 class="font-bold text-lg text-yellow-500 mb-3">The Original Vision</h4>
@@ -161,7 +170,7 @@
                         <p class="text-purple-200">Electric Ladyland (1968)</p>
                     </div>
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/TLV4_xaYynY" title="Jimi Hendrix - All Along the Watchtower" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/TLV4_xaYynY?enablejsapi=1" title="Jimi Hendrix - All Along the Watchtower" frameborder="0" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="p-6">
                         <h4 class="font-bold text-lg text-purple-400 mb-3">The Electric Reinvention</h4>
@@ -459,5 +468,56 @@
         });
     </script>
     </script>
+<script>
+(() => {
+  const ytIframes = Array.from(document.querySelectorAll('iframe[src*="youtube.com/embed/"]'));
+  if (!ytIframes.length) return;
+
+  // If the YouTube iframe API script already exists, don't add another.
+  const apiSrc = "https://www.youtube.com/iframe_api";
+  const hasApiScript = Array.from(document.scripts).some(s => (s.src || "").includes(apiSrc));
+
+  const initPlayers = () => {
+    if (!window.YT || !YT.Player) return;
+    const players = [];
+
+    const onStateChange = (event) => {
+      // 1 = playing
+      if (!window.YT || event.data !== YT.PlayerState.PLAYING) return;
+      for (const p of players) {
+        if (p !== event.target) {
+          try { p.pauseVideo(); } catch (_) {}
+        }
+      }
+    };
+
+    for (const iframe of ytIframes) {
+      try {
+        players.push(new YT.Player(iframe, { events: { onStateChange } }));
+      } catch (_) {
+        // If an iframe can't be wrapped, skip it.
+      }
+    }
+  };
+
+  // Chain onYouTubeIframeAPIReady if someone else defined it.
+  const prevReady = window.onYouTubeIframeAPIReady;
+  window.onYouTubeIframeAPIReady = () => {
+    try { if (typeof prevReady === "function") prevReady(); } catch (_) {}
+    initPlayers();
+  };
+
+  if (window.YT && YT.Player) {
+    initPlayers();
+    return;
+  }
+
+  if (!hasApiScript) {
+    const tag = document.createElement("script");
+    tag.src = apiSrc;
+    document.head.appendChild(tag);
+  }
+})();
+</script>
 </body>
 </html>

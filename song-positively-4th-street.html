@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positively 4th Street - Bob Dylan Videos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --text: #eee;
+            --text-muted: #aaa;
+            --card-bg: #1f1f3d;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: var(--accent);
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.2);
+        }
+
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info {
+            padding: 1rem;
+        }
+
+        .video-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .video-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .video-meta span {
+            margin-right: 1rem;
+        }
+
+        .video-type {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .type-official { background: #4CAF50; color: white; }
+        .type-live { background: #FF9800; color: white; }
+        .type-cover { background: #9C27B0; color: white; }
+        .type-interview { background: #2196F3; color: white; }
+        .type-documentary { background: #F44336; color: white; }
+        .type-podcast { background: #00BCD4; color: white; }
+
+        .section-intro {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .song-section {
+            background: var(--secondary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .song-title {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 1rem;
+            background: var(--secondary);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            background: var(--secondary);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .video-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+            nav { gap: 0.5rem; }
+            .nav-link { padding: 0.3rem 0.6rem; font-size: 0.9rem; }
+        }
+        </style>
+<meta name="google-site-verification" content="lpN-knW_P6ZOPWXkw5jX-G9Y8VzXKFjirBc8XGTCrPA">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X0XPQKF54"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5X0XPQKF54');
+</script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+<a href="videos.html" class="nav-link">Videos</a>
+<a href="interviews.html" class="nav-link">Interviews</a>
+<a href="covers.html" class="nav-link">Covers</a>
+<a href="timeline.html" class="nav-link">Timeline</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Positively 4th Street</h1>
+<p class="subtitle">Videos and performances by Bob Dylan</p>
+<h2>Official Videos</h2>
+<div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/oeq0jGhQ0x8"
+                        title="Bob Dylan - Positively 4th Street (Official Audio)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Bob Dylan - Positively 4th Street (Official Audio)</h3>
+                
+                <div class="video-meta">
+                    <span>Bob Dylan - Topic</span><span>2014</span><span>3.6M views</span>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<h2>Live Performances</h2>
+<p class="section-intro">Concert footage, TV appearances, and festival performances.</p>
+<div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/Yj7E5R-705k"
+                        title="Bob Dylan Positively 4th Street (Live in Paris 1966)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Bob Dylan Positively 4th Street (Live in Paris 1966)</h3>
+                
+                <div class="video-meta">
+                    <span>Bob Dylan</span><span>2019</span><span>1.9M views</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/iCjW43-Yf6Q"
+                        title="Bob Dylan - Positively 4th Street (Live 1966)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Bob Dylan - Positively 4th Street (Live 1966)</h3>
+                
+                <div class="video-meta">
+                    <span>DylanVault</span><span>2017</span><span>280K views</span>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<h2>Cover Versions</h2>
+<p class="section-intro">Notable covers and interpretations by other artists.</p>
+<div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/2B1w3k-4l7Y"
+                        title="Lucinda Williams - Positively 4th Street (Bob Dylan cover)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Lucinda Williams - Positively 4th Street (Bob Dylan cover)</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover by Lucinda Williams</p>
+                <div class="video-meta">
+                    <span>Lucinda Williams</span><span>2017</span><span>430K views</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/U9vJtS_32fU"
+                        title="Johnny Rivers - Positively 4th Street"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Johnny Rivers - Positively 4th Street</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover by Johnny Rivers - Topic</p>
+                <div class="video-meta">
+                    <span>Johnny Rivers - Topic</span><span>2018</span><span>150K views</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/5d1F20BwQGA"
+                        title="The Stereophonics - Positively 4th Street"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">The Stereophonics - Positively 4th Street</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover by mactrevino</p>
+                <div class="video-meta">
+                    <span>mactrevino</span><span>2008</span><span>160K views</span>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<h2>Lyric Videos</h2>
+<div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/14b51z1vH9Y"
+                        title="Bob Dylan - Positively 4th Street (Lyrics)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Bob Dylan - Positively 4th Street (Lyrics)</h3>
+                
+                <div class="video-meta">
+                    <span>TheMusicIsForever</span><span>2013</span><span>1M views</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/Qo4t9q8p5jE"
+                        title="Positively 4th Street - Bob Dylan (Lyrics)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Positively 4th Street - Bob Dylan (Lyrics)</h3>
+                
+                <div class="video-meta">
+                    <span>Oldies Lyrics</span><span>2012</span><span>250K views</span>
+                </div>
+            </div>
+        </div>
+        
+</div>
+    </main>
+    <footer>
+        <p>&copy; 2025 | Video research powered by AI</p>
+    </footer>
+</body>
+</html>

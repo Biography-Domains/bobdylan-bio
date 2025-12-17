@@ -42,6 +42,15 @@
     "url": "https://bobdylan.bio/album-time-out-of-mind.html"
 }
     </script>
+<meta name="google-site-verification" content="lpN-knW_P6ZOPWXkw5jX-G9Y8VzXKFjirBc8XGTCrPA">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X0XPQKF54"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5X0XPQKF54');
+</script>
 </head>
 <body class="bg-gray-900 text-white">
         <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
@@ -114,7 +123,7 @@
         <div class="max-w-4xl mx-auto px-4">
             <h2 class="text-2xl font-bold text-yellow-500 mb-6">Featured Performance</h2>
             <div class="video-container rounded-xl overflow-hidden">
-                <iframe src="https://www.youtube.com/embed/o_jF5NX4w8g" title="Time Out of Mind" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                <iframe src="https://www.youtube.com/embed/o_jF5NX4w8g?enablejsapi=1" title="Time Out of Mind" frameborder="0" allowfullscreen loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -168,5 +177,56 @@
             </div>
         </div>
     </footer>
+<script>
+(() => {
+  const ytIframes = Array.from(document.querySelectorAll('iframe[src*="youtube.com/embed/"]'));
+  if (!ytIframes.length) return;
+
+  // If the YouTube iframe API script already exists, don't add another.
+  const apiSrc = "https://www.youtube.com/iframe_api";
+  const hasApiScript = Array.from(document.scripts).some(s => (s.src || "").includes(apiSrc));
+
+  const initPlayers = () => {
+    if (!window.YT || !YT.Player) return;
+    const players = [];
+
+    const onStateChange = (event) => {
+      // 1 = playing
+      if (!window.YT || event.data !== YT.PlayerState.PLAYING) return;
+      for (const p of players) {
+        if (p !== event.target) {
+          try { p.pauseVideo(); } catch (_) {}
+        }
+      }
+    };
+
+    for (const iframe of ytIframes) {
+      try {
+        players.push(new YT.Player(iframe, { events: { onStateChange } }));
+      } catch (_) {
+        // If an iframe can't be wrapped, skip it.
+      }
+    }
+  };
+
+  // Chain onYouTubeIframeAPIReady if someone else defined it.
+  const prevReady = window.onYouTubeIframeAPIReady;
+  window.onYouTubeIframeAPIReady = () => {
+    try { if (typeof prevReady === "function") prevReady(); } catch (_) {}
+    initPlayers();
+  };
+
+  if (window.YT && YT.Player) {
+    initPlayers();
+    return;
+  }
+
+  if (!hasApiScript) {
+    const tag = document.createElement("script");
+    tag.src = apiSrc;
+    document.head.appendChild(tag);
+  }
+})();
+</script>
 </body>
 </html>

@@ -46,6 +46,15 @@
     }
 }
     </script>
+<meta name="google-site-verification" content="lpN-knW_P6ZOPWXkw5jX-G9Y8VzXKFjirBc8XGTCrPA">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X0XPQKF54"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5X0XPQKF54');
+</script>
 </head>
 <body class="bg-gray-900 text-white">
 
@@ -105,7 +114,7 @@
                         <p class="text-gray-300">The Freewheelin' Bob Dylan (1963)</p>
                     </div>
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/MMFj8uDubsE" title="Bob Dylan - Blowin' in the Wind" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/MMFj8uDubsE?enablejsapi=1" title="Bob Dylan - Blowin' in the Wind" frameborder="0" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="p-6">
                         <h4 class="font-bold text-lg text-yellow-500 mb-3">The Original</h4>
@@ -130,7 +139,7 @@
                         <p class="text-orange-200">In the Wind (1963)</p>
                     </div>
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/1Hhi0i0UDS0" title="Peter, Paul and Mary - Blowin' in the Wind" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/1Hhi0i0UDS0?enablejsapi=1" title="Peter, Paul and Mary - Blowin' in the Wind" frameborder="0" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="p-6">
                         <h4 class="font-bold text-lg text-orange-400 mb-3">The Hit Version</h4>
@@ -423,5 +432,56 @@
     </script>
     </script>
     <noscript>Please enable JavaScript to view comments.</noscript>
+<script>
+(() => {
+  const ytIframes = Array.from(document.querySelectorAll('iframe[src*="youtube.com/embed/"]'));
+  if (!ytIframes.length) return;
+
+  // If the YouTube iframe API script already exists, don't add another.
+  const apiSrc = "https://www.youtube.com/iframe_api";
+  const hasApiScript = Array.from(document.scripts).some(s => (s.src || "").includes(apiSrc));
+
+  const initPlayers = () => {
+    if (!window.YT || !YT.Player) return;
+    const players = [];
+
+    const onStateChange = (event) => {
+      // 1 = playing
+      if (!window.YT || event.data !== YT.PlayerState.PLAYING) return;
+      for (const p of players) {
+        if (p !== event.target) {
+          try { p.pauseVideo(); } catch (_) {}
+        }
+      }
+    };
+
+    for (const iframe of ytIframes) {
+      try {
+        players.push(new YT.Player(iframe, { events: { onStateChange } }));
+      } catch (_) {
+        // If an iframe can't be wrapped, skip it.
+      }
+    }
+  };
+
+  // Chain onYouTubeIframeAPIReady if someone else defined it.
+  const prevReady = window.onYouTubeIframeAPIReady;
+  window.onYouTubeIframeAPIReady = () => {
+    try { if (typeof prevReady === "function") prevReady(); } catch (_) {}
+    initPlayers();
+  };
+
+  if (window.YT && YT.Player) {
+    initPlayers();
+    return;
+  }
+
+  if (!hasApiScript) {
+    const tag = document.createElement("script");
+    tag.src = apiSrc;
+    document.head.appendChild(tag);
+  }
+})();
+</script>
 </body>
 </html>

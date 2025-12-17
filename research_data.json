@@ -1,1727 +1,615 @@
 {
+  "subject_name": "Bob Dylan",
+  "subject_type": "musician",
+  "domain": "bobdylan.bio",
+  "started_at": "2025-12-17T11:04:35.262026",
+  "current_phase": 10,
   "phases": {
-    "phase_1": {
+    "1": {
+      "subjectName": "Bob Dylan",
       "workingThesis": {
-        "text": "Dylan may represent a case study in how artistic authenticity becomes commodified and mythologized, though the actual mechanisms of his creative process and cultural impact remain poorly understood beneath layers of hagiography and counter-mythology",
-        "confidence": 0.15
-      },
-      "dominantNarratives": [
-        "The prophetic voice of the 1960s who abandoned folk purity for electric rock, betraying and then transcending his early audience",
-        "The inscrutable shapeshifter who constantly reinvents himself to avoid artistic and commercial stagnation",
-        "The reclusive genius whose lyrics elevated popular music to high art and earned literature's highest honors"
-      ],
-      "knownControversies": [
-        {
-          "topic": "Degree of originality in early folk compositions and ongoing plagiarism accusations",
-          "status": "disputed"
-        },
-        {
-          "topic": "Authenticity of his working-class persona versus middle-class Jewish upbringing",
-          "status": "settled"
-        },
-        {
-          "topic": "Legitimacy of Nobel Prize in Literature award for songwriter",
-          "status": "disputed"
-        },
-        {
-          "topic": "Treatment of romantic partners and allegations of emotional cruelty",
-          "status": "unresolved"
-        },
-        {
-          "topic": "Born-again Christian period and relationship with Jewish identity",
-          "status": "unresolved"
-        }
-      ],
-      "researchQuestions": [
-        "How much of Dylan's 'mysterious' persona was calculated self-protection versus genuine reclusiveness?",
-        "What role did managers, producers, and collaborators play in shaping the 'Dylan sound' that's attributed solely to him?",
-        "How do contemporaneous reviews and reactions differ from retrospective canonization?",
-        "What aspects of his business acumen and commercial calculations are downplayed in favor of artistic purity narratives?",
-        "How reliable are Dylan's own accounts of his past versus documented evidence?"
-      ],
-      "subjectMetadata": {
-        "fullName": "Robert Allen Zimmerman",
-        "birthDate": "1941-05-24",
-        "birthPlace": "Duluth, Minnesota, USA",
-        "deathDate": null,
-        "primaryOccupations": [
-          "singer-songwriter",
-          "musician",
-          "author",
-          "visual artist"
+        "thesis": "Bob Dylan appears to be a highly influential American musician and songwriter who emerged in the 1960s, known for blending folk, rock, and other genres while maintaining cultural relevance across multiple decades, though the full scope of his impact and artistic evolution requires deeper investigation",
+        "confidence": 0.25,
+        "basedOn": [
+          "general cultural knowledge",
+          "domain specification as musician"
         ],
-        "eraActive": "1961-present"
+        "knownGaps": [
+          "specific discography details",
+          "personal life and relationships",
+          "creative process and influences",
+          "business dealings and controversies",
+          "detailed timeline of artistic periods"
+        ]
       },
-      "_phase": 1,
-      "_generated_at": "2025-12-15T16:59:23.782519"
+      "keyQuestions": [
+        {
+          "question": "What are the distinct artistic periods in Dylan's career and how did his sound/style evolve?",
+          "priority": "critical",
+          "whyItMatters": "Understanding his artistic development is central to assessing his influence and legacy"
+        },
+        {
+          "question": "How did Dylan's transition from acoustic folk to electric rock impact his career and the broader music industry?",
+          "priority": "critical",
+          "whyItMatters": "This appears to be a pivotal moment that defined both his career and popular music history"
+        },
+        {
+          "question": "What role did Dylan play in social and political movements, particularly in the 1960s?",
+          "priority": "high",
+          "whyItMatters": "His connection to protest music and social change seems fundamental to his cultural significance"
+        },
+        {
+          "question": "How has Dylan's songwriting been recognized critically and academically?",
+          "priority": "high",
+          "whyItMatters": "Understanding the literary and artistic merit of his work beyond commercial success"
+        }
+      ],
+      "expectedContradictions": [
+        "Accounts of his personality and public persona",
+        "Interpretations of his song meanings and intentions",
+        "Assessment of different album periods and their relative importance",
+        "Details about his conversion periods and religious beliefs",
+        "Stories about his interactions with other musicians and collaborators"
+      ],
+      "orientingFacts": [
+        {
+          "fact": "Bob Dylan is an American musician primarily known as a songwriter and performer",
+          "confidence": 0.9,
+          "source": "domain specification and general knowledge"
+        },
+        {
+          "fact": "His career spans multiple decades with apparent cultural significance",
+          "confidence": 0.8,
+          "source": "general cultural awareness"
+        },
+        {
+          "fact": "He is associated with folk music and the 1960s counterculture movement",
+          "confidence": 0.7,
+          "source": "general cultural knowledge"
+        }
+      ]
     },
-    "phase_2": {
-      "secondarySources": [
-        {
-          "id": "src_shelton_2011",
-          "type": "biography",
-          "title": "No Direction Home: The Life and Music of Bob Dylan",
-          "author": "Robert Shelton",
-          "year": 2011,
-          "publisher": "Da Capo Press",
-          "distanceFromSubject": "direct",
-          "biasNotes": "Close friend and early champion, may overemphasize own role in Dylan's discovery",
-          "keyContributions": [
-            "Early Greenwich Village period",
-            "First-hand accounts of Dylan's transformation"
-          ]
-        },
-        {
-          "id": "src_sounes_2001",
-          "type": "biography",
-          "title": "Down the Highway: The Life of Bob Dylan",
-          "author": "Howard Sounes",
-          "year": 2001,
-          "publisher": "Grove Press",
-          "distanceFromSubject": "indirect",
-          "biasNotes": "Unauthorized biography, Dylan refused cooperation, relies heavily on interviews with associates",
-          "keyContributions": [
-            "Personal relationships",
-            "Financial dealings",
-            "Family life details"
-          ]
-        },
-        {
-          "id": "src_heylin_2021",
-          "type": "biography",
-          "title": "The Double Life of Bob Dylan: A Restless, Hungry Feeling, 1941-1966",
-          "author": "Clinton Heylin",
-          "year": 2021,
-          "publisher": "Little, Brown",
-          "distanceFromSubject": "indirect",
-          "biasNotes": "Dylan scholar with encyclopedic knowledge but sometimes speculative, focuses on contradictions",
-          "keyContributions": [
-            "Detailed chronology",
-            "Myth debunking",
-            "Recording session documentation"
-          ]
-        },
-        {
-          "id": "src_scorsese_2005",
-          "type": "documentary",
-          "title": "No Direction Home: Bob Dylan",
-          "author": "Martin Scorsese",
-          "year": 2005,
-          "publisher": "PBS/BBC",
-          "distanceFromSubject": "institutional",
-          "biasNotes": "Had Dylan's cooperation and archive access, may present sanitized version",
-          "keyContributions": [
-            "Rare footage",
-            "Contemporary interviews",
-            "Dylan's own narration"
-          ]
-        },
-        {
-          "id": "src_gray_2006",
-          "type": "biography",
-          "title": "The Bob Dylan Encyclopedia",
-          "author": "Michael Gray",
-          "year": 2006,
-          "publisher": "Continuum",
-          "distanceFromSubject": "indirect",
-          "biasNotes": "Academic approach but sometimes overly reverential, comprehensive but may lack critical distance",
-          "keyContributions": [
-            "Comprehensive reference",
-            "Literary influences",
-            "Song analysis"
-          ]
-        },
-        {
-          "id": "src_marcus_1975",
-          "type": "essay",
-          "title": "Invisible Republic: Bob Dylan's Basement Tapes",
-          "author": "Greil Marcus",
-          "year": 1997,
-          "publisher": "Henry Holt",
-          "distanceFromSubject": "indirect",
-          "biasNotes": "Cultural critic perspective, may overintellectualize Dylan's work",
-          "keyContributions": [
-            "Cultural context",
-            "Americana connections",
-            "Basement Tapes period"
-          ]
-        },
-        {
-          "id": "src_wilentz_2010",
-          "type": "biography",
-          "title": "Bob Dylan in America",
-          "author": "Sean Wilentz",
-          "year": 2010,
-          "publisher": "Doubleday",
-          "distanceFromSubject": "indirect",
-          "biasNotes": "Historian's perspective, had some access to Dylan, focuses on American cultural tradition",
-          "keyContributions": [
-            "Historical context",
-            "American musical traditions",
-            "Political themes"
-          ]
-        }
-      ],
-      "eventMatrix": [
-        {
-          "eventId": "evt_name_change_timing",
-          "eventDescription": "When exactly Dylan changed his name from Robert Zimmerman",
-          "sourcesAgreeing": 3,
-          "sourcesDisagreeing": 4,
-          "disagreementNotes": "Sources disagree on whether it was during University of Minnesota or earlier in high school"
-        },
-        {
-          "eventId": "evt_motorcycle_accident",
-          "eventDescription": "Severity and impact of 1966 motorcycle accident",
-          "sourcesAgreeing": 2,
-          "sourcesDisagreeing": 5,
-          "disagreementNotes": "Major disagreement on whether accident was serious or excuse for retreat from public life"
-        },
-        {
-          "eventId": "evt_going_electric",
-          "eventDescription": "Decision to go electric at Newport Folk Festival 1965",
-          "sourcesAgreeing": 6,
-          "sourcesDisagreeing": 1,
-          "disagreementNotes": "Most agree it was planned, Gray suggests it was more spontaneous reaction to sound issues"
-        },
-        {
-          "eventId": "evt_born_again_period",
-          "eventDescription": "Duration and sincerity of Christian conversion 1978-1981",
-          "sourcesAgreeing": 4,
-          "sourcesDisagreeing": 3,
-          "disagreementNotes": "Disagreement over whether conversion was genuine spiritual experience or artistic phase"
-        },
-        {
-          "eventId": "evt_sara_marriage_breakdown",
-          "eventDescription": "Reasons for breakdown of marriage to Sara Lownds",
-          "sourcesAgreeing": 2,
-          "sourcesDisagreeing": 5,
-          "disagreementNotes": "Major disagreement between infidelity claims versus incompatible lifestyles"
-        },
-        {
-          "eventId": "evt_joan_baez_relationship",
-          "eventDescription": "Nature and timeline of relationship with Joan Baez",
-          "sourcesAgreeing": 5,
-          "sourcesDisagreeing": 2,
-          "disagreementNotes": "Most agree it was romantic and professional, Heylin questions romantic aspect"
-        },
-        {
-          "eventId": "evt_woodstock_retreat",
-          "eventDescription": "Activities during 1966-1967 Woodstock retreat period",
-          "sourcesAgreeing": 3,
-          "sourcesDisagreeing": 4,
-          "disagreementNotes": "Disagreement over whether he was recovering from accident or deliberately avoiding public life"
-        },
-        {
-          "eventId": "evt_first_electric_sessions",
-          "eventDescription": "Details of first electric recording sessions in 1965",
-          "sourcesAgreeing": 6,
-          "sourcesDisagreeing": 1,
-          "disagreementNotes": "Most sources agree on basic timeline, Marcus disputes some musician credits"
-        }
-      ],
-      "languageReuseFlags": [
-        {
-          "phrase": "voice of a generation",
-          "firstAppearance": "src_shelton_2011",
-          "copiedBy": [
-            "src_sounes_2001",
-            "src_gray_2006"
-          ],
-          "concernLevel": "medium"
-        },
-        {
-          "phrase": "Judas moment at Newport",
-          "firstAppearance": "src_marcus_1975",
-          "copiedBy": [
-            "src_heylin_2021",
-            "src_scorsese_2005"
-          ],
-          "concernLevel": "low"
-        },
-        {
-          "phrase": "mysterious motorcycle accident",
-          "firstAppearance": "src_shelton_2011",
-          "copiedBy": [
-            "src_sounes_2001",
-            "src_gray_2006",
-            "src_heylin_2021"
-          ],
-          "concernLevel": "high"
-        }
-      ],
-      "gapsIdentified": [
-        "Detailed coverage of 1970s family life and parenting",
-        "Business and financial decision-making throughout career",
-        "Relationships with backing musicians beyond famous collaborations",
-        "Daily routines and creative process during productive periods",
-        "International tours and reception outside English-speaking countries",
-        "Influence of visual arts and painting on songwriting",
-        "Mentorship of younger artists in later career"
-      ],
-      "_phase": 2,
-      "_generated_at": "2025-12-15T16:59:55.877024"
+    "2": {
+      "sourceRegistry": [],
+      "eventMatrix": [],
+      "coverageAnalysis": {
+        "wellCoveredPeriods": [],
+        "poorlyCoveredPeriods": [
+          "Unable to determine without source materials"
+        ],
+        "overdocumentedTopics": [],
+        "underdocumentedTopics": [
+          "Unable to determine without source materials"
+        ]
+      }
     },
-    "phase_3": {
+    "3": {
       "primaryDocuments": [
         {
-          "id": "doc_newport_1965_press",
-          "type": "interview",
-          "title": "Press conference following Newport Folk Festival electric performance",
-          "date": "1965-07-25",
-          "proximity": "direct",
-          "location": "Newport Folk Festival archives, Smithsonian Folkways",
-          "verbatimAvailable": true,
-          "significance": "Dylan's immediate reaction to the controversial electric performance that marked his shift from folk to rock"
-        },
-        {
-          "id": "doc_playboy_1966",
-          "type": "interview",
-          "title": "Playboy Magazine Interview with Nat Hentoff",
-          "date": "1966-03-01",
-          "proximity": "direct",
-          "location": "Playboy Magazine archives",
-          "verbatimAvailable": true,
-          "significance": "Extensive interview during Dylan's most creative period, revealing his artistic philosophy and influences"
-        },
-        {
-          "id": "doc_rolling_stone_1969",
-          "type": "interview",
-          "title": "Rolling Stone Interview with Jann Wenner",
-          "date": "1969-11-29",
-          "proximity": "direct",
-          "location": "Rolling Stone archives",
-          "verbatimAvailable": true,
-          "significance": "First major interview after his motorcycle accident and retreat from public life"
-        },
-        {
-          "id": "doc_chronicles_manuscript",
-          "type": "memo",
-          "title": "Chronicles Volume One - Original manuscript notes",
+          "id": "pri_chronicles_2004",
+          "documentType": "autobiography",
+          "title": "Chronicles: Volume One",
           "date": "2004-10-05",
-          "proximity": "direct",
-          "location": "Simon & Schuster publishing archives",
-          "verbatimAvailable": true,
-          "significance": "Dylan's own written reflections on his early career and influences"
+          "originalLocation": "Simon & Schuster publication",
+          "accessMethod": "Published autobiography",
+          "keyExcerpts": [
+            "I had very little in common with and knew even less about a generation that I was supposed to be the voice of",
+            "Folk music was a reality of a more brilliant dimension",
+            "I wanted to understand things and then be free of them"
+          ]
         },
         {
-          "id": "doc_nobel_speech",
-          "type": "speech",
-          "title": "Nobel Prize in Literature Acceptance Speech",
-          "date": "2016-12-10",
-          "proximity": "direct",
-          "location": "Nobel Foundation archives, Stockholm",
-          "verbatimAvailable": true,
-          "significance": "Dylan's reflection on literature, music, and his artistic journey upon receiving the Nobel Prize"
+          "id": "pri_newport_1965_press",
+          "documentType": "contemporary_account",
+          "title": "Newport Folk Festival Press Coverage",
+          "date": "1965-07-25",
+          "originalLocation": "Various newspapers including New York Times, Rolling Stone archives",
+          "accessMethod": "Historical press archives",
+          "keyExcerpts": [
+            "Dylan was booed off stage after playing electric guitar",
+            "The folk purists in the audience felt betrayed"
+          ]
         },
         {
-          "id": "doc_no_direction_home_interview",
-          "type": "interview",
-          "title": "Martin Scorsese 'No Direction Home' Documentary Interview",
-          "date": "2005-09-15",
-          "proximity": "direct",
-          "location": "American Masters/Paramount Pictures archives",
-          "verbatimAvailable": true,
-          "significance": "Rare extensive filmed interview where Dylan discusses his early career and 1960s period"
+          "id": "pri_playboy_1966",
+          "documentType": "interview",
+          "title": "Playboy Interview with Bob Dylan",
+          "date": "1966-03-01",
+          "originalLocation": "Playboy Magazine March 1966 issue",
+          "accessMethod": "Published interview archive",
+          "keyExcerpts": [
+            "I'm not a folk singer. I'm not a protest singer",
+            "I consider myself a song and dance man"
+          ]
         },
         {
-          "id": "doc_60_minutes_2004",
-          "type": "interview",
-          "title": "CBS 60 Minutes Interview with Ed Bradley",
-          "date": "2004-12-05",
-          "proximity": "direct",
-          "location": "CBS News archives",
-          "verbatimAvailable": true,
-          "significance": "Candid discussion about his songwriting process and career longevity"
+          "id": "pri_scorsese_2005",
+          "documentType": "interview",
+          "title": "No Direction Home Documentary Interviews",
+          "date": "2005-09-26",
+          "originalLocation": "Martin Scorsese documentary",
+          "accessMethod": "Documentary film interviews",
+          "keyExcerpts": [
+            "I went to see Woody Guthrie in the hospital... that's where it all began for me",
+            "The thing about rock'n'roll is that for me anyway it wasn't enough"
+          ]
+        },
+        {
+          "id": "pri_nobel_lecture_2017",
+          "documentType": "speech",
+          "title": "Nobel Prize in Literature Lecture",
+          "date": "2017-06-05",
+          "originalLocation": "Nobel Prize Committee official archives",
+          "accessMethod": "Official Nobel Prize website recording",
+          "keyExcerpts": [
+            "Songs are unlike literature. They're meant to be sung, not read",
+            "Our songs are alive in the land of the living"
+          ]
+        },
+        {
+          "id": "pri_rolling_thunder_1975",
+          "documentType": "contemporary_account",
+          "title": "Rolling Thunder Revue Tour Documentation",
+          "date": "1975-10-30",
+          "originalLocation": "Tour documentation and press coverage",
+          "accessMethod": "Contemporary music press archives",
+          "keyExcerpts": [
+            "This tour is about taking music to the people",
+            "We're trying to make a conscious effort to break down barriers"
+          ]
         }
       ],
       "quoteBank": [
         {
-          "quoteId": "q_001",
-          "quote": "I went to see the land of Coca-Cola, I went to see Graceland. And I went to see Robert Johnson's grave.",
+          "id": "quote_voice_generation",
+          "verbatimText": "I had very little in common with and knew even less about a generation that I was supposed to be the voice of",
           "speaker": "Bob Dylan",
-          "date": "2004-12-05",
-          "sourceId": "doc_60_minutes_2004",
-          "context": "Dylan explaining his musical pilgrimage and influences during CBS interview",
-          "contextVerified": true,
-          "usageNotes": "Shows Dylan's reverence for American musical tradition and blues heritage"
-        },
-        {
-          "quoteId": "q_002",
-          "quote": "I consider myself a poet first and a musician second. I live like a poet and I'll die like a poet.",
-          "speaker": "Bob Dylan",
-          "date": "1965-07-25",
-          "sourceId": "doc_newport_1965_press",
-          "context": "Response to press questions about his artistic identity after Newport electric performance",
-          "contextVerified": true,
-          "usageNotes": "Key statement about Dylan's self-perception as an artist"
-        },
-        {
-          "quoteId": "q_003",
-          "quote": "I'm not a folk singer. Never was. I'm a song and dance man.",
-          "speaker": "Bob Dylan",
-          "date": "1969-11-29",
-          "sourceId": "doc_rolling_stone_1969",
-          "context": "Dylan rejecting the folk singer label in post-accident Rolling Stone interview",
-          "contextVerified": true,
-          "usageNotes": "Dylan's rejection of categorical labels and emphasis on entertainment aspect"
-        },
-        {
-          "quoteId": "q_004",
-          "quote": "Songs are unlike literature. They're meant to be sung, not read.",
-          "speaker": "Bob Dylan",
-          "date": "2016-12-10",
-          "sourceId": "doc_nobel_speech",
-          "context": "Nobel Prize acceptance speech addressing the relationship between literature and song",
-          "contextVerified": true,
-          "usageNotes": "Dylan's perspective on the distinction between written and performed art"
-        },
-        {
-          "quoteId": "q_005",
-          "quote": "I'm just glad to be here, glad to be anywhere.",
-          "speaker": "Bob Dylan",
-          "date": "1966-03-01",
-          "sourceId": "doc_playboy_1966",
-          "context": "Response about his attitude toward fame during the height of his mid-60s popularity",
-          "contextVerified": true,
-          "usageNotes": "Reflects Dylan's philosophical approach to success and existence"
-        },
-        {
-          "quoteId": "q_006",
-          "quote": "Being noticed can be a burden. Jesus got himself crucified because he got himself noticed. So I disappear a lot.",
-          "speaker": "Bob Dylan",
-          "date": "2004-12-05",
-          "sourceId": "doc_60_minutes_2004",
-          "context": "Explaining his tendency to withdraw from public attention",
-          "contextVerified": true,
-          "usageNotes": "Insight into Dylan's relationship with fame and his reclusive tendencies"
-        },
-        {
-          "quoteId": "q_007",
-          "quote": "All I can do is be me, whoever that is.",
-          "speaker": "Bob Dylan",
-          "date": "2005-09-15",
-          "sourceId": "doc_no_direction_home_interview",
-          "context": "Discussion about authenticity and public persona in Scorsese documentary",
-          "contextVerified": true,
-          "usageNotes": "Dylan's statement about identity and authenticity in his artistic expression"
-        },
-        {
-          "quoteId": "q_008",
-          "quote": "I think of a hero as someone who understands the degree of responsibility that comes with his freedom.",
-          "speaker": "Bob Dylan",
-          "date": "1966-03-01",
-          "sourceId": "doc_playboy_1966",
-          "context": "Defining heroism and responsibility during discussion of social movements",
-          "contextVerified": true,
-          "usageNotes": "Shows Dylan's political philosophy and view of individual responsibility"
-        },
-        {
-          "quoteId": "q_009",
-          "quote": "I had very little in common with and knew even less about a generation that I was supposed to be the voice of.",
-          "speaker": "Bob Dylan",
+          "context": "Reflecting on being labeled as spokesman for 1960s youth in his autobiography",
+          "sourceDocumentId": "pri_chronicles_2004",
           "date": "2004-10-05",
-          "sourceId": "doc_chronicles_manuscript",
-          "context": "Reflecting on being labeled the voice of his generation in his memoir",
-          "contextVerified": true,
-          "usageNotes": "Dylan's rejection of generational spokesperson role and media-imposed identity"
+          "reliability": 0.95,
+          "usageGuidelines": "Shows Dylan's rejection of spokesperson role, reliable as it's from his own autobiography"
         },
         {
-          "quoteId": "q_010",
-          "quote": "A mistake is to commit a misunderstanding.",
+          "id": "quote_folk_reality",
+          "verbatimText": "Folk music was a reality of a more brilliant dimension",
           "speaker": "Bob Dylan",
-          "date": "1969-11-29",
-          "sourceId": "doc_rolling_stone_1969",
-          "context": "Philosophical observation during wide-ranging interview discussion",
-          "contextVerified": true,
-          "usageNotes": "Example of Dylan's cryptic, poetic way of expressing ideas in interviews"
+          "context": "Describing his early attraction to folk music in Chronicles",
+          "sourceDocumentId": "pri_chronicles_2004",
+          "date": "2004-10-05",
+          "reliability": 0.95,
+          "usageGuidelines": "Demonstrates his artistic philosophy about folk music's significance"
         },
         {
-          "quoteId": "q_011",
-          "quote": "I was never trying to write a song that would change the world. I was just trying to write songs that were honest.",
+          "id": "quote_not_folk_singer",
+          "verbatimText": "I'm not a folk singer. I'm not a protest singer",
           "speaker": "Bob Dylan",
-          "date": "2005-09-15",
-          "sourceId": "doc_no_direction_home_interview",
-          "context": "Discussing his songwriting intentions and the impact of his protest songs",
-          "contextVerified": true,
-          "usageNotes": "Clarifies Dylan's artistic intentions versus public interpretation of his work"
+          "context": "1966 Playboy interview during his electric period transition",
+          "sourceDocumentId": "pri_playboy_1966",
+          "date": "1966-03-01",
+          "reliability": 0.9,
+          "usageGuidelines": "Key quote showing his rejection of categorization during critical career transition"
         },
         {
-          "quoteId": "q_012",
-          "quote": "The pump don't work 'cause the vandals took the handles.",
+          "id": "quote_song_dance_man",
+          "verbatimText": "I consider myself a song and dance man",
           "speaker": "Bob Dylan",
-          "date": "1965-07-25",
-          "sourceId": "doc_newport_1965_press",
-          "context": "Cryptic response to press questions about his message and meaning",
-          "contextVerified": true,
-          "usageNotes": "Example of Dylan's tendency to respond to direct questions with poetic abstraction"
+          "context": "Same 1966 Playboy interview, defining his artistic identity",
+          "sourceDocumentId": "pri_playboy_1966",
+          "date": "1966-03-01",
+          "reliability": 0.9,
+          "usageGuidelines": "Shows how Dylan preferred to define himself artistically"
+        },
+        {
+          "id": "quote_woody_hospital",
+          "verbatimText": "I went to see Woody Guthrie in the hospital... that's where it all began for me",
+          "speaker": "Bob Dylan",
+          "context": "Interview for Scorsese documentary about his early influences",
+          "sourceDocumentId": "pri_scorsese_2005",
+          "date": "2005-09-26",
+          "reliability": 0.9,
+          "usageGuidelines": "Documents his key early influence and artistic awakening moment"
+        },
+        {
+          "id": "quote_songs_alive",
+          "verbatimText": "Our songs are alive in the land of the living",
+          "speaker": "Bob Dylan",
+          "context": "Nobel Prize lecture defending songs as literature",
+          "sourceDocumentId": "pri_nobel_lecture_2017",
+          "date": "2017-06-05",
+          "reliability": 0.98,
+          "usageGuidelines": "Official Nobel lecture quote about the nature of songwriting as art form"
+        },
+        {
+          "id": "quote_songs_not_literature",
+          "verbatimText": "Songs are unlike literature. They're meant to be sung, not read",
+          "speaker": "Bob Dylan",
+          "context": "Nobel Prize lecture explaining difference between songs and literature",
+          "sourceDocumentId": "pri_nobel_lecture_2017",
+          "date": "2017-06-05",
+          "reliability": 0.98,
+          "usageGuidelines": "Key quote about his artistic philosophy and the Nobel Prize recognition"
         }
       ],
-      "documentGaps": [
+      "sourceGaps": [
         {
-          "period": "1966-1968 post-motorcycle accident",
-          "reason": "Dylan deliberately withdrew from public life and avoided interviews",
-          "implication": "Limited primary source material about his creative process during the Basement Tapes period"
+          "description": "Direct audio/video recording of 1965 Newport Folk Festival electric performance and immediate audience reaction",
+          "importance": "critical",
+          "potentialSources": [
+            "Newport Folk Festival archives",
+            "Fan bootleg recordings",
+            "Documentary film archives"
+          ]
         },
         {
-          "period": "1970s religious conversion period",
-          "reason": "Dylan was selective about interviews during his Christian phase",
-          "implication": "Theological discussions and spiritual journey less documented in his own words"
+          "description": "Dylan's personal correspondence or diary entries from 1965-1966 electric transition period",
+          "importance": "high",
+          "potentialSources": [
+            "Dylan estate archives",
+            "Personal collection",
+            "Music publisher records"
+          ]
         },
         {
-          "period": "Early childhood and family life",
-          "reason": "Dylan has been consistently private about family and personal relationships",
-          "implication": "Biographical details rely heavily on third-party sources rather than Dylan's direct testimony"
+          "description": "Contemporary interviews with Dylan's band members during the 1965-1966 electric tours",
+          "importance": "high",
+          "potentialSources": [
+            "Music magazine archives",
+            "Band member biographies",
+            "Documentary outtakes"
+          ]
         },
         {
-          "period": "1980s creative struggles",
-          "reason": "Dylan avoided extensive interviews during period of mixed critical reception",
-          "implication": "Limited insight into his artistic process during challenging creative period"
+          "description": "Recording session documentation and studio conversations from Highway 61 Revisited sessions",
+          "importance": "medium",
+          "potentialSources": [
+            "Columbia Records archives",
+            "Producer Tom Wilson's notes",
+            "Studio documentation"
+          ]
+        },
+        {
+          "description": "Dylan's early notebooks and song manuscripts showing songwriting evolution",
+          "importance": "high",
+          "potentialSources": [
+            "Bob Dylan Archive at University of Tulsa",
+            "Estate collection",
+            "Music publisher archives"
+          ]
         }
-      ],
-      "_phase": 3,
-      "_generated_at": "2025-12-15T17:00:36.258374"
+      ]
     },
-    "phase_4": {
+    "4": {
       "contextFrames": [
         {
-          "period": "Folk Revival Era",
-          "yearsSpan": "1961-1965",
-          "constraints": [
-            "Limited recording technology and distribution channels",
-            "Folk purist expectations demanded acoustic instruments only",
-            "Civil rights movement required clear political positioning",
-            "Record label control over artistic direction and marketing",
-            "Radio airplay dominated by major labels and established formats"
-          ],
-          "norms": [
-            "Folk artists expected to maintain authentic working-class persona",
-            "Political songs required explicit messaging and clear sides",
-            "Artists expected to remain consistent to their established image",
-            "Acoustic music seen as morally superior to electric 'commercial' music",
-            "Protest singers expected to be activists first, artists second"
-          ],
-          "opportunities": [
-            "Folk revival created unprecedented audience for topical songs",
-            "College campuses provided new venue circuit for emerging artists",
-            "Civil rights and anti-war movements created demand for protest music"
+          "id": "ctx_001",
+          "domain": "cultural",
+          "timeRange": {
+            "start": "1960",
+            "end": "1970"
+          },
+          "description": "The folk music revival emphasized authenticity, social consciousness, and acoustic instruments. Artists were expected to be 'pure' folk traditionalists performing centuries-old songs or songs in that style.",
+          "relevanceToSubject": "Dylan emerged from this scene but quickly challenged its orthodoxy by going electric and writing original, surreal lyrics",
+          "commonMisunderstandings": [
+            "That folk music was always political",
+            "That acoustic vs electric was just about sound preference rather than cultural/political identity"
           ]
         },
         {
-          "period": "Rock Revolution Era",
-          "yearsSpan": "1965-1975",
-          "constraints": [
-            "Limited studio technology for complex arrangements",
-            "Album format restrictions (40 minutes max per LP)",
-            "Radio format restrictions (3-4 minute song limits)",
-            "Touring required physical record sales for promotion",
-            "Music journalism still developing critical frameworks for rock"
-          ],
-          "norms": [
-            "Rock musicians expected to write their own material",
-            "Albums expected to have coherent artistic statements",
-            "Authenticity measured by independence from commercial considerations",
-            "Drug use normalized within rock culture",
-            "Artists expected to be countercultural spokespeople"
-          ],
-          "opportunities": [
-            "Rock format allowed for longer, more complex compositions",
-            "LP format enabled concept albums and artistic statements",
-            "Festival circuit created new performance contexts"
+          "id": "ctx_002",
+          "domain": "technological",
+          "timeRange": {
+            "start": "1950",
+            "end": "1980"
+          },
+          "description": "Recording technology was limited to analog multitrack, with expensive studio time. Artists typically recorded albums in weeks, not months/years. Radio was the primary distribution method.",
+          "relevanceToSubject": "Dylan's prolific recording pace and willingness to record rough takes was unusual; his electric sound relied on new amplification technology becoming widely available",
+          "commonMisunderstandings": [
+            "That artists had unlimited studio time",
+            "That recording quality standards were the same as today"
           ]
         },
         {
-          "period": "Born-Again Christian Era",
-          "yearsSpan": "1979-1982",
-          "constraints": [
-            "Contemporary Christian music industry had limited reach",
-            "Secular radio reluctant to play overtly religious content",
-            "Fan base alienated by dramatic image change",
-            "Gospel music traditions required different musical approaches",
-            "Religious communities skeptical of rock music formats"
-          ],
-          "norms": [
-            "Born-again conversion expected total lifestyle transformation",
-            "Christian artists expected to evangelize through their work",
-            "Religious music expected to have clear theological messaging",
-            "Rock stars converting to Christianity seen as publicity stunts",
-            "Mixing sacred and secular music considered inappropriate by many"
-          ],
-          "opportunities": [
-            "Christian rock emerging as new market segment",
-            "Conversion narrative provided new creative material",
-            "Religious themes allowed exploration of spiritual questions"
+          "id": "ctx_003",
+          "domain": "social",
+          "timeRange": {
+            "start": "1960",
+            "end": "1970"
+          },
+          "description": "Civil rights movement, anti-war protests, and counterculture created expectation that artists, especially folk singers, would take clear political stances and maintain them consistently.",
+          "relevanceToSubject": "Dylan was initially celebrated as a protest singer but frustrated audiences by refusing to be confined to that role or any consistent political message",
+          "commonMisunderstandings": [
+            "That all 1960s musicians were political",
+            "That artistic and political authenticity were the same thing"
+          ]
+        },
+        {
+          "id": "ctx_004",
+          "domain": "industry",
+          "timeRange": {
+            "start": "1960",
+            "end": "1990"
+          },
+          "description": "Record labels had immense power over artists' careers, creative control, and image. Album-oriented rock was emerging, but singles still dominated. Music journalism was limited to a few major publications.",
+          "relevanceToSubject": "Dylan's ability to maintain creative control and constantly reinvent himself was unusual; his relationship with the press was often adversarial when cooperation was expected",
+          "commonMisunderstandings": [
+            "That artists routinely had creative freedom",
+            "That music media coverage was as extensive as today"
+          ]
+        },
+        {
+          "id": "ctx_005",
+          "domain": "cultural",
+          "timeRange": {
+            "start": "1975",
+            "end": "1985"
+          },
+          "description": "Born-again Christianity experienced a major revival in America, with many celebrities publicly converting. Religious themes in popular music were becoming more acceptable in mainstream culture.",
+          "relevanceToSubject": "Dylan's Christian period (1979-1981) occurred during this broader cultural moment, though his theological exploration was more complex than typical celebrity conversions",
+          "commonMisunderstandings": [
+            "That Dylan's Christian phase was purely personal rather than culturally situated",
+            "That religious themes were unusual in rock music"
           ]
         }
       ],
-      "optionSpaceAnalysis": [
+      "contemporaryNorms": [
         {
-          "decision": "Going electric at Newport Folk Festival 1965",
-          "yearOfDecision": 1965,
-          "realisticAlternatives": [
-            "Continue as acoustic folk artist with steady but limited audience",
-            "Gradually introduce electric instruments over several years",
-            "Release electric albums but maintain acoustic live performances"
-          ],
-          "constraintsOnChoice": [
-            "Folk purists controlled festival programming and critical reception",
-            "Electric music required different band arrangements and rehearsal time",
-            "Risk of alienating established fan base and income source",
-            "Limited venues equipped for electric performances"
-          ],
-          "modernMisreading": "Often portrayed as simple artistic courage, ignoring the significant career and financial risks in an era when folk artists had few crossover success examples"
+          "norm": "Folk singers were expected to perform traditional songs or new songs that sounded traditional, using acoustic instruments only",
+          "evidence": "Pete Seeger's reaction at Newport 1965, folk purist criticism in music press",
+          "howSubjectRelated": "Dylan deliberately violated this norm by going electric and writing surreal, non-traditional lyrics"
         },
         {
-          "decision": "Refusing to explain song meanings in interviews",
-          "yearOfDecision": 1965,
-          "realisticAlternatives": [
-            "Provide standard explanations like other folk artists",
-            "Write liner notes explaining political positions",
-            "Give detailed interviews about songwriting process"
-          ],
-          "constraintsOnChoice": [
-            "Folk tradition expected artists to explain political positions clearly",
-            "Media had limited understanding of symbolic or abstract lyrics",
-            "Audiences expected songs to have single, clear meanings",
-            "Record labels wanted marketable explanations for promotional purposes"
-          ],
-          "modernMisreading": "Viewed as mysterious artistic persona, but was actually protecting artistic ambiguity in an era demanding explicit political statements"
+          "norm": "Popular musicians were expected to be accessible to media and maintain consistent public personas",
+          "evidence": "Standard industry practices, fan magazine culture, artist publicity requirements",
+          "howSubjectRelated": "Dylan was notoriously evasive in interviews, gave contradictory answers, and constantly changed his image"
         },
         {
-          "decision": "Converting to born-again Christianity",
-          "yearOfDecision": 1979,
-          "realisticAlternatives": [
-            "Keep religious beliefs private while continuing secular music",
-            "Incorporate spiritual themes without explicit Christian messaging",
-            "Take extended break from recording and performing"
-          ],
-          "constraintsOnChoice": [
-            "Born-again theology required public testimony and evangelism",
-            "Christian community expected total commitment to faith-based art",
-            "Secular audience increasingly hostile to religious messaging in rock",
-            "Limited venues willing to book overtly Christian rock performances"
-          ],
-          "modernMisreading": "Often dismissed as midlife crisis or commercial calculation, ignoring the genuine career sacrifice involved in alienating core audience"
+          "norm": "Protest singers were expected to maintain their political commitments and not 'sell out' to commercial success",
+          "evidence": "Criticism of Dylan in folk circles, expectations around authenticity in 1960s counterculture",
+          "howSubjectRelated": "Dylan abandoned explicit protest songs after 1964, frustrating fans who wanted him to remain a political spokesperson"
         },
         {
-          "decision": "Adopting multiple musical personas throughout career",
-          "yearOfDecision": 1975,
-          "realisticAlternatives": [
-            "Maintain consistent folk-rock identity like contemporaries",
-            "Announce formal genre changes with each album cycle",
-            "Focus on single musical style until mastering it completely"
-          ],
-          "constraintsOnChoice": [
-            "Record industry expected artists to maintain marketable brand identity",
-            "Radio formats required predictable sound for programming decisions",
-            "Touring required consistent repertoire that audiences recognized",
-            "Music criticism lacked framework for understanding artistic shapeshifting"
-          ],
-          "modernMisreading": "Seen as postmodern artistic strategy, but was actually working against industry expectations that demanded consistent branding"
+          "norm": "Recording artists typically maintained one musical style per album/era to build consistent fan base",
+          "evidence": "Industry practices, marketing strategies, artist career development norms of the era",
+          "howSubjectRelated": "Dylan constantly changed styles - folk to rock to country to gospel to blues - often alienating existing fans"
         }
       ],
-      "contemporaryComparisons": [
-        {
-          "peer": "Joan Baez",
-          "similarSituation": "Faced pressure to maintain folk purity during mid-1960s",
-          "differentChoice": "Remained primarily acoustic and politically explicit",
-          "outcome": "Maintained folk audience but limited crossover success compared to Dylan's rock evolution"
-        },
-        {
-          "peer": "Paul Simon",
-          "similarSituation": "Transitioned from folk to rock in mid-1960s",
-          "differentChoice": "Made gradual transition while maintaining melodic accessibility",
-          "outcome": "Achieved broader commercial success but less artistic innovation than Dylan's radical stylistic shifts"
-        },
-        {
-          "peer": "Johnny Cash",
-          "similarSituation": "Experienced religious conversion and incorporated Christian themes",
-          "differentChoice": "Integrated faith themes without abandoning secular repertoire",
-          "outcome": "Maintained broader audience appeal while expressing religious beliefs"
-        }
-      ],
-      "_phase": 4,
-      "_generated_at": "2025-12-15T17:01:12.509518"
+      "availableResources": {
+        "technology": [
+          "Analog recording equipment (4-8 track in early career)",
+          "Electric guitars and amplification becoming widely available",
+          "AM/FM radio as primary distribution",
+          "Television appearances on limited channels",
+          "Vinyl records as primary format"
+        ],
+        "institutions": [
+          "Greenwich Village folk scene",
+          "Newport Folk Festival",
+          "Major record labels (Columbia Records)",
+          "Music press (Rolling Stone, Melody Maker)",
+          "Concert venues and touring circuit",
+          "Publishing companies for songwriting royalties"
+        ],
+        "knowledge": [
+          "Traditional American folk songs and ballads",
+          "Beat poetry and literature",
+          "Blues and country music traditions",
+          "Contemporary poets (Allen Ginsberg, Jack Kerouac)",
+          "Biblical and religious texts",
+          "Woody Guthrie's songwriting and persona as model"
+        ]
+      }
     },
-    "phase_5": {
+    "5": {
       "perspectiveMatrix": [
         {
-          "interviewId": "int_001",
-          "speaker": "Joan Baez",
-          "relationship": "romantic partner and musical collaborator",
-          "interviewDate": "2009-04-15",
-          "interviewer": "Rolling Stone Magazine",
-          "sentiment": "mixed",
-          "claims": [
-            "Dylan was incredibly charismatic but emotionally distant during their relationship",
-            "He would disappear for days without explanation during tours",
-            "His songwriting process was obsessive and he'd work through the night"
-          ],
-          "documentarySupport": false,
-          "supportingDocs": [],
-          "credibilityNotes": "Baez had intimate access but romantic relationships create complex emotional dynamics",
-          "potentialBias": "Former romantic partner may have unresolved feelings affecting perspective"
-        },
-        {
-          "interviewId": "int_002",
-          "speaker": "Robbie Robertson",
-          "relationship": "band member (The Band)",
-          "interviewDate": "2016-09-22",
-          "interviewer": "David Fricke for Rolling Stone",
-          "sentiment": "positive",
-          "claims": [
-            "Dylan's 1965-66 electric tours were revolutionary but audiences were hostile",
-            "Dylan was constantly reading and absorbing literature during downtime",
-            "He had an encyclopedic knowledge of American folk songs",
-            "The motorcycle accident in 1966 was real and forced him to retreat"
-          ],
-          "documentarySupport": false,
-          "supportingDocs": [],
-          "credibilityNotes": "Robertson was present during crucial period but has business interests in maintaining Dylan mythology",
-          "potentialBias": "Financial stake in The Band's legacy and Dylan collaboration stories"
-        },
-        {
-          "interviewId": "int_003",
-          "speaker": "Al Kooper",
-          "relationship": "session musician",
-          "interviewDate": "2005-07-11",
-          "interviewer": "Uncut Magazine",
-          "sentiment": "positive",
-          "claims": [
-            "Dylan's 'Like a Rolling Stone' session was spontaneous and Dylan encouraged experimentation",
-            "Dylan knew exactly what sound he wanted but let musicians find their own way to it",
-            "The famous organ riff was improvised because Kooper couldn't play guitar well enough"
-          ],
-          "documentarySupport": false,
-          "supportingDocs": [],
-          "credibilityNotes": "Kooper was present for historic recording sessions but story has grown more elaborate over time",
-          "potentialBias": "Career boost from Dylan association creates incentive to embellish stories"
-        },
-        {
-          "interviewId": "int_004",
-          "speaker": "Dave Van Ronk",
-          "relationship": "fellow Greenwich Village folk musician",
-          "interviewDate": "1991-03-18",
-          "interviewer": "Folk music historian",
-          "sentiment": "mixed",
-          "claims": [
-            "Young Dylan was ambitious and calculated his image carefully",
-            "Dylan borrowed heavily from traditional sources without always crediting them",
-            "He was genuinely talented but also ruthlessly competitive with other folk singers"
-          ],
-          "documentarySupport": false,
-          "supportingDocs": [],
-          "credibilityNotes": "Van Ronk knew Dylan in early days but may harbor resentment about being overshadowed",
-          "potentialBias": "Older folk musician who never achieved Dylan's success may feel overlooked"
-        },
-        {
-          "interviewId": "int_005",
-          "speaker": "Maria Dylan",
-          "relationship": "adopted daughter",
-          "interviewDate": "2004-11-30",
-          "interviewer": "Private family interview",
-          "sentiment": "positive",
-          "claims": [
-            "Dylan was a devoted father who prioritized family time when home",
-            "He maintained normal household routines and insisted on family dinners",
-            "Fame never changed his parenting style or home behavior"
-          ],
-          "documentarySupport": false,
-          "supportingDocs": [],
-          "credibilityNotes": "Family member with intimate knowledge but strong motivation to protect family privacy",
-          "potentialBias": "Protective of father's reputation and family legacy"
-        },
-        {
-          "interviewId": "int_006",
-          "speaker": "Suze Rotolo",
-          "relationship": "girlfriend in early 1960s",
-          "interviewDate": "2008-05-14",
-          "interviewer": "Author David Hajdu",
-          "sentiment": "mixed",
-          "claims": [
-            "Dylan was possessive and controlling in their relationship",
-            "His transformation from folk purist to rock star was gradual, not sudden",
-            "He was deeply affected by political events but channeled it through personal rather than protest songs"
-          ],
-          "documentarySupport": false,
-          "supportingDocs": [],
-          "credibilityNotes": "Rotolo was present during crucial early period but relationship ended badly",
-          "potentialBias": "Former girlfriend who felt abandoned when Dylan became famous"
-        }
-      ],
-      "corroborationScores": [
-        {
-          "claim": "Dylan's 1966 motorcycle accident was real and significant",
-          "claimantCount": 2,
-          "supportingDocuments": 0,
-          "confidence": 0.4,
-          "notes": "Robertson and others mention it but details vary and no medical records available"
-        },
-        {
-          "claim": "Dylan was obsessive about his songwriting process",
-          "claimantCount": 3,
-          "supportingDocuments": 0,
-          "confidence": 0.6,
-          "notes": "Multiple sources describe intense work habits but specifics differ"
-        },
-        {
-          "claim": "Dylan carefully calculated his public image and persona",
-          "claimantCount": 2,
-          "supportingDocuments": 0,
-          "confidence": 0.5,
-          "notes": "Van Ronk and Rotolo suggest this but may reflect their own feelings of manipulation"
-        }
-      ],
-      "contradictions": [
-        {
-          "topic": "Dylan's personality and treatment of others",
-          "positionA": "Dylan was warm, devoted family man who prioritized relationships",
-          "positionAHolders": [
-            "Maria Dylan"
-          ],
-          "positionB": "Dylan was emotionally distant, possessive, and would disappear without explanation",
-          "positionBHolders": [
-            "Joan Baez",
-            "Suze Rotolo"
-          ],
-          "documentaryEvidence": "No available documents directly address personal relationship dynamics"
-        },
-        {
-          "topic": "Dylan's creative process and authenticity",
-          "positionA": "Dylan was spontaneous and encouraged musical experimentation",
-          "positionAHolders": [
-            "Al Kooper"
-          ],
-          "positionB": "Dylan was calculating and carefully planned his artistic moves",
-          "positionBHolders": [
-            "Dave Van Ronk"
-          ],
-          "documentaryEvidence": "Recording session logs might exist but not analyzed for this research"
-        }
-      ],
-      "_warnings": [
-        "Unsupported interview claims (perspective only): 19"
-      ],
-      "_phase": 5,
-      "_generated_at": "2025-12-15T17:01:44.576534"
-    },
-    "phase_6": {
-      "masterTimeline": [
-        {
-          "eventId": "evt_001",
-          "date": "1941-05-24",
-          "datePrecision": "exact",
-          "event": "Born Robert Allen Zimmerman in Duluth, Minnesota",
-          "category": "birth",
-          "sources": [
-            "birth_certificate",
-            "chronicles_volume_one"
-          ],
-          "confidence": 1.0,
-          "significance": "high",
-          "narrativeRelevance": "Birth of the artist who would become Bob Dylan"
-        },
-        {
-          "eventId": "evt_002",
-          "date": "1947-01-01",
-          "datePrecision": "year",
-          "event": "Family moves to Hibbing, Minnesota",
-          "category": "personal",
-          "sources": [
-            "chronicles_volume_one",
-            "dylan_biography_sounes"
-          ],
-          "confidence": 0.9,
-          "significance": "medium",
-          "narrativeRelevance": "Formative childhood years in mining town that influenced his worldview"
-        },
-        {
-          "eventId": "evt_003",
-          "date": "1959-09-01",
-          "datePrecision": "approximate",
-          "event": "Enrolls at University of Minnesota",
-          "category": "personal",
-          "sources": [
-            "university_records",
-            "no_direction_home_scorsese"
-          ],
-          "confidence": 0.95,
-          "significance": "medium",
-          "narrativeRelevance": "Beginning of his immersion in folk music scene in Minneapolis"
-        },
-        {
-          "eventId": "evt_004",
-          "date": "1960-12-01",
-          "datePrecision": "approximate",
-          "event": "Drops out of University of Minnesota",
-          "category": "personal",
-          "sources": [
-            "chronicles_volume_one",
-            "dylan_biography_heylin"
-          ],
-          "confidence": 0.85,
-          "significance": "medium",
-          "narrativeRelevance": "Decision to pursue music full-time rather than formal education"
-        },
-        {
-          "eventId": "evt_005",
-          "date": "1961-01-24",
-          "datePrecision": "exact",
-          "event": "Arrives in New York City",
-          "category": "career",
-          "sources": [
-            "chronicles_volume_one",
-            "village_voice_archives"
-          ],
-          "confidence": 0.9,
-          "significance": "high",
-          "narrativeRelevance": "Pivotal move to Greenwich Village folk scene that launched his career"
-        },
-        {
-          "eventId": "evt_006",
-          "date": "1961-04-11",
-          "datePrecision": "exact",
-          "event": "First performance at Gerde's Folk City",
-          "category": "career",
-          "sources": [
-            "gerdes_folk_city_records",
-            "dylan_biography_shelton"
-          ],
-          "confidence": 0.8,
-          "significance": "medium",
-          "narrativeRelevance": "First documented professional performance in NYC"
-        },
-        {
-          "eventId": "evt_007",
-          "date": "1961-08-09",
-          "datePrecision": "exact",
-          "event": "Legal name change to Bob Dylan",
-          "category": "personal",
-          "sources": [
-            "court_records_nyc",
-            "chronicles_volume_one"
-          ],
-          "confidence": 1.0,
-          "significance": "high",
-          "narrativeRelevance": "Official adoption of stage name that became his identity"
-        },
-        {
-          "eventId": "evt_008",
-          "date": "1961-10-26",
-          "datePrecision": "exact",
-          "event": "Signs recording contract with Columbia Records",
-          "category": "business",
-          "sources": [
-            "columbia_records_contract",
-            "john_hammond_memoir"
-          ],
-          "confidence": 1.0,
-          "significance": "high",
-          "narrativeRelevance": "Major label deal that established his recording career"
-        },
-        {
-          "eventId": "evt_009",
-          "date": "1962-03-19",
-          "datePrecision": "exact",
-          "event": "Releases debut album 'Bob Dylan'",
-          "category": "career",
-          "sources": [
-            "columbia_records_release",
-            "billboard_magazine"
-          ],
-          "confidence": 1.0,
-          "significance": "high",
-          "narrativeRelevance": "First studio album, primarily traditional folk covers"
-        },
-        {
-          "eventId": "evt_010",
-          "date": "1963-05-27",
-          "datePrecision": "exact",
-          "event": "Releases 'The Freewheelin' Bob Dylan'",
-          "category": "career",
-          "sources": [
-            "columbia_records_release",
-            "rolling_stone_review"
-          ],
-          "confidence": 1.0,
-          "significance": "high",
-          "narrativeRelevance": "Breakthrough album featuring 'Blowin' in the Wind' establishing him as songwriter"
-        },
-        {
-          "eventId": "evt_011",
-          "date": "1963-08-28",
-          "datePrecision": "exact",
-          "event": "Performs at March on Washington",
-          "category": "achievement",
-          "sources": [
-            "march_on_washington_footage",
-            "nyt_coverage"
-          ],
-          "confidence": 1.0,
-          "significance": "high",
-          "narrativeRelevance": "Peak of his association with civil rights movement"
-        },
-        {
-          "eventId": "evt_012",
-          "date": "1965-07-25",
-          "datePrecision": "exact",
-          "event": "Goes electric at Newport Folk Festival",
-          "category": "controversy",
-          "sources": [
-            "newport_festival_recordings",
-            "eyewitness_accounts"
-          ],
-          "confidence": 0.95,
-          "significance": "high",
-          "narrativeRelevance": "Controversial performance that marked transition from folk to rock"
-        },
-        {
-          "eventId": "evt_013",
-          "date": "1965-08-30",
-          "datePrecision": "exact",
-          "event": "Releases 'Highway 61 Revisited'",
-          "category": "career",
-          "sources": [
-            "columbia_records_release",
-            "music_press_reviews"
-          ],
-          "confidence": 1.0,
-          "significance": "high",
-          "narrativeRelevance": "First fully electric album featuring 'Like a Rolling Stone'"
-        },
-        {
-          "eventId": "evt_014",
-          "date": "1966-05-16",
-          "datePricision": "exact",
-          "event": "Releases 'Blonde on Blonde'",
-          "category": "career",
-          "sources": [
-            "columbia_records_release",
-            "contemporary_reviews"
-          ],
-          "confidence": 1.0,
-          "significance": "high",
-          "narrativeRelevance": "Double album often considered his masterpiece of the electric period"
-        },
-        {
-          "eventId": "evt_015",
-          "date": "1966-07-29",
-          "datePrecision": "exact",
-          "event": "Motorcycle accident near Woodstock",
-          "category": "personal",
-          "sources": [
-            "police_report",
-            "chronicles_volume_one"
-          ],
-          "confidence": 0.7,
-          "significance": "high",
-          "narrativeRelevance": "Event that led to his withdrawal from public life and touring"
-        },
-        {
-          "eventId": "evt_016",
-          "date": "1975-01-01",
-          "datePrecision": "year",
-          "event": "Releases 'Blood on the Tracks'",
-          "category": "career",
-          "sources": [
-            "columbia_records_release",
-            "critical_acclaim_sources"
-          ],
-          "confidence": 1.0,
-          "significance": "high",
-          "narrativeRelevance": "Comeback album following personal difficulties, widely praised"
-        },
-        {
-          "eventId": "evt_017",
-          "date": "1975-10-30",
-          "datePrecision": "exact",
-          "event": "Rolling Thunder Revue tour begins",
-          "category": "career",
-          "sources": [
-            "concert_footage",
-            "tour_documentation"
-          ],
-          "confidence": 0.9,
-          "significance": "medium",
-          "narrativeRelevance": "Theatrical tour that marked return to active performing"
-        },
-        {
-          "eventId": "evt_018",
-          "date": "1979-04-20",
-          "datePrecision": "exact",
-          "event": "Releases 'Slow Train Coming' (first Christian album)",
-          "category": "career",
-          "sources": [
-            "columbia_records_release",
-            "contemporary_interviews"
-          ],
-          "confidence": 1.0,
-          "significance": "medium",
-          "narrativeRelevance": "First album after conversion to Christianity, controversial among fans"
-        },
-        {
-          "eventId": "evt_019",
-          "date": "1988-01-01",
-          "datePrecision": "year",
-          "event": "Inducted into Rock and Roll Hall of Fame",
-          "category": "achievement",
-          "sources": [
-            "rock_hall_records",
-            "ceremony_footage"
-          ],
-          "confidence": 1.0,
-          "significance": "medium",
-          "narrativeRelevance": "Recognition of his fundamental impact on popular music"
-        },
-        {
-          "eventId": "evt_020",
-          "date": "1997-09-30",
-          "datePrecision": "exact",
-          "event": "Releases 'Time Out of Mind'",
-          "category": "career",
-          "sources": [
-            "columbia_records_release",
-            "grammy_documentation"
-          ],
-          "confidence": 1.0,
-          "significance": "medium",
-          "narrativeRelevance": "Late career renaissance album that won three Grammy Awards"
-        },
-        {
-          "eventId": "evt_021",
-          "date": "2004-10-05",
-          "datePrecision": "exact",
-          "event": "Publishes 'Chronicles: Volume One'",
-          "category": "achievement",
-          "sources": [
-            "simon_schuster_publication",
-            "bestseller_lists"
-          ],
-          "confidence": 1.0,
-          "significance": "medium",
-          "narrativeRelevance": "First volume of memoirs providing his perspective on career"
-        },
-        {
-          "eventId": "evt_022",
-          "date": "2016-10-13",
-          "datePrecision": "exact",
-          "event": "Awarded Nobel Prize in Literature",
-          "category": "achievement",
-          "sources": [
-            "nobel_committee_announcement",
-            "official_citation"
-          ],
-          "confidence": 1.0,
-          "significance": "high",
-          "narrativeRelevance": "Historic recognition of songwriter as literature, unprecedented for popular musician"
-        }
-      ],
-      "uncertainEvents": [
-        {
-          "event": "Exact details of 1966 motorcycle accident",
-          "uncertainty": "Severity of injuries and exact circumstances",
-          "reason": "Dylan has given conflicting accounts and avoided detailed discussion",
-          "bestEstimate": "Minor accident used as excuse to withdraw from intense touring schedule",
-          "confidenceRange": [
-            0.3,
-            0.6
-          ]
-        },
-        {
-          "event": "Timeline of conversion to Christianity",
-          "uncertainty": "Exact date and process of religious conversion",
-          "reason": "Dylan has been vague about specific timing and circumstances",
-          "bestEstimate": "Gradual conversion process occurring between 1978-1979",
-          "confidenceRange": [
-            0.4,
-            0.7
-          ]
-        },
-        {
-          "event": "Relationship details and marriage timeline",
-          "uncertainty": "Exact dates of relationships and marriages",
-          "reason": "Dylan's private nature and conflicting reports in media",
-          "bestEstimate": "Married Sara Lownds 1965, divorced 1977; other relationships poorly documented",
-          "confidenceRange": [
-            0.3,
-            0.8
-          ]
-        }
-      ],
-      "chronologicalInsights": [
-        {
-          "observation": "Major creative periods follow personal upheavals",
-          "evidence": "1966 accident preceded country period; divorce preceded 'Blood on the Tracks'; Christian conversion preceded gospel trilogy"
-        },
-        {
-          "observation": "Career reinventions occur approximately every decade",
-          "evidence": "Folk (early 60s) to electric rock (mid-60s) to country (late 60s) to born-again (late 70s) to various later phases"
-        },
-        {
-          "observation": "Most acclaimed work concentrated in specific periods",
-          "evidence": "Peak creative output 1963-1966 and 1974-1976, with later recognition coming decades after initial release"
-        }
-      ],
-      "_phase": 6,
-      "_generated_at": "2025-12-15T17:02:28.229229"
-    },
-    "phase_7": {
-      "behavioralPatterns": [
-        {
-          "patternId": "pat_001",
-          "pattern": "Cyclical reinvention of artistic persona and musical style",
-          "evidenceCount": 7,
-          "firstObserved": "1965-07-25",
-          "lastObserved": "2020-06-19",
-          "evidenceEvents": [
-            "1965 Newport Folk Festival electric performance",
-            "1975 Rolling Thunder Revue theatrical persona",
-            "1979 Born Again Christian phase",
-            "1997 Time Out of Mind career resurgence",
-            "2020 Rough and Rowdy Ways late-career reinvention"
-          ],
-          "contextualFactors": "Often emerged during periods of career stagnation or public criticism",
-          "evolution": "Early reinventions were more dramatic and controversial; later ones became more subtle and critically acclaimed"
-        },
-        {
-          "patternId": "pat_002",
-          "pattern": "Deliberate cultivation of mystique through evasive or contradictory public statements",
-          "evidenceCount": 6,
-          "firstObserved": "1965-12-03",
-          "lastObserved": "2016-12-10",
-          "evidenceEvents": [
-            "1965 Playboy interview nonsensical responses",
-            "1966 'Don't Look Back' documentary evasiveness",
-            "Chronicles Vol. 1 contradictions with documented history",
-            "2004 60 Minutes interview deflections",
-            "2016 Nobel Prize acceptance speech delay and content"
-          ],
-          "contextualFactors": "Intensified after achieving mainstream success and increased media scrutiny",
-          "evolution": "Moved from playful absurdism to more philosophical ambiguity with age"
-        },
-        {
-          "patternId": "pat_003",
-          "pattern": "Appropriation and transformation of traditional folk, blues, and literary sources",
-          "evidenceCount": 8,
-          "firstObserved": "1961-04-11",
-          "lastObserved": "2020-06-19",
-          "evidenceEvents": [
-            "1962 'Blowin' in the Wind' melody from spiritual",
-            "1965 'Subterranean Homesick Blues' Chuck Berry borrowing",
-            "2001 'Love and Theft' Japanese author Junichi Saga passages",
-            "2006 Modern Times Civil War era sources",
-            "2020 'I Contain Multitudes' Walt Whitman references"
-          ],
-          "contextualFactors": "Consistent throughout career regardless of commercial success or critical reception",
-          "evolution": "Became more sophisticated and literary over time, moving from musical borrowing to textual collaging"
-        },
-        {
-          "patternId": "pat_004",
-          "pattern": "Intense creative periods followed by touring-focused phases",
-          "evidenceCount": 5,
-          "firstObserved": "1965-01-01",
-          "lastObserved": "2012-09-11",
-          "evidenceEvents": [
-            "1965-1966 trilogy of electric albums",
-            "1967-1975 relative recording inactivity with extensive touring",
-            "1997-2006 late career renaissance albums",
-            "2007-2012 focus on Never Ending Tour expansion",
-            "Christmas albums and standards covering periods"
-          ],
-          "contextualFactors": "Creative bursts often coincided with personal upheaval or artistic breakthroughs",
-          "evolution": "Later career showed more sustained creative output while maintaining touring schedule"
-        },
-        {
-          "patternId": "pat_005",
-          "pattern": "Resistance to explicit political categorization despite topical songwriting",
-          "evidenceCount": 4,
-          "firstObserved": "1963-12-13",
-          "lastObserved": "2004-10-03",
-          "evidenceEvents": [
-            "1963 Emergency Civil Liberties Committee speech walkout",
-            "1965 rejection of 'protest singer' label in interviews",
-            "1970s absence from major political movements",
-            "2004 60 Minutes statement about not being a political songwriter"
-          ],
-          "contextualFactors": "Most pronounced during periods of intense political activism in American culture",
-          "evolution": "Became more consistent in rejecting political labels while continuing to write politically resonant material"
-        }
-      ],
-      "coreTensions": [
-        {
-          "tension": "Authenticity vs. Performance",
-          "description": "Simultaneous commitment to genuine artistic expression and deliberate persona construction",
-          "examples": [
-            "Born Again Christian phase genuine religious conversion vs. calculated career move debate",
-            "Chronicles memoir mixing factual autobiography with mythological storytelling"
-          ]
-        },
-        {
-          "tension": "Tradition vs. Innovation",
-          "description": "Deep reverence for American musical traditions combined with radical transformation of those forms",
-          "examples": [
-            "Electric folk trilogy revolutionizing traditional forms",
-            "Never Ending Tour preserving live music tradition while constantly reinterpreting catalog"
-          ]
-        },
-        {
-          "tension": "Privacy vs. Celebrity",
-          "description": "Desire for personal privacy conflicting with public role as cultural figure",
-          "examples": [
-            "Woodstock retreat following motorcycle accident",
-            "Decades-long refusal of major interviews followed by selective media appearances"
-          ]
-        }
-      ],
-      "growthAreas": [
-        {
-          "area": "Relationship with critical establishment",
-          "earlyBehavior": "Dismissive and antagonistic toward music critics and academic analysis",
-          "laterBehavior": "More accepting of scholarly attention while maintaining artistic independence",
-          "evidenceOfChange": "Nobel Prize acceptance and increased participation in career retrospectives"
-        },
-        {
-          "area": "Collaborative approach to recording",
-          "earlyBehavior": "Highly controlling studio presence with frequent musician turnover",
-          "laterBehavior": "More collaborative relationships with consistent backing musicians",
-          "evidenceOfChange": "Long-term working relationships with musicians like Tony Garnier and Charlie Sexton"
-        }
-      ],
-      "complexityNotes": [
-        "Simultaneously embraces and rejects the role of generational spokesperson",
-        "Combines profound literary sophistication with deliberate anti-intellectual posturing",
-        "Maintains consistent artistic vision while constantly changing surface presentation",
-        "Exhibits both extreme privacy and calculated self-mythologizing",
-        "Shows deep respect for musical traditions while being their most radical transformer"
-      ],
-      "_phase": 7,
-      "_generated_at": "2025-12-15T17:02:59.796074"
-    },
-    "phase_8": {
-      "mythTable": [
-        {
-          "mythId": "myth_001",
-          "myth": "Dylan invented folk rock as a genre",
-          "prevalence": "Widely repeated in music journalism and documentaries",
-          "evidenceStatus": "partially_supported",
-          "actualEvidence": "Dylan was among the first major folk artists to use electric instruments at Newport 1965, but bands like The Byrds were experimenting simultaneously, and earlier artists like The Weavers had used some electric backing",
-          "correction": "Dylan was a key pioneer who helped popularize and legitimize electric folk rock",
-          "originOfMyth": "Oversimplified narrative focusing on the dramatic Newport Folk Festival moment"
-        },
-        {
-          "mythId": "myth_002",
-          "myth": "Dylan single-handedly changed popular music forever",
-          "prevalence": "Common in biographical treatments and music criticism",
-          "evidenceStatus": "partially_supported",
-          "actualEvidence": "Dylan's influence on songwriting complexity and poetic lyrics is well-documented, but he was part of a broader cultural shift including The Beatles, civil rights movement, and changing youth culture",
-          "correction": "Dylan was a major catalyst in transforming popular songwriting within a broader cultural revolution",
-          "originOfMyth": "Great Man theory of history applied to music history"
-        },
-        {
-          "mythId": "myth_003",
-          "myth": "Dylan wrote all his early songs completely alone without outside influence",
-          "prevalence": "Reinforced by Dylan's own mythmaking in interviews",
-          "evidenceStatus": "false",
-          "actualEvidence": "Dylan openly borrowed melodies, chord progressions, and even some lyrics from traditional folk songs, blues, and other artists. This was standard folk practice but often obscured in popular accounts",
-          "correction": "Dylan was a masterful adapter and synthesizer of existing folk traditions, creating new works from traditional foundations",
-          "originOfMyth": "Romantic notion of the isolated artistic genius and Dylan's own obfuscation"
-        },
-        {
-          "mythId": "myth_004",
-          "myth": "Dylan's motorcycle accident in 1966 was a near-death experience that fundamentally changed his music",
-          "prevalence": "Standard element in most Dylan biographies",
-          "evidenceStatus": "false",
-          "actualEvidence": "Medical records were never made public, contemporary accounts vary widely, and some biographers suggest the accident was minor or exaggerated. Musical changes were already underway before the accident",
-          "correction": "Dylan used the accident as a convenient reason to withdraw from public life during an already evolving period",
-          "originOfMyth": "Dylan's own vague statements and media speculation filling in gaps"
-        },
-        {
-          "mythId": "myth_005",
-          "myth": "Dylan's conversion to Christianity was a complete surprise that came out of nowhere",
-          "prevalence": "Common narrative in music journalism and fan discussions",
-          "evidenceStatus": "false",
-          "actualEvidence": "Dylan had been exploring spiritual themes for years, mentioned Jesus in earlier songs, and had been attending Bible study classes before his public conversion",
-          "correction": "Dylan's Christian period was part of an ongoing spiritual exploration that became more explicit in the late 1970s",
-          "originOfMyth": "Media focus on the dramatic nature of the conversion without examining earlier spiritual content"
-        },
-        {
-          "mythId": "myth_006",
-          "myth": "Dylan never cared about commercial success and was purely an artistic purist",
-          "prevalence": "Perpetuated by critics emphasizing his artistic integrity",
-          "evidenceStatus": "false",
-          "actualEvidence": "Dylan was clearly interested in commercial success, moved to major labels, worked with commercial producers, and made strategic career decisions. He also sold his song catalog for hundreds of millions",
-          "correction": "Dylan balanced artistic vision with commercial awareness throughout his career",
-          "originOfMyth": "Romantic idealization of the artist as separate from commercial concerns"
-        }
-      ],
-      "languageRules": {
-        "allowed": [
-          "pioneered",
-          "helped establish",
-          "significantly influenced",
-          "contributed to",
-          "was among the first to",
-          "played a key role in",
-          "helped popularize"
-        ],
-        "restricted": [
-          "single-handedly created",
-          "invented",
-          "was the first person to ever",
-          "completely revolutionized alone",
-          "changed everything overnight",
-          "the sole architect of"
-        ],
-        "contextDependent": [
-          {
-            "phrase": "revolutionary",
-            "allowedWhen": "When describing specific documented innovations in songwriting or performance",
-            "restrictedWhen": "As a general descriptor without specific evidence"
+          "interviewee": "No interviews provided",
+          "relationshipToSubject": "N/A",
+          "timeKnewSubject": {
+            "start": "N/A",
+            "end": "N/A"
           },
-          {
-            "phrase": "transformed",
-            "allowedWhen": "When describing measurable changes in specific contexts",
-            "restrictedWhen": "When implying total transformation of entire musical landscape"
-          }
-        ]
-      },
-      "accurateFramings": [
-        {
-          "topic": "Dylan's role in folk rock",
-          "mythicVersion": "Dylan invented folk rock and shocked the world by going electric",
-          "accurateVersion": "Dylan was a key figure in popularizing electric folk music, contributing to a broader movement that included multiple artists"
-        },
-        {
-          "topic": "Dylan's songwriting originality",
-          "mythicVersion": "Dylan created entirely original songs from pure inspiration",
-          "accurateVersion": "Dylan masterfully adapted and transformed traditional folk sources, creating new works within established folk practices"
-        },
-        {
-          "topic": "Dylan's influence on popular music",
-          "mythicVersion": "Dylan single-handedly elevated the intellectual content of popular music",
-          "accurateVersion": "Dylan was a major force in expanding the lyrical and thematic possibilities of popular music during a period of broader cultural change"
-        },
-        {
-          "topic": "Dylan's motorcycle accident",
-          "mythicVersion": "A near-fatal accident that dramatically changed Dylan's artistic direction",
-          "accurateVersion": "A minor accident that provided cover for Dylan's existing desire to step back from intense public scrutiny"
-        },
-        {
-          "topic": "Dylan's relationship with fame",
-          "mythicVersion": "A pure artist who rejected all commercial considerations",
-          "accurateVersion": "An artist who successfully balanced creative integrity with commercial awareness and strategic career management"
+          "potentialBiases": [
+            "N/A"
+          ],
+          "uniqueAccess": "N/A",
+          "keyClaims": []
         }
       ],
-      "_phase": 8,
-      "_generated_at": "2025-12-15T17:03:30.540077"
+      "claimCorroboration": []
     },
-    "phase_9": {
-      "biographyTitle": "The Endless Highway: Bob Dylan's American Transformation",
-      "centralThesis": {
-        "text": "Bob Dylan represents the quintessential American artist whose continuous reinvention both reflected and shaped the cultural transformations of the late 20th century, demonstrating how authentic artistic vision can persist through radical stylistic changes while maintaining deep connections to American musical and literary traditions.",
-        "confidence": 0.8,
-        "supportingEvidence": [
-          "Documented musical evolution across five decades",
-          "Consistent thematic preoccupations with American identity",
-          "Influence on subsequent generations of artists",
-          "Literary recognition including Nobel Prize",
-          "Cultural impact during major historical moments"
-        ]
-      },
-      "chapterOutline": [
+    "6": {
+      "masterTimeline": [],
+      "timelineGaps": [
         {
-          "chapterNumber": 1,
-          "chapter": "Hibbing Iron: The Forging of Robert Zimmerman",
-          "timespan": "1941-1959",
-          "centralQuestion": "How did Dylan's Minnesota childhood and early musical discoveries shape his artistic foundation?",
-          "claimsReferenced": [
-            "claim_001",
-            "claim_015",
-            "claim_033"
-          ],
-          "keyDocuments": [
-            "doc_hibbing_records",
-            "doc_early_interviews"
-          ],
-          "keyQuotes": [
-            "q_001",
-            "q_015"
-          ],
-          "uncertaintyNotes": [
-            "Limited documentation of very early musical influences",
-            "Conflicting accounts of first encounters with folk music"
-          ],
-          "narrativeArc": "Establishes the tension between small-town origins and artistic ambition that would drive Dylan's entire career"
-        },
-        {
-          "chapterNumber": 2,
-          "chapter": "Greenwich Village Prophet: The Folk Messiah Emerges",
-          "timespan": "1960-1965",
-          "centralQuestion": "How did Dylan transform from folk interpreter to revolutionary songwriter while navigating the politics of the folk revival?",
-          "claimsReferenced": [
-            "claim_002",
-            "claim_018",
-            "claim_025"
-          ],
-          "keyDocuments": [
-            "doc_newport_footage",
-            "doc_early_albums"
-          ],
-          "keyQuotes": [
-            "q_003",
-            "q_007",
-            "q_012"
-          ],
-          "uncertaintyNotes": [
-            "Exact motivations for going electric remain debated",
-            "Degree of political consciousness versus artistic instinct unclear"
-          ],
-          "narrativeArc": "Chronicles the rise to folk stardom and the creative pressures that led to artistic rebellion"
-        },
-        {
-          "chapterNumber": 3,
-          "chapter": "Electric Shock: Rock and Roll Transformation",
-          "timespan": "1965-1967",
-          "centralQuestion": "How did Dylan's electric period revolutionize popular music while nearly destroying his relationship with his audience?",
-          "claimsReferenced": [
-            "claim_008",
-            "claim_019",
-            "claim_027"
-          ],
-          "keyDocuments": [
-            "doc_highway61",
-            "doc_blonde_sessions"
-          ],
-          "keyQuotes": [
-            "q_004",
-            "q_009"
-          ],
-          "uncertaintyNotes": [
-            "True extent of drug influence on creativity",
-            "Relationship dynamics with The Band during this period"
-          ],
-          "narrativeArc": "Explores the artistic breakthrough and personal costs of radical reinvention"
-        },
-        {
-          "chapterNumber": 4,
-          "chapter": "Retreat and Return: Basement Tapes to Blood on the Tracks",
-          "timespan": "1967-1975",
-          "centralQuestion": "How did Dylan's withdrawal from public life lead to artistic renewal and his most personal songwriting?",
-          "claimsReferenced": [
-            "claim_011",
-            "claim_022",
-            "claim_029"
-          ],
-          "keyDocuments": [
-            "doc_basement_tapes",
-            "doc_blood_sessions"
-          ],
-          "keyQuotes": [
-            "q_011",
-            "q_018"
-          ],
-          "uncertaintyNotes": [
-            "Details of motorcycle accident and recovery period",
-            "Extent of marital difficulties during Blood on the Tracks period"
-          ],
-          "narrativeArc": "Examines how personal crisis and retreat enabled artistic maturation and emotional honesty"
-        },
-        {
-          "chapterNumber": 5,
-          "chapter": "Rolling Thunder and Conversion: Seeking Redemption",
-          "timespan": "1975-1982",
-          "centralQuestion": "How did Dylan's spiritual searching manifest in both his touring spectacles and his controversial religious conversion?",
-          "claimsReferenced": [
-            "claim_013",
-            "claim_024",
-            "claim_031"
-          ],
-          "keyDocuments": [
-            "doc_rolling_thunder",
-            "doc_gospel_period"
-          ],
-          "keyQuotes": [
-            "q_013",
-            "q_020"
-          ],
-          "uncertaintyNotes": [
-            "Depth and duration of Christian faith",
-            "Relationship between personal beliefs and public performance"
-          ],
-          "narrativeArc": "Traces Dylan's public spiritual journey and its impact on both his art and his audience"
-        },
-        {
-          "chapterNumber": 6,
-          "chapter": "Elder Statesman: The Never-Ending Tour and Cultural Recognition",
-          "timespan": "1988-2020",
-          "centralQuestion": "How did Dylan maintain artistic relevance while becoming an acknowledged master of American culture?",
-          "claimsReferenced": [
-            "claim_016",
-            "claim_026",
-            "claim_032"
-          ],
-          "keyDocuments": [
-            "doc_chronicles",
-            "doc_nobel_speech"
-          ],
-          "keyQuotes": [
-            "q_016",
-            "q_024"
-          ],
-          "uncertaintyNotes": [
-            "Motivations for continuous touring schedule",
-            "Relationship with his own legacy and canonization"
-          ],
-          "narrativeArc": "Explores how Dylan balanced artistic integrity with cultural institution status while continuing to evolve"
+          "period": {
+            "start": "1941",
+            "end": "2024"
+          },
+          "description": "Complete biographical timeline unavailable - no verified events meet confidence threshold of 0.4",
+          "hypotheses": [
+            "Event matrix and corroborated claims phases may not have been completed",
+            "Source materials require additional verification and cross-referencing",
+            "Primary documents exist but individual events need extraction and confidence scoring"
+          ]
         }
       ],
-      "throughlines": [
+      "sequenceUncertainties": [
         {
-          "theme": "American Identity and Tradition",
-          "chapters": [
-            1,
-            2,
-            4,
-            6
-          ],
-          "evidence": "Documented through song lyrics, interview statements, and artistic choices showing consistent engagement with American folk, blues, and literary traditions"
-        },
-        {
-          "theme": "Artistic Reinvention and Authenticity",
-          "chapters": [
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "evidence": "Tracked through stylistic changes, audience reactions, and Dylan's own statements about artistic freedom"
-        },
-        {
-          "theme": "Performance and Persona",
-          "chapters": [
-            1,
-            2,
-            3,
-            5,
-            6
-          ],
-          "evidence": "Analyzed through concert footage, interview personas, and the evolution of Dylan's public presentations"
-        },
-        {
-          "theme": "Spiritual and Philosophical Searching",
-          "chapters": [
-            3,
-            4,
-            5,
-            6
-          ],
-          "evidence": "Documented in lyrics, religious conversion period, and philosophical statements in later interviews"
+          "events": [],
+          "uncertainty": "Cannot determine event sequences without verified events",
+          "implications": "Timeline reconstruction requires completion of previous analytical phases with confidence-scored events"
         }
-      ],
-      "openQuestions": [
-        {
-          "question": "What drives Dylan's compulsive need for artistic transformation?",
-          "reason": "Dylan rarely gives direct explanations for his stylistic changes, and psychological motivations remain largely private",
-          "significance": "Understanding this could illuminate the nature of sustained creativity and artistic authenticity"
-        },
-        {
-          "question": "How conscious was Dylan of his role in broader cultural movements?",
-          "reason": "Dylan consistently denies intentional political or cultural leadership while clearly influencing both",
-          "significance": "This tension between intention and impact shapes how we understand artistic responsibility"
-        },
-        {
-          "question": "What is the relationship between Dylan's public personas and private self?",
-          "reason": "Dylan's cultivation of mystery and contradictory statements make his authentic self difficult to access",
-          "significance": "This relates to broader questions about celebrity, privacy, and artistic identity in the modern era"
-        }
-      ],
-      "_phase": 9,
-      "_generated_at": "2025-12-15T17:04:02.780124"
+      ]
     },
-    "phase_10": {
-      "redactions": [
+    "7": {
+      "behavioralPatterns": [],
+      "coreTensions": [],
+      "avoidedAnalysis": [
         {
-          "content": "Specific details about Dylan's children's private lives and current activities",
-          "reason": "Privacy - adult children who didn't choose public life",
-          "recommendation": "Modify"
+          "claim": "Dylan exhibits patterns of artistic reinvention driven by creative restlessness",
+          "reason": "No timeline events or interview data provided to establish observable behavioral patterns with required 3+ instances"
         },
         {
-          "content": "Unverified claims about specific drug use incidents or quantities",
-          "reason": "Unverified and potentially harmful speculation",
-          "recommendation": "Remove"
+          "claim": "Dylan demonstrates consistent media avoidance or confrontational interview style",
+          "reason": "No interview transcripts or documented interactions available to analyze behavioral consistency"
         },
         {
-          "content": "Details of private medical information beyond what Dylan has publicly disclosed",
-          "reason": "Privacy - medical records are confidential",
-          "recommendation": "Remove"
+          "claim": "Dylan shows pattern of distancing himself from previous artistic phases",
+          "reason": "Without chronological events and evidence, cannot establish repeated behavioral patterns across time"
+        },
+        {
+          "claim": "Dylan exhibits any consistent interpersonal, creative, or professional behavioral patterns",
+          "reason": "Analysis requires minimum 3 independent instances with supporting evidence - none provided in current dataset"
         }
-      ],
+      ]
+    },
+    "8": {
+      "mythTable": [],
+      "languageRules": {
+        "allowed": [],
+        "restricted": [],
+        "contextDependent": []
+      },
+      "inflatedClaims": []
+    },
+    "9": {
+      "chapterOutline": [],
+      "claimRegistry": [],
+      "narrativeVoice": {
+        "tone": "objective",
+        "perspectiveAcknowledgment": "This biography cannot establish a coherent perspective due to insufficient verified foundation from previous research phases",
+        "authorStance": "Unable to construct narrative relationship to subject without verified timeline events, behavioral patterns, or addressable myths"
+      }
+    },
+    "10": {
+      "redactions": [],
       "disclosures": [
-        "This biography relies heavily on secondary sources, interviews, and published accounts rather than direct access to Dylan himself",
-        "Dylan has been notably private about personal details; many biographical claims come from third-party accounts that may reflect perspective rather than verified fact",
-        "The subject's early childhood and family dynamics before his musical career are documented primarily through later interviews and may be subject to memory limitations",
-        "Accounts of Dylan's conversion periods and spiritual beliefs vary significantly among sources and should be understood as external observations rather than definitive statements about his private beliefs",
-        "Details about business dealings, financial arrangements, and industry relationships are limited to publicly available information",
-        "Dylan's own statements about his life and work have sometimes been contradictory or deliberately enigmatic, reflecting his artistic persona"
-      ],
-      "factCheckFlags": [
         {
-          "claim": "Specific details about Dylan's motorcycle accident in 1966 and its severity",
-          "currentConfidence": 0.5,
-          "verificationNeeded": "Medical records or more contemporary accounts - much is based on later speculation"
+          "disclosure": "This biographical research was conducted without access to primary source materials or comprehensive fact-checking databases. All content should be independently verified before publication.",
+          "category": "methodology",
+          "affectedSections": [
+            "All sections"
+          ]
         },
         {
-          "claim": "Exact timeline and motivations for Dylan's Christian conversion period",
-          "currentConfidence": 0.6,
-          "verificationNeeded": "Direct statements from Dylan or contemporary religious community members"
+          "disclosure": "No claims were generated or verified during the research process. This represents a significant limitation in biographical completeness.",
+          "category": "limitations",
+          "affectedSections": [
+            "All sections"
+          ]
         },
         {
-          "claim": "Details about Dylan's relationship with Joan Baez beyond public performances",
-          "currentConfidence": 0.7,
-          "verificationNeeded": "Both parties have given conflicting accounts over the years"
+          "disclosure": "The subject Bob Dylan is a living person (as of 2024). Any biographical work would require careful consideration of privacy rights and potential defamation issues.",
+          "category": "limitations",
+          "affectedSections": [
+            "All sections"
+          ]
         },
         {
-          "claim": "Specific songwriting processes and inspirations for individual songs",
-          "currentConfidence": 0.5,
-          "verificationNeeded": "Dylan's own explanations are often metaphorical or contradictory"
+          "disclosure": "Bob Dylan's extensive catalog of copyrighted musical works, lyrics, and published materials would require proper licensing and fair use compliance for any substantial biographical work.",
+          "category": "limitations",
+          "affectedSections": [
+            "All sections"
+          ]
+        },
+        {
+          "disclosure": "No sources were consulted or verified in this research phase. Any biographical work would require comprehensive source verification and citation.",
+          "category": "sources",
+          "affectedSections": [
+            "All sections"
+          ]
         }
       ],
-      "ethicalConsiderations": [
-        {
-          "issue": "Balancing public interest with Dylan's documented preference for privacy",
-          "handling": "Focus on documented public record and artistic impact rather than speculation about private matters",
-          "justification": "Respects subject's autonomy while serving legitimate public interest in understanding an important cultural figure"
-        },
-        {
-          "issue": "Treatment of Dylan's various relationships and family matters",
-          "handling": "Include only information that is well-documented and relevant to understanding his artistic development",
-          "justification": "Protects privacy of family members while providing necessary context for his work"
-        },
-        {
-          "issue": "Handling conflicting accounts from different periods of Dylan's life",
-          "handling": "Present multiple perspectives clearly labeled as such, acknowledge contradictions rather than choosing one version",
-          "justification": "Maintains intellectual honesty and allows readers to understand the complexity of the historical record"
-        },
-        {
-          "issue": "Dylan's own mythologizing and deliberate obfuscation of biographical details",
-          "handling": "Acknowledge when Dylan himself has given conflicting accounts, treat his statements as part of his artistic persona when appropriate",
-          "justification": "Recognizes that Dylan's relationship with his own biography is itself part of his artistic expression"
-        }
-      ],
-      "publicationReadiness": {
-        "ready": true,
-        "blockers": [],
-        "recommendations": [
-          "Include a methodology note explaining the challenges of Dylan biography given his privacy and contradictory statements",
-          "Clearly distinguish between documented facts, widely reported but unverified claims, and speculation",
-          "Consider adding timeline of major life events with confidence levels for key claims",
-          "Emphasize the artistic and cultural impact, which is most solidly documented, over personal details",
-          "Include note about Dylan's 2016 Nobel Prize adding to his historical significance"
-        ]
+      "factCheckResults": {
+        "totalClaims": 0,
+        "verifiedClaims": 0,
+        "uncertainClaims": 0,
+        "removedClaims": 0,
+        "overallConfidence": 0.0
       },
-      "_phase": 10,
-      "_generated_at": "2025-12-15T17:04:25.867444"
+      "livingPersonsReview": {
+        "livingPersonsMentioned": [
+          "Bob Dylan"
+        ],
+        "defamationRiskAssessment": "High - Living public figure requires extensive legal review and fact verification before any biographical publication",
+        "rightToReplyOffered": false
+      },
+      "copyrightCompliance": {
+        "quotesUnderFairUse": false,
+        "imagesLicensed": false,
+        "musicLyricsAvoided": false
+      },
+      "publicationReady": false,
+      "publicationBlockers": [
+        "No verified content generated",
+        "No source materials consulted",
+        "Living person privacy and defamation concerns unaddressed",
+        "Copyright compliance not established",
+        "No fact-checking conducted",
+        "Insufficient biographical research completed"
+      ]
     }
-  }
+  },
+  "validation_results": {
+    "1": {
+      "result": "pass",
+      "errors": [],
+      "warnings": []
+    },
+    "2": {
+      "result": "pass",
+      "errors": [],
+      "warnings": [
+        "Only 0 sources found - more needed for saturation"
+      ]
+    },
+    "3": {
+      "result": "pass",
+      "errors": [],
+      "warnings": []
+    },
+    "4": {
+      "result": "pass",
+      "errors": [],
+      "warnings": []
+    },
+    "5": {
+      "result": "pass",
+      "errors": [],
+      "warnings": [
+        "Less than 2 perspectives - limited corroboration possible"
+      ]
+    },
+    "6": {
+      "result": "pass",
+      "errors": [],
+      "warnings": []
+    },
+    "7": {
+      "result": "pass",
+      "errors": [],
+      "warnings": [
+        "Fewer than 2 patterns identified"
+      ]
+    },
+    "8": {
+      "result": "pass",
+      "errors": [],
+      "warnings": []
+    },
+    "9": {
+      "result": "pass",
+      "errors": [],
+      "warnings": []
+    },
+    "10": {
+      "result": "fail",
+      "errors": [
+        "Publication not ready. Blockers: No verified content generated, No source materials consulted, Living person privacy and defamation concerns unaddressed, Copyright compliance not established, No fact-checking conducted, Insufficient biographical research completed"
+      ],
+      "warnings": []
+    }
+  },
+  "publication_ready": false
 }

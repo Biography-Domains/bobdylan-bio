@@ -3,274 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hurricane - Bob Dylan | Chords, History & Videos</title>
-    <meta name="description" content="Hurricane by Bob Dylan - song history, guitar chords, tabs, notable covers, live performances, and in-depth musical analysis of this classic.">
-    <link rel="canonical" href="https://bobdylan.bio/song-hurricane.html">
-    <meta property="og:title" content="Hurricane - Bob Dylan | Chords, History & Videos">
-    <meta property="og:description" content="Hurricane by Bob Dylan - song history, guitar chords, tabs, notable covers, live performances, and in-depth musical analysis of this classic.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bobdylan.bio/song-hurricane.html">
-    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/0/02/Bob_Dylan_-_Azkena_Rock_Festival_2010_2.jpg">
-    <meta property="og:site_name" content="Bob Dylan Biography">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hurricane - Bob Dylan | Chords, History & Videos">
-    <meta name="twitter:description" content="Hurricane by Bob Dylan - song history, guitar chords, tabs, notable covers, live performances, and in-depth musical analysis of this classic.">
-
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Hurricane - Bob Dylan Videos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        .hero-gradient { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
-        .nav-link:hover { color: #f59e0b; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .chord { color: #f59e0b; font-weight: bold; font-family: monospace; }
-    </style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --text: #eee;
+            --text-muted: #aaa;
+            --card-bg: #1f1f3d;
+        }
 
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "MusicRecording",
-    "name": "Hurricane",
-    "byArtist": {
-        "@type": "Person",
-        "name": "Bob Dylan"
-    },
-    "url": "https://bobdylan.bio/song-hurricane.html",
-    "genre": [
-        "Folk",
-        "Rock",
-        "Blues"
-    ]
-}
-    </script>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: var(--accent);
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.2);
+        }
+
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info {
+            padding: 1rem;
+        }
+
+        .video-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .video-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .video-meta span {
+            margin-right: 1rem;
+        }
+
+        .video-type {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .type-official { background: #4CAF50; color: white; }
+        .type-live { background: #FF9800; color: white; }
+        .type-cover { background: #9C27B0; color: white; }
+        .type-interview { background: #2196F3; color: white; }
+        .type-documentary { background: #F44336; color: white; }
+        .type-podcast { background: #00BCD4; color: white; }
+
+        .section-intro {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .song-section {
+            background: var(--secondary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .song-title {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 1rem;
+            background: var(--secondary);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            background: var(--secondary);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .video-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+            nav { gap: 0.5rem; }
+            .nav-link { padding: 0.3rem 0.6rem; font-size: 0.9rem; }
+        }
+        </style>
+<meta name="google-site-verification" content="lpN-knW_P6ZOPWXkw5jX-G9Y8VzXKFjirBc8XGTCrPA">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X0XPQKF54"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5X0XPQKF54');
+</script>
 </head>
-<body class="bg-gray-900 text-white">
-    <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
-                <div class="hidden md:flex space-x-6 text-sm">
-                    <a href="/" class="nav-link text-gray-300">Home</a>
-                    <a href="about.html" class="nav-link text-gray-300">Biography</a>
-                    <a href="discography.html" class="nav-link text-gray-300">Discography</a>
-                    <a href="videos.html" class="nav-link text-gray-300">Videos</a>
-                    <a href="songs.html" class="nav-link text-gray-300">Songs</a>
-                    <a href="covers.html" class="nav-link text-gray-300">Covers</a>
-                    <a href="gallery.html" class="nav-link text-gray-300">Gallery</a>
-                </div>
-                <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-                <a href="/" class="block py-2 text-gray-300">Home</a>
-                <a href="about.html" class="block py-2 text-gray-300">Biography</a>
-                <a href="discography.html" class="block py-2 text-gray-300">Discography</a>
-                <a href="videos.html" class="block py-2 text-gray-300">Videos</a>
-                <a href="songs.html" class="block py-2 text-gray-300">Songs</a>
-                <a href="covers.html" class="block py-2 text-gray-300">Covers</a>
-                <a href="gallery.html" class="block py-2 text-gray-300">Gallery</a>
-            </div>
-        </div>
-    </nav>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+<a href="videos.html" class="nav-link">Videos</a>
+<a href="interviews.html" class="nav-link">Interviews</a>
+<a href="covers.html" class="nav-link">Covers</a>
+<a href="timeline.html" class="nav-link">Timeline</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Hurricane</h1>
+<p class="subtitle">Videos and performances by Bob Dylan</p>
+<h2>Official Videos</h2>
+<div class="video-grid">
 
-    <!-- Hero -->
-    <section class="hero-gradient pt-32 pb-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <a href="songs.html" class="text-yellow-500 hover:text-yellow-400 text-sm">&larr; Back to Songs</a>
-            <div class="mt-6">
-                <span class="inline-block bg-red-500 text-white px-3 py-1 rounded text-xs font-bold mb-4">PROTEST EPIC</span>
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hurricane</h1>
-                <p class="text-xl text-gray-300 mb-2">From <a href="album-desire.html" class="text-yellow-500 hover:underline">Desire</a> (1976)</p>
-                <div class="flex flex-wrap gap-4 mt-4">
-                    <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm">Key: A Minor</span>
-                    <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm">Tempo: 160 BPM</span>
-                    <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm">Difficulty: Intermediate</span>
-                    <span class="bg-gray-800 px-4 py-2 rounded-lg text-sm">Capo: None</span>
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/TkRkcOhM5wA"
+                        title="Hurricane"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Hurricane</h3>
+                
+                <div class="video-meta">
+                    <span>BobDylanVEVO</span><span>2014</span><span>15M views</span>
                 </div>
             </div>
         </div>
-    </section>
+        
+</div>
+<h2>Live Performances</h2>
+<p class="section-intro">Concert footage, TV appearances, and festival performances.</p>
+<div class="video-grid">
 
-    <!-- Main Content -->
-    <section class="py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid lg:grid-cols-3 gap-8">
-
-                <!-- Main Column -->
-                <div class="lg:col-span-2 space-y-8">
-
-                    <!-- Featured Video -->
-                    <div class="bg-gray-800 rounded-xl overflow-hidden">
-                        <div class="p-4 border-b border-gray-700">
-                            <h2 class="text-xl font-bold text-yellow-500">Featured Performance</h2>
-                            <p class="text-gray-400 text-sm">Official Audio</p>
-                        </div>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/bpZvg_FjL3Q" title="Hurricane" frameborder="0" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <!-- History & Context -->
-                    <div class="bg-gray-800 rounded-xl p-6">
-                        <h2 class="text-2xl font-bold text-yellow-500 mb-4">The Story Behind the Song</h2>
-                        <div class="prose prose-invert text-gray-300 space-y-4">
-                            <p>This 8+ minute protest song tells the story of boxer Rubin "Hurricane" Carter, who was wrongly convicted of murder. Dylan visited Carter in prison and co-wrote the song with Jacques Levy.</p>
-<p>The song helped bring attention to Carter's case, though he wasn't released until 1985. Dylan performed it on the Rolling Thunder Revue tour with violinist Scarlet Rivera providing the signature sound.</p>
-                        </div>
-                    </div>
-
-                    <!-- Chord Chart -->
-                    <div class="bg-gray-800 rounded-xl p-6">
-                        <h2 class="text-2xl font-bold text-yellow-500 mb-4">Guitar Chords</h2>
-                        <div class="bg-gray-900 rounded-lg p-4 mb-4">
-                            <p class="text-sm text-gray-400 mb-2">Chords used:</p>
-                            <div class="flex flex-wrap gap-4">
-                                <span class="chord text-2xl">Am</span>
-<span class="chord text-2xl">F</span>
-<span class="chord text-2xl">C</span>
-<span class="chord text-2xl">G</span>
-<span class="chord text-2xl">Em</span>
-                            </div>
-                        </div>
-                        <div class="mt-4 p-4 bg-gray-700 rounded-lg">
-                            <h4 class="font-bold text-yellow-500 mb-2">Playing Tips:</h4>
-                            <ul class="text-gray-300 text-sm space-y-1">
-                                <li>• Key of A Minor, no capo needed</li>
-                                <li>• Tempo: 160 BPM - practice with a metronome</li>
-                                <li>• Difficulty: Intermediate</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- More Performances -->
-                    <div class="bg-gray-800 rounded-xl p-6">
-                        <h2 class="text-2xl font-bold text-yellow-500 mb-4">More Performances</h2>
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div class="video-container rounded-lg overflow-hidden">
-                                <iframe src="https://www.youtube.com/embed/dJ_bWYndkps" title="Hurricane" frameborder="0" allowfullscreen loading="lazy"></iframe>
-                            </div>
-<div class="video-container rounded-lg overflow-hidden">
-                                <iframe src="https://www.youtube.com/embed/1_MRoRJhiN0" title="Hurricane" frameborder="0" allowfullscreen loading="lazy"></iframe>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Sidebar -->
-                <div class="space-y-6">
-
-                    <!-- Quick Facts -->
-                    <div class="bg-gray-800 rounded-xl p-6">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-4">Quick Facts</h3>
-                        <dl class="space-y-3 text-sm">
-                            <div class="flex justify-between">
-                                <dt class="text-gray-400">Written:</dt>
-                                <dd>1975</dd>
-                            </div>
-                            <div class="flex justify-between">
-                                <dt class="text-gray-400">Recorded:</dt>
-                                <dd>July 1975</dd>
-                            </div>
-                            <div class="flex justify-between">
-                                <dt class="text-gray-400">Released:</dt>
-                                <dd>1976</dd>
-                            </div>
-                            <div class="flex justify-between">
-                                <dt class="text-gray-400">Length:</dt>
-                                <dd>8:33</dd>
-                            </div>
-                            <div class="flex justify-between">
-                                <dt class="text-gray-400">Producer:</dt>
-                                <dd>Don DeVito</dd>
-                            </div>
-                        </dl>
-                    </div>
-
-                    <!-- Official Lyrics -->
-                    <div class="bg-gray-800 rounded-xl p-6">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-4">Official Lyrics</h3>
-                        <p class="text-gray-400 text-sm mb-4">Read the complete lyrics on Bob Dylan's official website.</p>
-                        <a href="https://www.bobdylan.com/songs/hurricane/" target="_blank" rel="noopener" class="inline-block bg-yellow-500 text-black font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 transition text-sm">
-                            View Lyrics &rarr;
-                        </a>
-                    </div>
-
-                    <!-- Notable Covers -->
-                    <div class="bg-gray-800 rounded-xl p-6">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-4">Notable Covers</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-center justify-between">
-                <span>Willie Nelson</span>
-                <span class="text-gray-500 text-sm">1983</span>
-            </li>
-<li class="flex items-center justify-between">
-                <span>Live performances only primarily</span>
-            </li>
-
-                        </ul>
-                    </div>
-
-                    <!-- Recognition -->
-                    <div class="bg-gray-800 rounded-xl p-6">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-4">Recognition</h3>
-                        <ul class="space-y-2 text-sm text-gray-300">
-                            <li>• Dylan's last major protest song</li>
-<li>• Featured in 1999 film 'The Hurricane'</li>
-                        </ul>
-                    </div>
-
-                    <!-- Related Songs -->
-                    <div class="bg-gray-800 rounded-xl p-6">
-                        <h3 class="text-lg font-bold text-yellow-500 mb-4">Related Songs</h3>
-                        <ul class="space-y-2">
-                            <li class="text-gray-400">More songs coming soon</li>
-                        </ul>
-                    </div>
-
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/p2XGv12uS9Y"
+                        title="Bob Dylan - Hurricane (Live at Harvard Square Theater, Cambridge, MA - November 20, 1975)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Bob Dylan - Hurricane (Live at Harvard Square Theater, Cambr...</h3>
+                
+                <div class="video-meta">
+                    <span>BobDylanVEVO</span><span>2022</span><span>723K views</span>
                 </div>
             </div>
         </div>
-    </section>
+        
 
-    <footer class="bg-gray-900 border-t border-gray-800 py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-yellow-500 font-bold mb-4">BOB DYLAN</h3>
-                    <p class="text-gray-400 text-sm">The official biography site celebrating six decades of music.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Explore</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="about.html" class="hover:text-yellow-500">Biography</a></li>
-                        <li><a href="discography.html" class="hover:text-yellow-500">Discography</a></li>
-                        <li><a href="songs.html" class="hover:text-yellow-500">Songs</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Media</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="videos.html" class="hover:text-yellow-500">Videos</a></li>
-                        <li><a href="gallery.html" class="hover:text-yellow-500">Gallery</a></li>
-                        <li><a href="covers.html" class="hover:text-yellow-500">Covers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">More</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="timeline.html" class="hover:text-yellow-500">Timeline</a></li>
-                        <li><a href="performances.html" class="hover:text-yellow-500">Performances</a></li>
-                        <li><a href="legacy.html" class="hover:text-yellow-500">Legacy</a></li>
-                    </ul>
-                </div>
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/6xP3lF7jOZE"
+                        title="Bob Dylan - Hurricane (Rolling Thunder Revue, 1975)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2025 bobdylan.bio - A Biography Domains Site</p>
+            <div class="video-info">
+                
+                <h3 class="video-title">Bob Dylan - Hurricane (Rolling Thunder Revue, 1975)</h3>
+                
+                <div class="video-meta">
+                    <span>alexstacy1</span><span>2015</span><span>43K views</span>
+                </div>
             </div>
         </div>
+        
+</div>
+<h2>Cover Versions</h2>
+<p class="section-intro">Notable covers and interpretations by other artists.</p>
+<div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/2S-3BfJvI5I"
+                        title="Hurricane - Bob Dylan (Violin cover) - Karolina Protsenko"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Hurricane - Bob Dylan (Violin cover) - Karolina Protsenko</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover by Karolina Protsenko Violin</p>
+                <div class="video-meta">
+                    <span>Karolina Protsenko Violin</span><span>2020</span><span>1.5M views</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/XUfQnQ4M07U"
+                        title="Hurricane - by Bob Dylan - Cover by Mark Shepard"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Hurricane - by Bob Dylan - Cover by Mark Shepard</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover by MarkShepard</p>
+                <div class="video-meta">
+                    <span>MarkShepard</span><span>2013</span><span>56K views</span>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<h2>Lyric Videos</h2>
+<div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/rR758iXP994"
+                        title="Bob Dylan - Hurricane Lyrics"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Bob Dylan - Hurricane Lyrics</h3>
+                
+                <div class="video-meta">
+                    <span>LyricsOnDemand</span><span>2017</span><span>2.3M views</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/J1mQJ6iI2D4"
+                        title="Bob Dylan - Hurricane (Subtitulado Español)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                
+                <h3 class="video-title">Bob Dylan - Hurricane (Subtitulado Español)</h3>
+                
+                <div class="video-meta">
+                    <span>Mr. Tambourine Man</span><span>2009</span><span>565K views</span>
+                </div>
+            </div>
+        </div>
+        
+</div>
+    </main>
+    <footer>
+        <p>&copy; 2025 | Video research powered by AI</p>
     </footer>
 </body>
 </html>

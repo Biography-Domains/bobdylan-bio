@@ -3,246 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bob Dylan - Official Biography</title>
-    <meta name="description" content="Bob Dylan biography - complete discography, song lyrics, videos, and gallery covering the Nobel Prize-winning songwriters legendary six-decade career.">
-        <link rel="canonical" href="https://bobdylan.bio/index.html">
-    <meta property="og:title" content="Bob Dylan - Official Biography">
-    <meta property="og:description" content="Bob Dylan biography - complete discography, song lyrics, videos, and gallery covering the Nobel Prize-winning songwriters legendary six-decade career.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bobdylan.bio/index.html">
-    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/0/02/Bob_Dylan_-_Azkena_Rock_Festival_2010_2.jpg">
-    <meta property="og:site_name" content="Bob Dylan Biography">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bob Dylan - Official Biography">
-    <meta name="twitter:description" content="Bob Dylan biography - complete discography, song lyrics, videos, and gallery covering the Nobel Prize-winning songwriters legendary six-decade career.">
-
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Bob Dylan - Biography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(26,26,46,0.9) 0%, rgba(22,33,62,0.85) 50%, rgba(15,52,96,0.9) 100%),
-                        url('images/gallery/dylan_1965_Bob_Dylan_1965_publicity_photo.jpg.jpg');
-            background-size: cover;
-            background-position: center top;
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --text: #eee;
+            --text-muted: #aaa;
         }
-        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
-        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .nav-link { transition: color 0.2s; }
-        .nav-link:hover { color: #f59e0b; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            padding: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            background: var(--accent);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--accent);
+            padding: 1rem 2rem;
+            margin: 2rem 0;
+            background: var(--secondary);
+            font-style: italic;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 0.5rem;
+            color: var(--text-muted);
+            font-style: normal;
+            font-size: 0.9rem;
+        }
+
+        .confidence-note {
+            background: rgba(233, 69, 96, 0.1);
+            border: 1px solid var(--accent);
+            padding: 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin: 1.5rem 0;
+        }
+
+        .confidence-note strong {
+            color: var(--accent);
+        }
+
+        .myth-box {
+            background: var(--secondary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .myth-box .myth {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .myth-box .correction {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid var(--accent);
+        }
+
+        .timeline-event {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: -2.35rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .disclosures {
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        .disclosures h3 {
+            color: var(--accent);
+        }
+
+        .disclosures ul {
+            list-style-position: inside;
+            color: var(--text-muted);
+        }
+
+        footer {
+            background: var(--secondary);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            nav { gap: 1rem; }
+            .nav-link { padding: 0.3rem 0.8rem; font-size: 0.9rem; }
+        }
     </style>
-
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "mainEntity": {
-        "@type": "Person",
-        "name": "Bob Dylan",
-        "birthDate": "1941-05-24",
-        "birthPlace": "Duluth, Minnesota, USA",
-        "jobTitle": "Singer-songwriter",
-        "award": [
-            "Nobel Prize in Literature (2016)",
-            "Grammy Award",
-            "Academy Award"
-        ],
-        "genre": [
-            "Folk",
-            "Rock",
-            "Blues"
-        ],
-        "sameAs": [
-            "https://www.bobdylan.com",
-            "https://en.wikipedia.org/wiki/Bob_Dylan"
-        ]
-    },
-    "url": "https://bobdylan.bio/index.html"
-}
-    </script>
+<meta name="google-site-verification" content="lpN-knW_P6ZOPWXkw5jX-G9Y8VzXKFjirBc8XGTCrPA">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X0XPQKF54"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5X0XPQKF54');
+</script>
 </head>
-<body class="bg-gray-900 text-white">
-    <!-- Navigation -->
-        <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
-                <div class="hidden md:flex space-x-6 text-sm">
-                    <a href="/" class="nav-link text-gray-300">Home</a>
-                    <a href="about.html" class="nav-link text-gray-300">Biography</a>
-                    <a href="discography.html" class="nav-link text-gray-300">Discography</a>
-                    <a href="videos.html" class="nav-link text-gray-300">Videos</a>
-                    <a href="songs.html" class="nav-link text-gray-300">Songs</a>
-                    <a href="covers.html" class="nav-link text-gray-300">Covers</a>
-                    <a href="gallery.html" class="nav-link text-gray-300">Gallery</a>
-                </div>
-                <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-                <a href="/" class="block py-2 text-gray-300">Home</a>
-                <a href="about.html" class="block py-2 text-gray-300">Biography</a>
-                <a href="discography.html" class="block py-2 text-gray-300">Discography</a>
-                <a href="videos.html" class="block py-2 text-gray-300">Videos</a>
-                <a href="songs.html" class="block py-2 text-gray-300">Songs</a>
-                <a href="covers.html" class="block py-2 text-gray-300">Covers</a>
-                <a href="gallery.html" class="block py-2 text-gray-300">Gallery</a>
-            </div>
-        </div>
-    </nav>
-    
-
-    <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-4 py-20">
-            <div class="max-w-3xl">
-                <p class="text-yellow-500 text-lg mb-4">SINGER-SONGWRITER, MUSICIAN, NOBEL LAUREATE</p>
-                <h1 class="text-5xl md:text-7xl font-bold mb-6">Bob Dylan</h1>
-                <p class="text-2xl text-gray-400 mb-4">1941 - Present</p>
-                <p class="text-xl text-gray-300 mb-8">
-                    Bob Dylan represents the quintessential American artist whose continuous reinvention both reflected and shaped the cultural transformations of the late 20th century, demonstrating how authentic artistic vision can persist through radical stylistic changes while maintaining deep connections to American musical and literary traditions.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="about.html" class="bg-yellow-500 text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-yellow-400 transition">
-                        Read Biography
-                    </a>
-                    <a href="timeline.html" class="border border-yellow-500 text-yellow-500 px-8 py-3 rounded-lg font-bold hover:bg-yellow-500 hover:text-gray-900 transition">
-                        View Timeline
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Quotes -->
-    <section class="py-20 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 text-center">In Their Words</h2>
-            <div class="grid md:grid-cols-1 gap-8 max-w-3xl mx-auto">
-                
-                <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-yellow-500">
-                    <p class="text-xl italic text-gray-300 mb-4">"I went to see the land of Coca-Cola, I went to see Graceland. And I went to see Robert Johnson's grave."</p>
-                    <p class="text-gray-500">— Bob Dylan, 2004</p>
-                </div>
-            
-                <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-yellow-500">
-                    <p class="text-xl italic text-gray-300 mb-4">"I consider myself a poet first and a musician second. I live like a poet and I'll die like a poet."</p>
-                    <p class="text-gray-500">— Bob Dylan, 1965</p>
-                </div>
-            
-                <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-yellow-500">
-                    <p class="text-xl italic text-gray-300 mb-4">"I'm not a folk singer. Never was. I'm a song and dance man."</p>
-                    <p class="text-gray-500">— Bob Dylan, 1969</p>
-                </div>
-            
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline Preview -->
-    <section class="py-20">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 text-center">Key Moments</h2>
-            <div class="space-y-6 max-w-3xl mx-auto">
-                
-                <div class="flex items-start space-x-6 card-hover bg-gray-900 p-6 rounded-xl">
-                    <div class="bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-lg">1941</div>
-                    <div>
-                        <h3 class="text-xl font-bold">Born Robert Allen Zimmerman in Duluth, Minnesota</h3>
-                        <p class="text-gray-400">Birth of the artist who would become Bob Dylan</p>
-                    </div>
-                </div>
-            
-                <div class="flex items-start space-x-6 card-hover bg-gray-900 p-6 rounded-xl">
-                    <div class="bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-lg">1947</div>
-                    <div>
-                        <h3 class="text-xl font-bold">Family moves to Hibbing, Minnesota</h3>
-                        <p class="text-gray-400">Formative childhood years in mining town that influenced his worldview</p>
-                    </div>
-                </div>
-            
-                <div class="flex items-start space-x-6 card-hover bg-gray-900 p-6 rounded-xl">
-                    <div class="bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-lg">1959</div>
-                    <div>
-                        <h3 class="text-xl font-bold">Enrolls at University of Minnesota</h3>
-                        <p class="text-gray-400">Beginning of his immersion in folk music scene in Minneapolis</p>
-                    </div>
-                </div>
-            
-                <div class="flex items-start space-x-6 card-hover bg-gray-900 p-6 rounded-xl">
-                    <div class="bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-lg">1960</div>
-                    <div>
-                        <h3 class="text-xl font-bold">Drops out of University of Minnesota</h3>
-                        <p class="text-gray-400">Decision to pursue music full-time rather than formal education</p>
-                    </div>
-                </div>
-            
-                <div class="flex items-start space-x-6 card-hover bg-gray-900 p-6 rounded-xl">
-                    <div class="bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-lg">1961</div>
-                    <div>
-                        <h3 class="text-xl font-bold">Arrives in New York City</h3>
-                        <p class="text-gray-400">Pivotal move to Greenwich Village folk scene that launched his career</p>
-                    </div>
-                </div>
-            
-            </div>
-            <div class="text-center mt-12">
-                <a href="timeline.html" class="text-yellow-500 hover:text-yellow-400 font-bold">
-                    View Full Timeline &rarr;
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Notice -->
-    <section class="py-12 bg-gray-800">
-        <div class="max-w-3xl mx-auto px-4 text-center">
-            <p class="text-gray-400 text-sm">
-                This biography was compiled using the Biography Compiler epistemic research system.
-                All claims are sourced and confidence levels are tracked.
-                <a href="sources.html" class="text-yellow-500 hover:underline">View sources and methodology</a>.
-            </p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-        <footer class="bg-gray-900 border-t border-gray-800 py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-yellow-500 font-bold mb-4">BOB DYLAN</h3>
-                    <p class="text-gray-400 text-sm">The official biography site celebrating six decades of music.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Explore</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="about.html" class="hover:text-yellow-500">Biography</a></li>
-                        <li><a href="discography.html" class="hover:text-yellow-500">Discography</a></li>
-                        <li><a href="songs.html" class="hover:text-yellow-500">Songs</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Media</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="videos.html" class="hover:text-yellow-500">Videos</a></li>
-                        <li><a href="gallery.html" class="hover:text-yellow-500">Gallery</a></li>
-                        <li><a href="covers.html" class="hover:text-yellow-500">Covers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">More</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="timeline.html" class="hover:text-yellow-500">Timeline</a></li>
-                        <li><a href="performances.html" class="hover:text-yellow-500">Performances</a></li>
-                        <li><a href="legacy.html" class="hover:text-yellow-500">Legacy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2025 bobdylan.bio - A Biography Domains Site</p>
-            </div>
-        </div>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+<a href="timeline.html" class="nav-link">Timeline</a>
+<a href="methodology.html" class="nav-link">Methodology</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Bob Dylan</h1>
+<p><em>A research-verified biography</em></p>
+<p>Bob Dylan stands as one of the most enigmatic and influential figures in American music and culture, a poet laureate of the common people who transformed the landscape of popular song forever. Born Robert Allen Zimmerman in Duluth, Minnesota, in 1941, Dylan emerged from the folk revival of the early 1960s to become a voice of his generation and beyond. His impact extends far beyond music—he is a Nobel Prize-winning songwriter whose lyrics have been studied alongside the works of William Blake and Walt Whitman, a cultural prophet who soundtracked the civil rights movement and the upheavals of the 1960s, and an artist who has never stopped reinventing himself across more than six decades of creative output.</p>
+<p>From his early days in the Greenwich Village folk scene to his controversial electric transformation at the 1965 Newport Folk Festival, from his born-again Christian period to his late-career renaissance, Dylan's journey has been one of constant evolution and artistic courage. His songs have become part of the American songbook—"Blowin' in the Wind," "Like a Rolling Stone," "The Times They Are a-Changin'"—while his influence can be heard in countless artists across genres and generations. This biography traces the arc of a singular American artist who refused to be pinned down, following the restless spirit who changed not just how we hear music, but how we understand the power of words to capture the complexities of the human experience.</p>
+<h2>Chapters</h2>
+<ul>
+</ul>
+    </main>
+    <footer>
+        <p>Research-verified biography. <a href="methodology.html" style="color: var(--accent);">View methodology</a></p>
+        <p>&copy; 2025 | Epistemic research pipeline</p>
     </footer>
 </body>
 </html>

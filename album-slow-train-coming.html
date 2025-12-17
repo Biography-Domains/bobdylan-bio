@@ -42,6 +42,15 @@
     "url": "https://bobdylan.bio/album-slow-train-coming.html"
 }
     </script>
+<meta name="google-site-verification" content="lpN-knW_P6ZOPWXkw5jX-G9Y8VzXKFjirBc8XGTCrPA">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X0XPQKF54"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5X0XPQKF54');
+</script>
 </head>
 <body class="bg-gray-900 text-white">
         <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
@@ -118,7 +127,7 @@
 
                 <div class="bg-gray-900 rounded-xl overflow-hidden">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/hkY78R-l_C8" title="Bob Dylan - Slow Train Coming (Official Audio)" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/hkY78R-l_C8?enablejsapi=1" title="Bob Dylan - Slow Train Coming (Official Audio)" frameborder="0" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="p-4">
                         <h3 class="font-bold text-lg text-yellow-500">Slow Train Coming (Official Audio)</h3>
@@ -127,7 +136,7 @@
                 </div>
                 <div class="bg-gray-900 rounded-xl overflow-hidden">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/P1B5Vf4yG44" title="Bob Dylan - Bob Dylan - Slow Train Coming - Budokan 1978" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/P1B5Vf4yG44?enablejsapi=1" title="Bob Dylan - Bob Dylan - Slow Train Coming - Budokan 1978" frameborder="0" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="p-4">
                         <h3 class="font-bold text-lg text-yellow-500">Bob Dylan - Slow Train Coming - Budokan 1978</h3>
@@ -136,7 +145,7 @@
                 </div>
                 <div class="bg-gray-900 rounded-xl overflow-hidden">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/0Q-I91eQ6A0" title="Bob Dylan - Bob Dylan - Slow Train Coming" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/0Q-I91eQ6A0?enablejsapi=1" title="Bob Dylan - Bob Dylan - Slow Train Coming" frameborder="0" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="p-4">
                         <h3 class="font-bold text-lg text-yellow-500">Bob Dylan - Slow Train Coming</h3>
@@ -145,7 +154,7 @@
                 </div>
                 <div class="bg-gray-900 rounded-xl overflow-hidden">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/cI_M2e0x5K4" title="Bob Dylan - Slow Train Coming (Live)" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/cI_M2e0x5K4?enablejsapi=1" title="Bob Dylan - Slow Train Coming (Live)" frameborder="0" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="p-4">
                         <h3 class="font-bold text-lg text-yellow-500">Slow Train Coming (Live)</h3>
@@ -205,5 +214,56 @@
             </div>
         </div>
     </footer>
+<script>
+(() => {
+  const ytIframes = Array.from(document.querySelectorAll('iframe[src*="youtube.com/embed/"]'));
+  if (!ytIframes.length) return;
+
+  // If the YouTube iframe API script already exists, don't add another.
+  const apiSrc = "https://www.youtube.com/iframe_api";
+  const hasApiScript = Array.from(document.scripts).some(s => (s.src || "").includes(apiSrc));
+
+  const initPlayers = () => {
+    if (!window.YT || !YT.Player) return;
+    const players = [];
+
+    const onStateChange = (event) => {
+      // 1 = playing
+      if (!window.YT || event.data !== YT.PlayerState.PLAYING) return;
+      for (const p of players) {
+        if (p !== event.target) {
+          try { p.pauseVideo(); } catch (_) {}
+        }
+      }
+    };
+
+    for (const iframe of ytIframes) {
+      try {
+        players.push(new YT.Player(iframe, { events: { onStateChange } }));
+      } catch (_) {
+        // If an iframe can't be wrapped, skip it.
+      }
+    }
+  };
+
+  // Chain onYouTubeIframeAPIReady if someone else defined it.
+  const prevReady = window.onYouTubeIframeAPIReady;
+  window.onYouTubeIframeAPIReady = () => {
+    try { if (typeof prevReady === "function") prevReady(); } catch (_) {}
+    initPlayers();
+  };
+
+  if (window.YT && YT.Player) {
+    initPlayers();
+    return;
+  }
+
+  if (!hasApiScript) {
+    const tag = document.createElement("script");
+    tag.src = apiSrc;
+    document.head.appendChild(tag);
+  }
+})();
+</script>
 </body>
 </html>

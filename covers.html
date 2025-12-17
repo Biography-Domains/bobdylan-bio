@@ -3,458 +3,430 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bob Dylan Covers - Who Did It Better? | Vote & Compare</title>
-    <meta name="description" content="Bob Dylan cover songs - iconic versions by <a href="https://jimihendrix.bio" class="bio-link" target="_blank">Jimi Hendrix</a>, Adele, Guns N Roses, The Byrds, Eric Clapton, and hundreds more artists. Compare and vote.">
-    <meta name="keywords" content="Bob Dylan covers, who did it better, best cover songs, Dylan vs Hendrix, cover song battles">
-
-    <meta property="og:title" content="Bob Dylan Covers - Who Did It Better?">
-    <meta property="og:description" content="Bob Dylan cover songs - iconic versions by <a href="https://jimihendrix.bio" class="bio-link" target="_blank">Jimi Hendrix</a>, Adele, Guns N Roses, The Byrds, Eric Clapton, and hundreds more artists. Compare and vote.">
-    <meta property="og:type" content="website">
-
-        <link rel="canonical" href="https://bobdylan.bio/covers.html">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Bob Dylan - Cover Songs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        .hero-gradient { background: linear-gradient(135deg, #7c2d12 0%, #1e1b4b 100%); }
-        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
-        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .nav-link { transition: color 0.2s; }
-        .nav-link:hover { color: #f59e0b; }
-        .song-card { border-left: 4px solid #f59e0b; }
-        .cover-count { background: linear-gradient(135deg, #f59e0b, #dc2626); background-color: #f59e0b; }
-        .battle-badge { animation: pulse 2s infinite; }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --text: #eee;
+            --text-muted: #aaa;
+            --card-bg: #1f1f3d;
         }
-    </style>
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Bob Dylan Cover Song Comparisons",
-        "description": "Compare original Bob Dylan recordings with famous cover versions",
-        "about": {"@type": "Person", "name": "Bob Dylan"},
-        "numberOfItems": 50
-    }
-    </script>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: var(--accent);
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.2);
+        }
+
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info {
+            padding: 1rem;
+        }
+
+        .video-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .video-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .video-meta span {
+            margin-right: 1rem;
+        }
+
+        .video-type {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .type-official { background: #4CAF50; color: white; }
+        .type-live { background: #FF9800; color: white; }
+        .type-cover { background: #9C27B0; color: white; }
+        .type-interview { background: #2196F3; color: white; }
+        .type-documentary { background: #F44336; color: white; }
+        .type-podcast { background: #00BCD4; color: white; }
+
+        .section-intro {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .song-section {
+            background: var(--secondary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .song-title {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 1rem;
+            background: var(--secondary);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            background: var(--secondary);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .video-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+            nav { gap: 0.5rem; }
+            .nav-link { padding: 0.3rem 0.6rem; font-size: 0.9rem; }
+        }
+        </style>
+<meta name="google-site-verification" content="lpN-knW_P6ZOPWXkw5jX-G9Y8VzXKFjirBc8XGTCrPA">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X0XPQKF54"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5X0XPQKF54');
+</script>
 </head>
-<body class="bg-gray-900 text-white">
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+<a href="videos.html" class="nav-link">Videos</a>
+<a href="interviews.html" class="nav-link">Interviews</a>
+<a href="covers.html" class="nav-link">Covers</a>
+<a href="timeline.html" class="nav-link">Timeline</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Covers by Bob Dylan</h1>
+<p class="subtitle">Songs Bob Dylan covered from other artists</p>
 
-        <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-95 border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-yellow-500">BOB DYLAN</a>
-                <div class="hidden md:flex space-x-6 text-sm">
-                    <a href="/" class="nav-link text-gray-300">Home</a>
-                    <a href="about.html" class="nav-link text-gray-300">Biography</a>
-                    <a href="discography.html" class="nav-link text-gray-300">Discography</a>
-                    <a href="videos.html" class="nav-link text-gray-300">Videos</a>
-                    <a href="songs.html" class="nav-link text-gray-300">Songs</a>
-                    <a href="covers.html" class="nav-link text-gray-300">Covers</a>
-                    <a href="gallery.html" class="nav-link text-gray-300">Gallery</a>
-                </div>
-                <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+            <div class="stats-bar">
+                <div class="stat"><div class="stat-number">10</div><div class="stat-label">Cover Songs</div></div>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-                <a href="/" class="block py-2 text-gray-300">Home</a>
-                <a href="about.html" class="block py-2 text-gray-300">Biography</a>
-                <a href="discography.html" class="block py-2 text-gray-300">Discography</a>
-                <a href="videos.html" class="block py-2 text-gray-300">Videos</a>
-                <a href="songs.html" class="block py-2 text-gray-300">Songs</a>
-                <a href="covers.html" class="block py-2 text-gray-300">Covers</a>
-                <a href="gallery.html" class="block py-2 text-gray-300">Gallery</a>
+            
+<div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/5kH1ny323tU"
+                        title="Bob Dylan - "Little Moses" (Trad.) - Unreleased, Gospel Era"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="hero-gradient pt-32 pb-20">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <span class="inline-block bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-bold mb-4">COVERS HUB</span>
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Who Did It Better?</h1>
-            <p class="text-xl text-gray-300 mb-6">600+ artists have covered Bob Dylan. Compare and vote for your favorites.</p>
-
-            <div class="flex flex-wrap justify-center gap-4 mt-8">
-                <div class="bg-gray-800 bg-opacity-50 px-6 py-3 rounded-lg">
-                    <span class="text-3xl font-bold text-yellow-500">1,500+</span>
-                    <p class="text-gray-400 text-sm">Cover Versions</p>
-                </div>
-                <div class="bg-gray-800 bg-opacity-50 px-6 py-3 rounded-lg">
-                    <span class="text-3xl font-bold text-yellow-500">600+</span>
-                    <p class="text-gray-400 text-sm">Artists</p>
-                </div>
-                <div class="bg-gray-800 bg-opacity-50 px-6 py-3 rounded-lg">
-                    <span class="text-3xl font-bold text-yellow-500">300+</span>
-                    <p class="text-gray-400 text-sm">Songs Covered</p>
+            <div class="video-info">
+                <span class="video-type type-cover">Cover</span>
+                <h3 class="video-title">Bob Dylan - "Little Moses" (Trad.) - Unreleased, Gospel Era</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover of 'Little Moses' by Traditional</p>
+                <div class="video-meta">
+                    <span>1979</span><span>33000 views</span>
                 </div>
             </div>
         </div>
-    </section>
+        
 
-    <!-- Featured Battles -->
-    <section class="py-16 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4">Featured Battles</h2>
-            <p class="text-gray-400 text-center mb-12">The most legendary cover vs original showdowns</p>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- All Along the Watchtower -->
-                <a href="vs-all-along-the-watchtower.html" class="card-hover bg-gray-900 rounded-xl overflow-hidden group">
-                    <div class="bg-gradient-to-r from-amber-600 to-purple-600 p-4">
-                        <span class="battle-badge inline-block bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">HOT</span>
-                        <h3 class="text-xl font-bold mt-2">All Along the Watchtower</h3>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="text-center">
-                                <p class="font-bold text-amber-500">Bob Dylan</p>
-                                <p class="text-xs text-gray-500">1967</p>
-                            </div>
-                            <span class="text-2xl font-bold text-gray-600">VS</span>
-                            <div class="text-center">
-                                <p class="font-bold text-purple-400">Jimi Hendrix</p>
-                                <p class="text-xs text-gray-500">1968</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm">The cover so good Dylan adopted it himself</p>
-                        <div class="mt-4 text-yellow-500 group-hover:text-yellow-400">Vote Now &rarr;</div>
-                    </div>
-                </a>
-
-                <!-- Knockin' on Heaven's Door -->
-                <a href="vs-knockin-on-heavens-door.html" class="card-hover bg-gray-900 rounded-xl overflow-hidden group">
-                    <div class="bg-gradient-to-r from-amber-600 to-red-600 p-4">
-                        <span class="battle-badge inline-block bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">NEW</span>
-                        <h3 class="text-xl font-bold mt-2">Knockin' on Heaven's Door</h3>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="text-center">
-                                <p class="font-bold text-amber-500">Bob Dylan</p>
-                                <p class="text-xs text-gray-500">1973</p>
-                            </div>
-                            <span class="text-2xl font-bold text-gray-600">VS</span>
-                            <div class="text-center">
-                                <p class="font-bold text-red-400">Guns N' Roses</p>
-                                <p class="text-xs text-gray-500">1987</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm">Acoustic original vs power rock anthem</p>
-                        <div class="mt-4 text-yellow-500 group-hover:text-yellow-400">Vote Now &rarr;</div>
-                    </div>
-                </a>
-
-                <!-- Make You Feel My Love -->
-                <a href="vs-make-you-feel-my-love.html" class="card-hover bg-gray-900 rounded-xl overflow-hidden group">
-                    <div class="bg-gradient-to-r from-amber-600 to-pink-600 p-4">
-                        <span class="battle-badge inline-block bg-blue-500 text-white px-2 py-1 rounded text-xs font-bold">POPULAR</span>
-                        <h3 class="text-xl font-bold mt-2">Make You Feel My Love</h3>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="text-center">
-                                <p class="font-bold text-amber-500">Bob Dylan</p>
-                                <p class="text-xs text-gray-500">1997</p>
-                            </div>
-                            <span class="text-2xl font-bold text-gray-600">VS</span>
-                            <div class="text-center">
-                                <p class="font-bold text-pink-400">Adele</p>
-                                <p class="text-xs text-gray-500">2008</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm">450+ covers - which is best?</p>
-                        <div class="mt-4 text-yellow-500 group-hover:text-yellow-400">Vote Now &rarr;</div>
-                    </div>
-                </a>
-
-                <!-- Mr. Tambourine Man -->
-                <a href="vs-mr-tambourine-man.html" class="card-hover bg-gray-900 rounded-xl overflow-hidden group">
-                    <div class="bg-gradient-to-r from-amber-600 to-cyan-600 p-4">
-                        <h3 class="text-xl font-bold mt-2">Mr. Tambourine Man</h3>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="text-center">
-                                <p class="font-bold text-amber-500">Bob Dylan</p>
-                                <p class="text-xs text-gray-500">1965</p>
-                            </div>
-                            <span class="text-2xl font-bold text-gray-600">VS</span>
-                            <div class="text-center">
-                                <p class="font-bold text-cyan-400">The Byrds</p>
-                                <p class="text-xs text-gray-500">1965</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm">The cover that invented folk-rock</p>
-                        <div class="mt-4 text-yellow-500 group-hover:text-yellow-400">Vote Now &rarr;</div>
-                    </div>
-                </a>
-
-                <!-- Blowin' in the Wind -->
-                <a href="vs-blowin-in-the-wind.html" class="card-hover bg-gray-900 rounded-xl overflow-hidden group">
-                    <div class="bg-gradient-to-r from-amber-600 to-green-600 p-4">
-                        <h3 class="text-xl font-bold mt-2">Blowin' in the Wind</h3>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="text-center">
-                                <p class="font-bold text-amber-500">Bob Dylan</p>
-                                <p class="text-xs text-gray-500">1963</p>
-                            </div>
-                            <span class="text-2xl font-bold text-gray-600">VS</span>
-                            <div class="text-center">
-                                <p class="font-bold text-green-400">Peter, Paul & Mary</p>
-                                <p class="text-xs text-gray-500">1963</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm">The civil rights anthem showdown</p>
-                        <div class="mt-4 text-yellow-500 group-hover:text-yellow-400">Vote Now &rarr;</div>
-                    </div>
-                </a>
-
-                <!-- It Ain't Me Babe -->
-                <a href="vs-it-aint-me-babe.html" class="card-hover bg-gray-900 rounded-xl overflow-hidden group">
-                    <div class="bg-gradient-to-r from-amber-600 to-yellow-600 p-4">
-                        <h3 class="text-xl font-bold mt-2">It Ain't Me Babe</h3>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="text-center">
-                                <p class="font-bold text-amber-500">Bob Dylan</p>
-                                <p class="text-xs text-gray-500">1964</p>
-                            </div>
-                            <span class="text-2xl font-bold text-gray-600">VS</span>
-                            <div class="text-center">
-                                <p class="font-bold text-yellow-400">Johnny Cash</p>
-                                <p class="text-xs text-gray-500">1964</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm">Solo vs legendary duet</p>
-                        <div class="mt-4 text-yellow-500 group-hover:text-yellow-400">Vote Now &rarr;</div>
-                    </div>
-                </a>
-
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/F8mE8N3z93A"
+                        title="Bob Dylan - Blue Moon (Richard Rodgers & Lorenz Hart cover)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-cover">Cover</span>
+                <h3 class="video-title">Bob Dylan - Blue Moon (Richard Rodgers & Lorenz Hart cover)</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover of 'Blue Moon' by Richard Rodgers & Lorenz Hart</p>
+                <div class="video-meta">
+                    <span>1992</span><span>130000 views</span>
+                </div>
             </div>
         </div>
-    </section>
+        
 
-    <!-- Multi-Artist Battles -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4">Cover Tournaments</h2>
-            <p class="text-gray-400 text-center mb-12">Multiple artists battle it out - vote for the best version!</p>
-
-            <div class="grid md:grid-cols-2 gap-8">
-
-                <!-- Knockin' Tournament -->
-                <div class="song-card bg-gray-800 rounded-xl p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-yellow-500">Knockin' on Heaven's Door</h3>
-                        <span class="cover-count text-white px-3 py-1 rounded-full text-sm font-bold">150+ versions</span>
-                    </div>
-                    <p class="text-gray-400 mb-4">Who knocked the hardest?</p>
-                    <div class="space-y-2">
-                        <a href="vs-knockin-on-heavens-door.html" class="flex items-center justify-between bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition">
-                            <span>Bob Dylan <span class="text-gray-500">vs</span> Guns N' Roses</span>
-                            <span class="text-yellow-500">&rarr;</span>
-                        </a>
-                        <a href="song-knockin-on-heavens-door.html" class="flex items-center justify-between bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition">
-                            <span>Full Song Page</span>
-                            <span class="text-yellow-500">&rarr;</span>
-                        </a>
-                    </div>
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/hQvL4Kk0r7c"
+                        title="Bob Dylan - Red River Shore"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-cover">Cover</span>
+                <h3 class="video-title">Bob Dylan - Red River Shore</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover of 'Red River Shore' by Traditional</p>
+                <div class="video-meta">
+                    <span>1997</span><span>89000 views</span>
                 </div>
-
-                <!-- Make You Feel My Love Tournament -->
-                <div class="song-card bg-gray-800 rounded-xl p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-yellow-500">Make You Feel My Love</h3>
-                        <span class="cover-count text-white px-3 py-1 rounded-full text-sm font-bold">450+ versions</span>
-                    </div>
-                    <p class="text-gray-400 mb-4">The modern standard - who owns it?</p>
-                    <div class="space-y-2">
-                        <a href="vs-make-you-feel-my-love.html" class="flex items-center justify-between bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition">
-                            <span>Bob Dylan <span class="text-gray-500">vs</span> Adele</span>
-                            <span class="text-yellow-500">&rarr;</span>
-                        </a>
-                        <a href="song-make-you-feel-my-love.html" class="flex items-center justify-between bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition">
-                            <span>Full Song Page</span>
-                            <span class="text-yellow-500">&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
+        
 
-    <!-- All Songs Covered -->
-    <section class="py-16 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4">Most Covered Dylan Songs</h2>
-            <p class="text-gray-400 text-center mb-12">Click any song to explore the full song page</p>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-
-                <a href="song-blowin-in-the-wind.html" class="bg-gray-900 p-4 rounded-lg hover:bg-gray-700 transition flex justify-between items-center">
-                    <div>
-                        <h4 class="font-bold">Blowin' in the Wind</h4>
-                        <p class="text-gray-500 text-sm">1963</p>
-                    </div>
-                    <span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">100+ covers</span>
-                </a>
-
-                <a href="song-all-along-the-watchtower.html" class="bg-gray-900 p-4 rounded-lg hover:bg-gray-700 transition flex justify-between items-center">
-                    <div>
-                        <h4 class="font-bold">All Along the Watchtower</h4>
-                        <p class="text-gray-500 text-sm">1967</p>
-                    </div>
-                    <span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">80+ covers</span>
-                </a>
-
-                <a href="song-knockin-on-heavens-door.html" class="bg-gray-900 p-4 rounded-lg hover:bg-gray-700 transition flex justify-between items-center">
-                    <div>
-                        <h4 class="font-bold">Knockin' on Heaven's Door</h4>
-                        <p class="text-gray-500 text-sm">1973</p>
-                    </div>
-                    <span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">150+ covers</span>
-                </a>
-
-                <a href="song-make-you-feel-my-love.html" class="bg-gray-900 p-4 rounded-lg hover:bg-gray-700 transition flex justify-between items-center">
-                    <div>
-                        <h4 class="font-bold">Make You Feel My Love</h4>
-                        <p class="text-gray-500 text-sm">1997</p>
-                    </div>
-                    <span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">450+ covers</span>
-                </a>
-
-                <a href="song-mr-tambourine-man.html" class="bg-gray-900 p-4 rounded-lg hover:bg-gray-700 transition flex justify-between items-center">
-                    <div>
-                        <h4 class="font-bold">Mr. Tambourine Man</h4>
-                        <p class="text-gray-500 text-sm">1965</p>
-                    </div>
-                    <span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">60+ covers</span>
-                </a>
-
-                <a href="song-times-they-are-a-changin.html" class="bg-gray-900 p-4 rounded-lg hover:bg-gray-700 transition flex justify-between items-center">
-                    <div>
-                        <h4 class="font-bold">The Times They Are a-Changin'</h4>
-                        <p class="text-gray-500 text-sm">1964</p>
-                    </div>
-                    <span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">70+ covers</span>
-                </a>
-
-                <a href="song-like-a-rolling-stone.html" class="bg-gray-900 p-4 rounded-lg hover:bg-gray-700 transition flex justify-between items-center">
-                    <div>
-                        <h4 class="font-bold">Like a Rolling Stone</h4>
-                        <p class="text-gray-500 text-sm">1965</p>
-                    </div>
-                    <span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">50+ covers</span>
-                </a>
-
-                <a href="song-dont-think-twice.html" class="bg-gray-900 p-4 rounded-lg hover:bg-gray-700 transition flex justify-between items-center">
-                    <div>
-                        <h4 class="font-bold">Don't Think Twice, It's All Right</h4>
-                        <p class="text-gray-500 text-sm">1963</p>
-                    </div>
-                    <span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">40+ covers</span>
-                </a>
-
-                <a href="song-tangled-up-in-blue.html" class="bg-gray-900 p-4 rounded-lg hover:bg-gray-700 transition flex justify-between items-center">
-                    <div>
-                        <h4 class="font-bold">Tangled Up in Blue</h4>
-                        <p class="text-gray-500 text-sm">1975</p>
-                    </div>
-                    <span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">35+ covers</span>
-                </a>
-
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/S873V57M_80"
+                        title="Bob Dylan - Friend Of The Devil (Grateful Dead Cover) - Soundcheck 1987"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
             </div>
-
-            <div class="text-center mt-8">
-                <a href="songs.html" class="inline-block bg-yellow-500 text-black font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition">
-                    View All Songs
-                </a>
+            <div class="video-info">
+                <span class="video-type type-cover">Cover</span>
+                <h3 class="video-title">Bob Dylan - Friend Of The Devil (Grateful Dead Cover) - Soun...</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover of 'Friend of the Devil' by Grateful Dead</p>
+                <div class="video-meta">
+                    <span>1987</span><span>110000 views</span>
+                </div>
             </div>
         </div>
-    </section>
+        
 
-    <!-- Explore More -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Explore More</h2>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <a href="songs.html" class="card-hover bg-gradient-to-br from-amber-900 to-amber-700 p-6 rounded-xl text-center">
-                    <div class="text-4xl mb-4">🎸</div>
-                    <h3 class="font-bold text-xl mb-2">All Songs</h3>
-                    <p class="text-amber-200 text-sm">Guitar chords and song guides</p>
-                </a>
-
-                <a href="videos.html" class="card-hover bg-gradient-to-br from-purple-900 to-purple-700 p-6 rounded-xl text-center">
-                    <div class="text-4xl mb-4">🎤</div>
-                    <h3 class="font-bold text-xl mb-2">Videos</h3>
-                    <p class="text-purple-200 text-sm">Live performances and interviews</p>
-                </a>
-
-                <a href="discography.html" class="card-hover bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-xl text-center">
-                    <div class="text-4xl mb-4">📀</div>
-                    <h3 class="font-bold text-xl mb-2">Discography</h3>
-                    <p class="text-blue-200 text-sm">All 39 studio albums</p>
-                </a>
-
-                <a href="timeline.html" class="card-hover bg-gradient-to-br from-green-900 to-green-700 p-6 rounded-xl text-center">
-                    <div class="text-4xl mb-4">📅</div>
-                    <h3 class="font-bold text-xl mb-2">Timeline</h3>
-                    <p class="text-green-200 text-sm">60+ years of music history</p>
-                </a>
-
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/Wf_iXF-YI18"
+                        title="Bob Dylan - Can't Help Falling In Love (Elvis Presley cover)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-cover">Cover</span>
+                <h3 class="video-title">Bob Dylan - Can't Help Falling In Love (Elvis Presley cover)</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover of 'Can't Help Falling in Love' by Elvis Presley</p>
+                <div class="video-meta">
+                    <span>1987</span><span>440000 views</span>
+                </div>
             </div>
         </div>
-    </section>
+        
 
-        <footer class="bg-gray-900 border-t border-gray-800 py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-yellow-500 font-bold mb-4">BOB DYLAN</h3>
-                    <p class="text-gray-400 text-sm">The official biography site celebrating six decades of music.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Explore</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="about.html" class="hover:text-yellow-500">Biography</a></li>
-                        <li><a href="discography.html" class="hover:text-yellow-500">Discography</a></li>
-                        <li><a href="songs.html" class="hover:text-yellow-500">Songs</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Media</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="videos.html" class="hover:text-yellow-500">Videos</a></li>
-                        <li><a href="gallery.html" class="hover:text-yellow-500">Gallery</a></li>
-                        <li><a href="covers.html" class="hover:text-yellow-500">Covers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">More</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="timeline.html" class="hover:text-yellow-500">Timeline</a></li>
-                        <li><a href="performances.html" class="hover:text-yellow-500">Performances</a></li>
-                        <li><a href="legacy.html" class="hover:text-yellow-500">Legacy</a></li>
-                    </ul>
-                </div>
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/m8KjQWpC59Y"
+                        title="Bob Dylan - "Barbara Allen" Live 1961 (Rare)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2025 bobdylan.bio - A Biography Domains Site</p>
+            <div class="video-info">
+                <span class="video-type type-cover">Cover</span>
+                <h3 class="video-title">Bob Dylan - "Barbara Allen" Live 1961 (Rare)</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover of 'Barbara Allen' by Traditional</p>
+                <div class="video-meta">
+                    <span>1961</span><span>130000 views</span>
+                </div>
             </div>
         </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/Oa4Hn_5nC6g"
+                        title="Bob Dylan - Come All You Fair And Tender Ladies"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-cover">Cover</span>
+                <h3 class="video-title">Bob Dylan - Come All You Fair And Tender Ladies</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover of 'Come All You Fair and Tender Ladies' by Traditional</p>
+                <div class="video-meta">
+                    <span>1961</span><span>100000 views</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/S4Nol0HhJpQ"
+                        title="Bob Dylan - Matchbox (Carl Perkins Cover) - 1986"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-cover">Cover</span>
+                <h3 class="video-title">Bob Dylan - Matchbox (Carl Perkins Cover) - 1986</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover of 'Matchbox' by Carl Perkins</p>
+                <div class="video-meta">
+                    <span>1986</span><span>150000 views</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/bF9zF76k-Xo"
+                        title="Bob Dylan - Across the Borderline (Willie Nelson Cover) - 1990"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-cover">Cover</span>
+                <h3 class="video-title">Bob Dylan - Across the Borderline (Willie Nelson Cover) - 19...</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover of 'Across the Borderline' by Willie Nelson</p>
+                <div class="video-meta">
+                    <span>1990</span><span>20000 views</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="video-card">
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/qLh7d7eYm7A"
+                        title="Bob Dylan - Frankie and Albert [Traditional] (Live, 1962)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+                <span class="video-type type-cover">Cover</span>
+                <h3 class="video-title">Bob Dylan - Frankie and Albert [Traditional] (Live, 1962)</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Cover of 'Frankie and Albert' by Traditional</p>
+                <div class="video-meta">
+                    <span>1962</span><span>55000 views</span>
+                </div>
+            </div>
+        </div>
+        
+</div>
+    </main>
+    <footer>
+        <p>&copy; 2025 | Video research powered by AI</p>
     </footer>
-
 </body>
 </html>

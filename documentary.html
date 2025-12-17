@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bob Dylan Documentary</title>
+  <meta name="description" content="A 25-minute documentary-style narrative about Bob Dylan, built from the Hyperlink.bio research archive." />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: rgba(255,255,255,0.06);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+    }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; background: var(--bg); color: var(--text); }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.25rem; }
+    h1 { font-size: 2.25rem; margin: 0 0 0.5rem; }
+    .sub { color: var(--muted); margin: 0 0 1.5rem; }
+    .panel { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem; }
+    .grid { display: grid; gap: 1rem; }
+    .grid.cols2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .grid.cols3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    a { color: var(--accent); }
+    .card img { width:100%; height: 220px; object-fit: cover; border-radius: 12px; display:block; }
+    .caption { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; }
+    .vcard .frame { position: relative; padding-top: 56.25%; border-radius: 12px; overflow: hidden; background: rgba(0,0,0,0.35); }
+    .vcard iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .kicker { color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.75rem; }
+    ul { margin: 0.5rem 0 0; padding-left: 1.2rem; color: var(--muted); }
+    .chapters { max-height: 360px; overflow: auto; padding-right: 0.25rem; }
+    .now-playing { margin: 0.25rem 0 0.75rem; color: var(--text); font-size: 0.95rem; }
+    .now-playing .label { color: var(--muted); margin-right: 0.35rem; }
+    .chapter-btn {
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: 0;
+      color: var(--accent);
+      padding: 0.35rem 0;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    .chapter-btn:hover { text-decoration: underline; }
+    .chapter-btn.active { color: #ffffff; font-weight: 650; }
+  </style>
+<meta name="google-site-verification" content="lpN-knW_P6ZOPWXkw5jX-G9Y8VzXKFjirBc8XGTCrPA">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X0XPQKF54"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5X0XPQKF54');
+</script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kicker">Documentary</div>
+    <h1>Bob Dylan — A 25‑Minute Story</h1>
+    <p class="sub">Narrated with Google’s best male voice (en-US-Chirp3-HD-Iapetus).</p>
+
+    <div class="panel">
+      <div class="kicker">Audio</div>
+      <p class="sub">Press play, then browse chapters, images, and clips as the narration progresses.</p>
+      <audio id="doc-audio" controls preload="metadata" style="width:100%;">
+        <source src="assets/documentary_narration_premium.wav" type="audio/wav" />
+      </audio>
+    </div>
+
+    <div style="height: 1rem;"></div>
+
+    <div class="grid cols2">
+      <div class="panel">
+        <div class="kicker">Chapters</div>
+        <div id="now-playing" class="now-playing"><span class="label">Now playing:</span><span class="title">—</span></div>
+        <ul class="chapters">
+          <li><button class="chapter-btn" data-start="109.828">Hibbing Iron: The Forging of Robert Zimmerman</button></li><li><button class="chapter-btn" data-start="231.403">Greenwich Village Prophet: The Folk Messiah Emerges</button></li><li><button class="chapter-btn" data-start="352.377">The Voice of a Generation</button></li><li><button class="chapter-btn" data-start="452.591">Electric Shock: The Rock Revolution</button></li><li><button class="chapter-btn" data-start="602.666">Retreat and Return: Woodstock and Rebirth</button></li><li><button class="chapter-btn" data-start="738.82">Blood on the Tracks: The Masterpiece of Heartbreak</button></li><li><button class="chapter-btn" data-start="842.814">Born Again: The Christian Years</button></li><li><button class="chapter-btn" data-start="941.228">Lost in the Eighties</button></li><li><button class="chapter-btn" data-start="1051.943">The Never Ending Tour</button></li><li><button class="chapter-btn" data-start="1151.317">Nobel Laureate: Recognition and Legacy</button></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="kicker">How this is made</div>
+        <p class="sub">Script comes from your biography research pages; images are served from your R2 library; clips are embedded from YouTube.</p>
+      </div>
+    </div>
+
+    <div style="height: 1rem;"></div>
+
+    <div class="panel">
+      <div class="kicker">Images</div>
+      <div class="grid cols3">
+        
+        <div class="card">
+          <img src="https://upload.wikimedia.org/wikipedia/en/5/51/BobDylanalbum.jpg" alt="Bob Dylan (1962) album cover" loading="lazy" />
+          <div class="caption">Bob Dylan (1962) album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/freewheelin-bob-dylan.jpg" alt="The Freewheelin' Bob Dylan album cover" loading="lazy" />
+          <div class="caption">The Freewheelin' Bob Dylan album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/times-they-are-a-changin.jpg" alt="The Times They Are a-Changin' album cover" loading="lazy" />
+          <div class="caption">The Times They Are a-Changin' album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/another-side-bob-dylan.jpg" alt="Another Side of Bob Dylan album cover" loading="lazy" />
+          <div class="caption">Another Side of Bob Dylan album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/bringing-it-all-back-home.jpg" alt="Bringing It All Back Home album cover" loading="lazy" />
+          <div class="caption">Bringing It All Back Home album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/highway-61-revisited.jpg" alt="Highway 61 Revisited album cover" loading="lazy" />
+          <div class="caption">Highway 61 Revisited album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/blonde-on-blonde.jpg" alt="Blonde on Blonde album cover" loading="lazy" />
+          <div class="caption">Blonde on Blonde album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/john-wesley-harding.jpg" alt="John Wesley Harding album cover" loading="lazy" />
+          <div class="caption">John Wesley Harding album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/nashville-skyline.jpg" alt="Nashville Skyline album cover" loading="lazy" />
+          <div class="caption">Nashville Skyline album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/self-portrait.jpg" alt="Self Portrait album cover" loading="lazy" />
+          <div class="caption">Self Portrait album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/new-morning.jpg" alt="New Morning album cover" loading="lazy" />
+          <div class="caption">New Morning album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/pat-garrett-billy-kid.jpg" alt="Pat Garrett &amp; Billy the Kid album cover" loading="lazy" />
+          <div class="caption">Pat Garrett &amp; Billy the Kid album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/planet-waves.jpg" alt="Planet Waves album cover" loading="lazy" />
+          <div class="caption">Planet Waves album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/blood-on-the-tracks.jpg" alt="Blood on the Tracks album cover" loading="lazy" />
+          <div class="caption">Blood on the Tracks album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/desire.jpg" alt="Desire album cover" loading="lazy" />
+          <div class="caption">Desire album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/street-legal.jpg" alt="Street Legal album cover" loading="lazy" />
+          <div class="caption">Street Legal album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/slow-train-coming.jpg" alt="Slow Train Coming album cover" loading="lazy" />
+          <div class="caption">Slow Train Coming album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/saved.jpg" alt="Saved album cover" loading="lazy" />
+          <div class="caption">Saved album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/infidels.png" alt="Infidels album cover" loading="lazy" />
+          <div class="caption">Infidels album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/oh-mercy.jpg" alt="Oh Mercy album cover" loading="lazy" />
+          <div class="caption">Oh Mercy album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/good-as-i-been.jpg" alt="Good As I Been to You album cover" loading="lazy" />
+          <div class="caption">Good As I Been to You album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/time-out-of-mind.jpg" alt="Time Out of Mind album cover" loading="lazy" />
+          <div class="caption">Time Out of Mind album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/love-and-theft.jpg" alt="Love and Theft album cover" loading="lazy" />
+          <div class="caption">Love and Theft album cover</div>
+        </div>
+        
+        <div class="card">
+          <img src="images/albums/modern-times.jpg" alt="Modern Times album cover" loading="lazy" />
+          <div class="caption">Modern Times album cover</div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div style="height: 1rem;"></div>
+
+    <div class="panel">
+      <div class="kicker">Clips</div>
+      <div class="grid cols2">
+        
+        <div class="vcard">
+          <div class="frame">
+            <iframe src="https://www.youtube.com/embed/W1YZOq-Tf5I?enablejsapi=1" title="Interview/Doc clip" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="caption">Interview/Doc clip</div>
+        </div>
+        
+        <div class="vcard">
+          <div class="frame">
+            <iframe src="https://www.youtube.com/embed/wD6Y1k2qgWA?enablejsapi=1" title="Interview/Doc clip" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="caption">Interview/Doc clip</div>
+        </div>
+        
+        <div class="vcard">
+          <div class="frame">
+            <iframe src="https://www.youtube.com/embed/1yXo-z6i0q0?enablejsapi=1" title="Interview/Doc clip" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="caption">Interview/Doc clip</div>
+        </div>
+        
+        <div class="vcard">
+          <div class="frame">
+            <iframe src="https://www.youtube.com/embed/QG6R7t7NGtM?enablejsapi=1" title="Interview/Doc clip" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="caption">Interview/Doc clip</div>
+        </div>
+        
+        <div class="vcard">
+          <div class="frame">
+            <iframe src="https://www.youtube.com/embed/N6-7xI2U5cE?enablejsapi=1" title="Interview/Doc clip" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="caption">Interview/Doc clip</div>
+        </div>
+        
+        <div class="vcard">
+          <div class="frame">
+            <iframe src="https://www.youtube.com/embed/U4c3e-uHn50?enablejsapi=1" title="Interview/Doc clip" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="caption">Interview/Doc clip</div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const audio = document.getElementById('doc-audio');
+      if (!audio) return;
+      const nowEl = document.getElementById('now-playing');
+      const nowTitle = nowEl ? nowEl.querySelector('.title') : null;
+
+      const btns = Array.from(document.querySelectorAll('.chapter-btn[data-start]'))
+        .map(el => {
+          const start = parseFloat(el.getAttribute('data-start') || 'NaN');
+          return { el, start, title: (el.textContent || '').trim() };
+        })
+        .filter(x => Number.isFinite(x.start))
+        .sort((a,b) => a.start - b.start);
+
+      function setActive(index) {
+        btns.forEach((b, i) => {
+          if (i === index) b.el.classList.add('active');
+          else b.el.classList.remove('active');
+        });
+        if (index >= 0 && index < btns.length) {
+          const t = btns[index].title || '—';
+          if (nowTitle) nowTitle.textContent = t;
+          // Keep active chapter visible (within the page), without being too jumpy.
+          btns[index].el.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        }
+      }
+
+      function findActiveIndex(timeSec) {
+        // last chapter whose start <= current time (with a small bias forward)
+        const t = Math.max(0, (timeSec || 0) + 0.15);
+        let lo = 0, hi = btns.length - 1, ans = -1;
+        while (lo <= hi) {
+          const mid = (lo + hi) >> 1;
+          if (btns[mid].start <= t) { ans = mid; lo = mid + 1; }
+          else hi = mid - 1;
+        }
+        return ans;
+      }
+
+      let lastActive = -2;
+      let ticking = false;
+      function onTimeUpdate() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(() => {
+          ticking = false;
+          const idx = findActiveIndex(audio.currentTime);
+          if (idx !== lastActive) {
+            lastActive = idx;
+            setActive(idx);
+          }
+        });
+      }
+
+      audio.addEventListener('timeupdate', onTimeUpdate);
+      audio.addEventListener('seeked', onTimeUpdate);
+      audio.addEventListener('loadedmetadata', onTimeUpdate);
+
+      btns.forEach((b) => {
+        b.el.addEventListener('click', () => {
+          const start = b.start;
+          audio.currentTime = Math.max(0, start);
+          audio.play().catch(() => {});
+          lastActive = -2;
+          onTimeUpdate();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

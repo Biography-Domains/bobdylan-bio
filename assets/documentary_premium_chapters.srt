@@ -1,0 +1,51 @@
+1
+00:00:00,000 --> 00:00:06,000
+Cold Open
+
+2
+00:00:31,934 --> 00:00:37,934
+Premise
+
+3
+00:01:49,828 --> 00:01:55,828
+Hibbing Iron: The Forging of Robert Zimmerman
+
+4
+00:03:51,403 --> 00:03:57,403
+Greenwich Village Prophet: The Folk Messiah Emerges
+
+5
+00:05:52,377 --> 00:05:58,377
+The Voice of a Generation
+
+6
+00:07:32,591 --> 00:07:38,591
+Electric Shock: The Rock Revolution
+
+7
+00:10:02,666 --> 00:10:08,666
+Retreat and Return: Woodstock and Rebirth
+
+8
+00:12:18,820 --> 00:12:24,820
+Blood on the Tracks: The Masterpiece of Heartbreak
+
+9
+00:14:02,814 --> 00:14:08,814
+Born Again: The Christian Years
+
+10
+00:15:41,228 --> 00:15:47,228
+Lost in the Eighties
+
+11
+00:17:31,943 --> 00:17:37,943
+The Never Ending Tour
+
+12
+00:19:11,317 --> 00:19:17,317
+Nobel Laureate: Recognition and Legacy
+
+13
+00:21:33,711 --> 00:21:39,711
+Outro
